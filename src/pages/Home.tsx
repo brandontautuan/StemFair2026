@@ -1,21 +1,23 @@
+import ParticleHero from '../components/ParticleHero';
+
 function Home() {
   return (
     <>
       <div className="banner-container">
-        <img src="/banner_image.jpg" alt="LRCCD STEM Fair Banner" className="banner-image" />
+        <ParticleHero className="banner-canvas" />
         <div className="banner-text">
-          <h1 className="banner-title">LRCCD STEM Fair</h1>
-          <p className="banner-subtitle">April 10th, 2026 • FLC Main Campus</p>
+          <h1 className="banner-title">Los Rios STEM Fair</h1>
+          <p className="banner-subtitle">April 26th • FLC Main Campus</p>
         </div>
       </div>
       
       <main className="main-content">
         <section className="event-intro">
-          <h2 className="section-title">Welcome to the LRCCD STEM Fair</h2>
+          <h2 className="section-title">Welcome to the Los Rios STEM Fair</h2>
           <div className="intro-content">
             <p className="intro-text">
               Join us for an exciting celebration of innovation, creativity, and scientific discovery! 
-              The LRCCD STEM Fair brings together talented students from across the Los Rios Community 
+              The Los Rios STEM Fair brings together talented students from across the Los Rios Community 
               College District to showcase their groundbreaking projects, research, and technological innovations.
             </p>
             <p className="intro-text">
@@ -27,14 +29,14 @@ function Home() {
             <p className="intro-text">
               Whether you're a student looking to present your project, a community member eager to 
               learn about the latest innovations, or an educator interested in supporting student 
-              achievement, the LRCCD STEM Fair offers something for everyone. Come be inspired by 
+              achievement, the Los Rios STEM Fair offers something for everyone. Come be inspired by 
               the next generation of scientists, engineers, and innovators!
             </p>
           </div>
         </section>
 
         <section className="speakers-section">
-          <h2 className="section-title">Featured Speakers</h2>
+          <h2 className="section-title">Featured Speakers (Coming Soon)</h2>
           <div className="speakers-grid">
             <div className="speaker-card">
               <div className="speaker-image">
