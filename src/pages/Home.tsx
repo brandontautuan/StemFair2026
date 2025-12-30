@@ -1,10 +1,12 @@
+import ParticleHero from '../components/ParticleHero';
+
 function Home() {
   return (
     <>
       <div className="banner-container">
-        <img src="/banner_image.jpg" alt="LRCCD STEM Fair Banner" className="banner-image" />
+        <ParticleHero className="banner-canvas" />
         <div className="banner-text">
-          <h1 className="banner-title">LRCCD STEM Fair</h1>
+          <h1 className="banner-title">Los Rios STEM Fair</h1>
           <p className="banner-subtitle">April 26th • FLC Main Campus</p>
         </div>
       </div>
