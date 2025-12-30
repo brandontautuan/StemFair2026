@@ -5,7 +5,7 @@ function About() {
         <h1 className="page-title">About</h1>
         <div className="section-content">
           <p className="section-text">
-            The LRCCD STEM Fair is an annual event that celebrates innovation, creativity, and 
+            The Los Rios STEM Fair is an annual event that celebrates innovation, creativity, and 
             scientific discovery within the Los Rios Community College District. This event 
             provides a platform for students to showcase their projects, research, and 
             technological innovations.
@@ -25,13 +25,6 @@ function About() {
               <strong>Date:</strong> April 10th, 2026<br />
               <strong>Location:</strong> FLC Main Campus<br />
               <strong>Time:</strong> All day event<br />
-            </p>
-          </div>
-          <div className="info-card">
-            <h2 className="info-title">Contact Us</h2>
-            <p className="info-text">
-              For more information about the LRCCD STEM Fair, please contact the event 
-              organizers or visit our main office.
             </p>
           </div>
         </div>
