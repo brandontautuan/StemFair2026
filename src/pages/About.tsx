@@ -22,7 +22,7 @@ function About() {
           <div className="info-card">
             <h2 className="info-title">Event Details</h2>
             <p className="info-text">
-              <strong>Date:</strong> April 26th<br />
+              <strong>Date:</strong> April 10th, 2026<br />
               <strong>Location:</strong> FLC Main Campus<br />
               <strong>Time:</strong> All day event<br />
             </p>

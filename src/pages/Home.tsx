@@ -5,7 +5,7 @@ function Home() {
         <img src="/banner_image.jpg" alt="LRCCD STEM Fair Banner" className="banner-image" />
         <div className="banner-text">
           <h1 className="banner-title">LRCCD STEM Fair</h1>
-          <p className="banner-subtitle">April 26th • FLC Main Campus</p>
+          <p className="banner-subtitle">April 10th, 2026 • FLC Main Campus</p>
         </div>
       </div>
       
