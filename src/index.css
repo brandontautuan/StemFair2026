@@ -167,6 +167,36 @@ body {
   .banner-subtitle {
     font-size: clamp(1rem, 4vw, 1.2rem);
   }
+
+  .nav-menu {
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .nav-menu li a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .main-content {
+    padding: 2rem 1rem;
+  }
+
+  .event-intro,
+  .speakers-section,
+  .page-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .section-title,
+  .page-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .intro-text,
+  .section-text {
+    font-size: 1rem;
+  }
 }
 
 /* Main Content */
@@ -561,5 +591,39 @@ body {
   .teams-grid,
   .sponsors-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu {
+    gap: 0.25rem;
+    padding: 0 0.5rem;
+  }
+
+  .nav-menu li a {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .main-content {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .event-intro,
+  .speakers-section,
+  .page-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .info-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .sponsor-tier {
+    padding: 1.5rem 1rem;
+  }
+
+  .tier-title {
+    font-size: 1.5rem;
   }
 }
