@@ -191,7 +191,6 @@ const ParticleHero: React.FC<ParticleHeroProps> = ({
     } else {
       // Render static frame for reduced motion preference
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const rect = canvas.getBoundingClientRect();
       particlesRef.current.forEach((particle) => {
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
