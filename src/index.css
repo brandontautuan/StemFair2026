@@ -41,6 +41,12 @@ body {
 .app {
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-body {
+  flex: 1;
 }
 
 /* Navigation */
@@ -211,6 +217,207 @@ body {
   margin-bottom: 0;
 }
 
+/* User Funnel Section */
+.user-funnel {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.funnel-intro {
+  color: #555;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.funnel-lanes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.funnel-lane {
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.funnel-lane:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.funnel-lane-participants {
+  border-color: #0066cc;
+  background: linear-gradient(135deg, #f8fcff 0%, #eef6ff 100%);
+}
+
+.funnel-lane-participants:hover {
+  border-color: #0052a3;
+  box-shadow: 0 6px 16px rgba(0, 102, 204, 0.25);
+}
+
+.funnel-lane-attendees {
+  background-color: #fafafa;
+}
+
+.funnel-lane-industry {
+  background-color: #fafafa;
+}
+
+.funnel-lane-title {
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.funnel-lane-participants .funnel-lane-title {
+  color: #0066cc;
+}
+
+.funnel-lane-desc {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.funnel-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+}
+
+.cta-primary {
+  background-color: #0066cc;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.4);
+}
+
+.cta-primary:hover {
+  background-color: #0052a3;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.5);
+}
+
+.cta-secondary {
+  background-color: #fff;
+  color: #0066cc;
+  border: 2px solid #0066cc;
+}
+
+.cta-secondary:hover {
+  background-color: #0066cc;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .funnel-lanes {
+    grid-template-columns: 1fr;
+  }
+  
+  .funnel-ctas {
+    flex-direction: column;
+  }
+}
+
+/* Key Dates Section */
+.key-dates-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.key-dates-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.key-date-item {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #e0e0e0;
+}
+
+.key-date-highlight {
+  border-left-color: #0066cc;
+  background: linear-gradient(135deg, #f8fcff 0%, #eef6ff 100%);
+}
+
+.key-date-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.key-date-value {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.key-date-highlight .key-date-value {
+  color: #0066cc;
+}
+
+.key-date-detail {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.key-dates-link {
+  display: inline-block;
+  color: #0066cc;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.key-dates-link:hover {
+  text-decoration: underline;
+}
+
 /* Speakers Section */
 .speakers-section {
   background-color: #fff;
@@ -297,6 +504,41 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Form Embed (Register page) */
+.form-embed-container {
+  width: 100%;
+  min-height: 600px;
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.form-embed-container iframe {
+  display: block;
+  min-height: 800px;
+}
+
+.form-fallback {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.form-fallback a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-fallback a:hover {
+  text-decoration: underline;
+}
+
+.register-intro {
+  text-align: center;
+}
+
 .page-title {
   color: #0066cc;
   font-size: 2.5rem;
@@ -343,6 +585,37 @@ body {
 
 .info-text:last-child {
   margin-bottom: 0;
+}
+
+/* Sponsors Form CTA */
+.sponsors-cta-card .info-text {
+  margin-bottom: 1rem;
+}
+
+.sponsors-form-cta {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background-color: #0066cc;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sponsors-form-cta:hover {
+  background-color: #0052a3;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.sponsors-form-placeholder {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #e8e8e8;
+  color: #666;
+  font-size: 0.95rem;
+  border-radius: 8px;
 }
 
 /* Schedule Styles */

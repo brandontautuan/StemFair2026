@@ -1,7 +1,9 @@
+const SPONSORSHIP_FORM_URL = '#'; // Placeholder—add when available
+
 function Sponsors() {
   return (
     <main className="main-content">
-      <section className="page-section">
+      <section className="page-section sponsors-section">
         <h1 className="page-title">Sponsors</h1>
         <div className="section-content">
           <p className="section-text">
@@ -10,13 +12,25 @@ function Sponsors() {
             their innovative work.
           </p>
 
-          <div className="info-card">
+          <div className="info-card sponsors-cta-card">
             <h2 className="info-title">Become a Sponsor</h2>
             <p className="info-text">
-              Interested in supporting the Los Rios STEM Fair? Contact Abaan Majid at abaanmajid15@gmail.com to learn more about 
-              sponsorship opportunities and how your organization can contribute to student 
-              success in STEM fields.
+              Interested in supporting the Los Rios STEM Fair? Fill out the Sponsorship Form to express 
+              your interest, or contact us at abaanmajid15@gmail.com to learn more about sponsorship 
+              opportunities and how your organization can contribute to student success in STEM fields.
             </p>
+            {SPONSORSHIP_FORM_URL !== '#' ? (
+              <a
+                href={SPONSORSHIP_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="sponsors-form-cta"
+              >
+                Open Sponsorship Form →
+              </a>
+            ) : (
+              <span className="sponsors-form-placeholder">Sponsorship Form coming soon—email abaanmajid15@gmail.com in the meantime</span>
+            )}
           </div>
 
           {/* Gold Sponsors Section */}

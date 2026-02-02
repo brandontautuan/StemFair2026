@@ -1,0 +1,158 @@
+.event-flow-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.event-flow-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.event-flow-intro {
+  color: #555;
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+.event-flow-phases {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.flow-phase {
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid #0066cc;
+  background-color: #fafafa;
+  transition: box-shadow 0.3s ease;
+}
+
+.flow-phase:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.flow-phase-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.flow-phase-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0066cc;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.flow-phase-title {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.flow-phase-desc {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 0 1.5rem;
+}
+
+.flow-phase-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.flow-cta {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.flow-cta:hover {
+  transform: translateY(-2px);
+}
+
+.flow-cta-primary {
+  background-color: #0066cc;
+  color: #fff;
+}
+
+.flow-cta-primary:hover {
+  background-color: #0052a3;
+  color: #fff;
+}
+
+.flow-cta-secondary {
+  background-color: #fff;
+  color: #0066cc;
+  border: 2px solid #0066cc;
+}
+
+.flow-cta-secondary:hover {
+  background-color: #0066cc;
+  color: #fff;
+}
+
+.flow-phase-timeline {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.flow-timeline-badge {
+  padding: 0.4rem 0.8rem;
+  background-color: #0066cc;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.flow-timeline-date {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .event-flow-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .flow-phase {
+    padding: 1.5rem;
+  }
+
+  .flow-phase-title {
+    font-size: 1.25rem;
+  }
+
+  .flow-phase-actions {
+    flex-direction: column;
+  }
+
+  .flow-cta {
+    text-align: center;
+  }
+}

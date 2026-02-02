@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import Footer from './Footer';
 
 function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
@@ -24,18 +25,36 @@ function Layout({ children }: { children: React.ReactNode }) {
             </Link>
           </li>
           <li>
+            <Link to="/event-flow" className={isActive('/event-flow') ? 'active' : ''}>
+              Event Flow
+            </Link>
+          </li>
+          <li>
+            <Link to="/requirements" className={isActive('/requirements') ? 'active' : ''}>
+              Requirements
+            </Link>
+          </li>
+          <li>
+            <Link to="/industry" className={isActive('/industry') ? 'active' : ''}>
+              Industry
+            </Link>
+          </li>
+          <li>
             <Link to="/sponsors" className={isActive('/sponsors') ? 'active' : ''}>
               Sponsors
             </Link>
           </li>
           <li>
-            <Link to="/about" className={isActive('/about') ? 'active' : ''}>
-              About
+            <Link to="/faq" className={isActive('/faq') ? 'active' : ''}>
+              FAQ
             </Link>
           </li>
         </ul>
       </nav>
-      {children}
+      <div className="app-body">
+        {children}
+      </div>
+      <Footer />
     </div>
   );
 }
