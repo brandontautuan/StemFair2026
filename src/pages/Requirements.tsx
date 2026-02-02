@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import './Requirements.css';
 
 const DISCORD_URL = 'https://discord.gg/twRRrEyANK';
-const INTEREST_FORM_URL = 'https://forms.gle/evzMxp7bMHRrw8eJA';
 
 function Requirements() {
   return (

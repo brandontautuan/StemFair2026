@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import './EventFlow.css';
 
 const DISCORD_URL = 'https://discord.gg/twRRrEyANK';
-const INTEREST_FORM_URL = 'https://forms.gle/evzMxp7bMHRrw8eJA';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -18,7 +17,7 @@ const phaseVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: 'easeOut' },
+    transition: { duration: 0.4, ease: 'easeOut' as const },
   },
 };
 
