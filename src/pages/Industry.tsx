@@ -24,10 +24,9 @@ function Industry() {
         </div>
 
         <div className="industry-cta-card">
-          <h2 className="industry-cta-title">Register Your Interest</h2>
+          <h2 className="industry-cta-title">Register</h2>
           <p className="industry-cta-desc">
-            Fill out the form below to let us know you&apos;re interested in attending as an industry 
-            professional or mentor. We&apos;ll reach out with more details.
+            Fill out the form below to register as an industry professional or mentor. We&apos;ll reach out with more details.
           </p>
           {INDUSTRY_FORM_URL !== '#' ? (
             <a

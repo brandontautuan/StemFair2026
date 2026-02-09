@@ -14,7 +14,7 @@
 ### Form URLs
 | Form | URL |
 |------|-----|
-| Interest Form | https://forms.gle/evzMxp7bMHRrw8eJA |
+| Registration Form | https://forms.gle/evzMxp7bMHRrw8eJA |
 | Proposal Form | *(placeholder—add when available)* |
 | Industry/Mentor Form | *(placeholder—add when available)* |
 | Sponsorship Form | *(placeholder—add when available)* |
@@ -38,8 +38,8 @@
     - [cite_start]Create clear paths for Students/Professors vs. General Attendees[cite: 5, 7, 8].
     - [cite_start]Add primary CTAs: "Register Interest" and "Submit Proposal"[cite: 42, 93, 94].
 - [ ] **Task 1.3: Registration Page Update**
-    - [cite_start]Keep the register page but embed the Interest Form directly[cite: 31].
-    - Interest Form URL: https://forms.gle/evzMxp7bMHRrw8eJA
+    - [cite_start]Keep the register page but embed the Registration Form directly[cite: 31].
+    - Registration Form URL: https://forms.gle/evzMxp7bMHRrw8eJA
 
 ---
 
@@ -51,7 +51,7 @@
     - [cite_start]**Phase 2:** Team Formation via Discord[cite: 16, 17, 49].
     - [cite_start]**Phase 3:** Project development leading to April 17th[cite: 20, 21].
 - [ ] **Task 2.2: Build Requirements Page**
-    - [cite_start]List all links: Discord, Interest Form, and Proposal Form[cite: 27, 28, 29, 30].
+    - [cite_start]List all links: Discord, Registration Form, and Proposal Form[cite: 27, 28, 29, 30].
     - Use placeholder links for Proposal Form if URL not yet available.
 
 ---

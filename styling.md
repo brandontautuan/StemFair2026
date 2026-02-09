@@ -21,7 +21,7 @@
 ## 📑 Content Constraints
 * [cite_start]**Event Date:** April 17th[cite: 21, 40].
 * **Call to Actions:**
-    * [cite_start]**Interest Form:** Embed or link the form on the Register page[cite: 31, 55].
+    * [cite_start]**Registration Form:** Embed or link the form on the Register page[cite: 31, 55].
     * [cite_start]**Proposal Form:** Must be highlighted for project leads[cite: 13, 55].
     * [cite_start]**Discord:** Emphasize Discord for announcements and team formation[cite: 15, 28, 88].
 * [cite_start]**Footer Requirement:** Every page must include the contact email `abaanmajid15@gmail.com` and a note about pinging an "admin role" on Discord[cite: 33, 34, 91].

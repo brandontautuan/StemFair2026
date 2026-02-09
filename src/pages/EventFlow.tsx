@@ -51,16 +51,18 @@ function EventFlow() {
           <motion.div className="flow-phase" variants={phaseVariants}>
             <div className="flow-phase-header">
               <span className="flow-phase-number">1</span>
-              <h2 className="flow-phase-title">Interest &amp; Proposal</h2>
+              <h2 className="flow-phase-title">Registration &amp; Proposal</h2>
             </div>
             <p className="flow-phase-desc">
-              Register your interest and submit a project proposal. Complete the Interest Form to express your intent, 
-              then submit a Proposal Form with your project idea. This helps us organize the fair and connect you with 
-              potential team members.
+              Register and submit a project proposal. Complete the Registration Form to sign up, 
+              then submit a Proposal Form with your project idea. When registering, you&apos;ll indicate 
+              whether your project will participate in the <strong>Presentation Period</strong> (scheduled 
+              formal presentations) or the <strong>Showcase/Open Floor</strong> (informal walk-by viewing). 
+              This helps us organize the fair and connect you with potential team members.
             </p>
             <div className="flow-phase-actions">
               <Link to="/register" className="flow-cta flow-cta-primary">
-                Register Interest
+                Register
               </Link>
               <a href="#" className="flow-cta flow-cta-secondary" title="Proposal form coming soon">
                 Submit Proposal
@@ -96,9 +98,26 @@ function EventFlow() {
             </div>
             <p className="flow-phase-desc">
               Develop your project with your team. Use Discord to collaborate, ask questions, and get support. 
-              Your work culminates at the Los Rios STEM Fair on <strong>April 17th</strong> at Folsom Lake College, 
-              where you&apos;ll present your project to judges, peers, and industry professionals.
+              Your work culminates at the Los Rios STEM Fair on <strong>April 17th</strong> at Folsom Lake College.
             </p>
+            <div className="flow-event-formats">
+              <h3 className="flow-formats-title">Event Day Formats</h3>
+              <p className="flow-formats-intro">Choose which format fits your project when you register:</p>
+              <div className="flow-format-cards">
+                <div className="flow-format-card">
+                  <h4 className="flow-format-name">Presentation Period</h4>
+                  <p className="flow-format-desc">
+                    Scheduled, formal presentations. Your team presents to judges and attendees in a dedicated time slot.
+                  </p>
+                </div>
+                <div className="flow-format-card">
+                  <h4 className="flow-format-name">Showcase / Open Floor</h4>
+                  <p className="flow-format-desc">
+                    Free-roam, informal viewing. Attendees browse projects at their own pace—great for demos and hands-on exhibits.
+                  </p>
+                </div>
+              </div>
+            </div>
             <div className="flow-phase-timeline">
               <span className="flow-timeline-badge">Event Day</span>
               <span className="flow-timeline-date">April 17th • Folsom Lake College</span>

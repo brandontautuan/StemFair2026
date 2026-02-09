@@ -36,13 +36,13 @@ function Requirements() {
           <div className="requirement-card">
             <div className="requirement-icon" aria-hidden>📋</div>
             <div className="requirement-content">
-              <h2 className="requirement-name">Interest Form</h2>
+              <h2 className="requirement-name">Registration Form</h2>
               <p className="requirement-desc">
-                Register your interest in participating. Complete this form to express your intent 
-                and help us organize the fair.
+                Sign up to participate in the fair. Complete this form to register and help us 
+                organize the event.
               </p>
               <Link to="/register" className="requirement-link">
-                Fill Interest Form →
+                Fill Registration Form →
               </Link>
             </div>
           </div>

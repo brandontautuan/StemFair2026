@@ -113,6 +113,54 @@
   color: #fff;
 }
 
+.flow-event-formats {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.flow-formats-title {
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.flow-formats-intro {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+}
+
+.flow-format-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.flow-format-card {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #0066cc;
+}
+
+.flow-format-name {
+  color: #0066cc;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+}
+
+.flow-format-desc {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
 .flow-phase-timeline {
   display: flex;
   align-items: center;
@@ -150,6 +198,10 @@
 
   .flow-phase-actions {
     flex-direction: column;
+  }
+
+  .flow-format-cards {
+    grid-template-columns: 1fr;
   }
 
   .flow-cta {

@@ -56,16 +56,16 @@ function Home() {
           <div className="funnel-lanes">
             <div className="funnel-lane funnel-lane-participants">
               <h3 className="funnel-lane-title">Students &amp; Professors</h3>
-              <p className="funnel-lane-desc">Present a project or research at the fair. Register your interest and submit a proposal to get started.</p>
+              <p className="funnel-lane-desc">Present a project or research at the fair. Register and submit a proposal to get started.</p>
               <div className="funnel-ctas">
-                <Link to="/register" className="cta-button cta-primary">Register Interest</Link>
+                <Link to="/register" className="cta-button cta-primary">Register</Link>
                 <a href="#" className="cta-button cta-primary" title="Proposal form coming soon">Submit Proposal</a>
               </div>
             </div>
             <div className="funnel-lane funnel-lane-attendees">
               <h3 className="funnel-lane-title">General Attendees</h3>
               <p className="funnel-lane-desc">Attend the fair, explore projects, and connect with students and innovators. No registration required—just show up!</p>
-              <Link to="/register" className="cta-button cta-secondary">Register Interest</Link>
+              <Link to="/register" className="cta-button cta-secondary">Register</Link>
             </div>
             <div className="funnel-lane funnel-lane-industry">
               <h3 className="funnel-lane-title">Industry &amp; Sponsors</h3>

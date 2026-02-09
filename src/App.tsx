@@ -6,6 +6,7 @@ import EventFlow from './pages/EventFlow';
 import Requirements from './pages/Requirements';
 import Industry from './pages/Industry';
 import FAQ from './pages/FAQ';
+import Projects from './pages/Projects';
 import Schedule from './pages/Schedule';
 import Teams from './pages/Teams';
 import Sponsors from './pages/Sponsors';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/requirements" element={<Requirements />} />
           <Route path="/industry" element={<Industry />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/teams" element={<Teams />} />
           <Route path="/sponsors" element={<Sponsors />} />

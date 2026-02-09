@@ -45,6 +45,11 @@ function Layout({ children }: { children: React.ReactNode }) {
             </Link>
           </li>
           <li>
+            <Link to="/projects" className={isActive('/projects') ? 'active' : ''}>
+              Projects
+            </Link>
+          </li>
+          <li>
             <Link to="/faq" className={isActive('/faq') ? 'active' : ''}>
               FAQ
             </Link>
