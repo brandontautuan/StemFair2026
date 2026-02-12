@@ -85,32 +85,31 @@
   font-weight: 600;
   text-decoration: none;
   border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  border: var(--button-idle-border);
+  background-color: var(--button-idle-bg);
+  color: var(--button-idle-color);
+  transition: var(--button-transition);
 }
 
 .flow-cta:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-bg);
   transform: translateY(-2px);
 }
 
-.flow-cta-primary {
-  background-color: #0066cc;
-  color: #fff;
-}
-
-.flow-cta-primary:hover {
-  background-color: #0052a3;
-  color: #fff;
-}
-
+.flow-cta-primary,
 .flow-cta-secondary {
-  background-color: #fff;
-  color: #0066cc;
-  border: 2px solid #0066cc;
+  background-color: var(--button-idle-bg);
+  color: var(--button-idle-color);
+  border: var(--button-idle-border);
 }
 
+.flow-cta-primary:hover,
 .flow-cta-secondary:hover {
-  background-color: #0066cc;
-  color: #fff;
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-bg);
 }
 
 .flow-event-formats {

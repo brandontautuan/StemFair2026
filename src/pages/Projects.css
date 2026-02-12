@@ -74,19 +74,21 @@
 .project-read-more {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: transparent;
-  color: #0066cc;
+  background-color: var(--button-idle-bg);
+  color: var(--button-idle-color);
   font-size: 0.95rem;
   font-weight: 600;
-  border: 2px solid #0066cc;
-  border-radius: 6px;
+  border: var(--button-idle-border);
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: var(--button-transition);
 }
 
 .project-read-more:hover {
-  background-color: #0066cc;
-  color: #fff;
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-bg);
+  transform: translateY(-2px);
 }
 
 /* Project Detail Modal */
@@ -141,18 +143,21 @@
 
 .project-modal-close {
   padding: 0.5rem 1rem;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--button-idle-bg);
+  color: var(--button-idle-color);
   font-size: 0.9rem;
   font-weight: 600;
-  border: none;
-  border-radius: 6px;
+  border: var(--button-idle-border);
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: var(--button-transition);
 }
 
 .project-modal-close:hover {
-  background-color: #555;
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-bg);
+  transform: translateY(-2px);
 }
 
 .project-modal-body {

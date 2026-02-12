@@ -1,0 +1,87 @@
+.update-portal-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.update-portal-intro {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.update-portal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.35rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
+}
+
+.update-portal-message {
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.update-portal-message--success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.update-portal-message--error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.update-portal-submit {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--button-idle-bg);
+  color: var(--button-idle-color);
+  font-weight: 600;
+  font-size: 1rem;
+  border: var(--button-idle-border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--button-transition);
+}
+
+.update-portal-submit:hover:not(:disabled) {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-bg);
+  transform: translateY(-2px);
+}
+
+.update-portal-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

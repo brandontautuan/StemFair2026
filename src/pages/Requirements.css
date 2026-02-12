@@ -111,14 +111,21 @@
 }
 
 .requirements-cta-link {
-  color: #0066cc;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: var(--button-idle-color);
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.2s ease;
+  border-radius: 8px;
+  border: var(--button-idle-border);
+  background-color: var(--button-idle-bg);
+  transition: var(--button-transition);
 }
 
 .requirements-cta-link:hover {
-  color: #0052a3;
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-bg);
 }
 
 @media (max-width: 768px) {

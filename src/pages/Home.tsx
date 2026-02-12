@@ -13,53 +13,18 @@ function Home() {
       </div>
       
       <main className="main-content">
-        <section className="event-intro">
-          <h2 className="section-title">Welcome to the Los Rios STEM Fair</h2>
-          <div className="intro-content">
-            <p className="intro-text">
-              The Los Rios STEM Fair is an annual event that celebrates innovation, creativity, and 
-              scientific discovery within the Los Rios Community College District. This event 
-              provides a platform for students to showcase their projects, research, and 
-              technological innovations.
-            </p>
-            <p className="intro-text">
-              Join us for an exciting celebration! The Los Rios STEM Fair brings together talented 
-              students from across the district to showcase their groundbreaking projects and 
-              technological innovations. From cutting-edge research to practical solutions 
-              addressing real-world challenges, you'll witness the future of STEM unfold before 
-              your eyes.
-            </p>
-            <div className="info-card">
-              <h2 className="info-title">Our Mission</h2>
-              <p className="info-text">
-                To inspire and recognize excellence in Science, Technology, Engineering, and 
-                Mathematics by providing students with opportunities to present their work, 
-                connect with peers and professionals, and gain valuable experience in their 
-                chosen fields.
-              </p>
-            </div>
-            <div className="info-card">
-              <h2 className="info-title">Event Details</h2>
-              <p className="info-text">
-                <strong>Event:</strong> Los Rios STEM Fair<br />
-                <strong>Date:</strong> April 17th<br />
-                <strong>Location:</strong> Folsom Lake College<br />
-                <strong>Time:</strong> All day event
-              </p>
-            </div>
-          </div>
-        </section>
-
         <section className="user-funnel">
           <h2 className="section-title">How to Participate</h2>
-          <p className="funnel-intro">Choose your path based on how you'd like to be involved:</p>
+          <p className="funnel-intro">
+            April 17th at Folsom Lake College. Choose your path and get involved:
+          </p>
           <div className="funnel-lanes">
             <div className="funnel-lane funnel-lane-participants">
               <h3 className="funnel-lane-title">Students &amp; Professors</h3>
               <p className="funnel-lane-desc">Present a project or research at the fair. Register and submit a proposal to get started.</p>
               <div className="funnel-ctas">
-                <Link to="/register" className="cta-button cta-primary">Register</Link>
-                <a href="#" className="cta-button cta-primary" title="Proposal form coming soon">Submit Proposal</a>
+                <Link to="/register" className="cta-button cta-secondary">Register</Link>
+                <a href="#" className="cta-button cta-secondary" title="Proposal form coming soon">Submit Proposal</a>
               </div>
             </div>
             <div className="funnel-lane funnel-lane-attendees">
@@ -70,10 +35,22 @@ function Home() {
             <div className="funnel-lane funnel-lane-industry">
               <h3 className="funnel-lane-title">Industry &amp; Sponsors</h3>
               <p className="funnel-lane-desc">Support the fair as a mentor, sponsor, or industry partner. Connect with emerging talent.</p>
-              <div className="funnel-ctas">
-                <Link to="/industry" className="cta-button cta-secondary">Industry / Mentor</Link>
-                <Link to="/sponsors" className="cta-button cta-secondary">Sponsors</Link>
-              </div>
+              <Link to="/get-involved" className="cta-button cta-secondary">Get Involved</Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="event-intro event-intro-compact">
+          <h2 className="section-title">About the Fair</h2>
+          <div className="intro-content">
+            <p className="intro-text">
+              The Los Rios STEM Fair celebrates innovation and scientific discovery. Students present projects, 
+              connect with peers and professionals, and gain experience in STEM fields.
+            </p>
+            <div className="info-card info-card-inline">
+              <p className="info-text">
+                <strong>April 17th</strong> · Folsom Lake College · All day
+              </p>
             </div>
           </div>
         </section>
@@ -81,7 +58,7 @@ function Home() {
         <section className="key-dates-section">
           <h2 className="section-title">Key Dates</h2>
           <div className="key-dates-list">
-            <div className="key-date-item key-date-highlight">
+            <div className="key-date-item">
               <span className="key-date-label">Event Day</span>
               <span className="key-date-value">April 17th</span>
               <span className="key-date-detail">Los Rios STEM Fair at Folsom Lake College</span>
