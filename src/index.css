@@ -476,6 +476,33 @@ body {
   border-color: var(--button-hover-bg);
 }
 
+/* Day-of schedule inline (within Key Dates card) */
+.key-dates-schedule-inline {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e8e8e8;
+}
+
+.key-dates-schedule-heading {
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+.key-dates-schedule-intro {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 0.5rem;
+}
+
+.key-dates-schedule-coming-soon {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
 /* Speakers Section */
 .speakers-section {
   background-color: #fff;

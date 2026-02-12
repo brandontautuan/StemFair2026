@@ -75,47 +75,12 @@ function Home() {
               <span className="key-date-detail">Form teams via Discord</span>
             </div>
           </div>
-          <Link to="/schedule" className="key-dates-link">View full schedule →</Link>
-        </section>
-
-        <section className="speakers-section">
-          <h2 className="section-title">Featured Speakers (Coming Soon)</h2>
-          <div className="speakers-grid">
-            <div className="speaker-card">
-              <div className="speaker-image">
-                <img src="/template_profile_pic.jpg" alt="Speaker 1" />
-              </div>
-              <h3 className="speaker-name">Speaker Name</h3>
-              <p className="speaker-title">Title/Organization</p>
-              <p className="speaker-bio">Brief bio or topic description will appear here.</p>
-            </div>
-            
-            <div className="speaker-card">
-              <div className="speaker-image">
-                <img src="/template_profile_pic.jpg" alt="Speaker 2" />
-              </div>
-              <h3 className="speaker-name">Speaker Name</h3>
-              <p className="speaker-title">Title/Organization</p>
-              <p className="speaker-bio">Brief bio or topic description will appear here.</p>
-            </div>
-            
-            <div className="speaker-card">
-              <div className="speaker-image">
-                <img src="/template_profile_pic.jpg" alt="Speaker 3" />
-              </div>
-              <h3 className="speaker-name">Speaker Name</h3>
-              <p className="speaker-title">Title/Organization</p>
-              <p className="speaker-bio">Brief bio or topic description will appear here.</p>
-            </div>
-            
-            <div className="speaker-card">
-              <div className="speaker-image">
-                <img src="/template_profile_pic.jpg" alt="Speaker 4" />
-              </div>
-              <h3 className="speaker-name">Speaker Name</h3>
-              <p className="speaker-title">Title/Organization</p>
-              <p className="speaker-bio">Brief bio or topic description will appear here.</p>
-            </div>
+          <div className="key-dates-schedule-inline">
+            <h3 className="key-dates-schedule-heading">Day-of Schedule</h3>
+            <p className="key-dates-schedule-intro">
+              The day-of schedule for April 17th at Folsom Lake College. Times and sessions will be finalized closer to the event.
+            </p>
+            <p className="key-dates-schedule-coming-soon">Schedule coming soon—check back for updates.</p>
           </div>
         </section>
       </main>

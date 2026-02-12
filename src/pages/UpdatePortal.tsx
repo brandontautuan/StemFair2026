@@ -5,7 +5,8 @@
  * progress_percentage and status_update.
  */
 
-import { useState, FormEvent } from 'react';
+import { useState } from 'react';
+import type { FormEvent } from 'react';
 import { updateProjectProgress } from '../lib/supabaseProjects';
 import { isSupabaseConfigured } from '../lib/supabase';
 import './UpdatePortal.css';
@@ -48,9 +49,8 @@ function UpdatePortal() {
         <section className="update-portal-section">
           <h1 className="page-title">Team Lead Update Portal</h1>
           <p className="update-portal-intro">
-            Supabase is not configured. Add <code>VITE_SUPABASE_URL</code> and{' '}
-            <code>VITE_SUPABASE_ANON_KEY</code> to your <code>.env</code> file to
-            enable project updates.
+            Project updates are not available—this site is frontend-only with no database.
+            Contact the event organizers for other ways to submit progress.
           </p>
         </section>
       </main>

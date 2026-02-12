@@ -1,40 +1,32 @@
 /**
- * Supabase Client - STEM Fair 2026
+ * Supabase stub - STEM Fair 2026 (frontend-only, no database)
  *
- * Uses CDN (ESM) or npm package. For Vite/React, we use the npm package.
- * Get your URL and anon key from: Supabase Dashboard > Project Settings > API
- *
- * IMPORTANT: Create a .env file with:
- *   VITE_SUPABASE_URL=https://your-project.supabase.co
- *   VITE_SUPABASE_ANON_KEY=your-anon-key
- *
- * Never commit the service role key. The anon key is safe for frontend use.
+ * This app runs without a backend. All Supabase exports are stubbed so
+ * the Update Portal and any project features show "not configured" or no-op behavior.
  */
 
-import { createClient } from '@supabase/supabase-js';
+export const isSupabaseConfigured = false;
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL ?? '';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY ?? '';
+/** Stub client (no real calls). Used by supabaseProjects for type safety. */
+export const supabase = {
+  from: () => ({
+    select: () => ({ order: () => Promise.resolve({ data: [], error: null }) }),
+  }),
+  channel: () => ({
+    on: () => ({ subscribe: () => {} }),
+  }),
+  removeChannel: () => {},
+  rpc: () => Promise.resolve({ data: false, error: { message: 'No database configured.' } }),
+};
 
-export const isSupabaseConfigured =
-  Boolean(supabaseUrl && supabaseAnonKey);
-
-if (!isSupabaseConfigured) {
-  console.warn(
-    'Supabase not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to .env'
-  );
-}
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
-/** Supabase projects table row type */
+/** Project row type (for display/types only) */
 export interface SupabaseProject {
   id: string;
   project_name: string;
   team_lead: string;
   progress_percentage: number;
   status_update: string;
-  secret_key?: string; // Never expose to client; RLS hides it
+  secret_key?: string;
   created_at: string;
   updated_at: string;
 }
