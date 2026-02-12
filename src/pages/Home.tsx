@@ -77,10 +77,35 @@ function Home() {
           </div>
           <div className="key-dates-schedule-inline">
             <h3 className="key-dates-schedule-heading">Day-of Schedule</h3>
-            <p className="key-dates-schedule-intro">
-              The day-of schedule for April 17th at Folsom Lake College. Times and sessions will be finalized closer to the event.
+            <p className="key-dates-schedule-disclaimer">
+              <strong>This schedule is prone to heavy change and is not finalized yet.</strong>
             </p>
-            <p className="key-dates-schedule-coming-soon">Schedule coming soon—check back for updates.</p>
+            <p className="key-dates-schedule-intro">
+              April 17th at Folsom Lake College. Times and sessions may be updated closer to the event.
+            </p>
+            <ul className="schedule-list" aria-label="Event schedule">
+              <li className="schedule-item">
+                <span className="schedule-time">12:00 – 12:30</span>
+                <span className="schedule-title">Intro Period</span>
+                <p className="schedule-desc">
+                  Guests arrive and get settled. Coffee and light refreshments will be available—a good time to mingle, chat, and connect. Tables and materials will be set up during this window.
+                </p>
+              </li>
+              <li className="schedule-item">
+                <span className="schedule-time">12:30 – 2:00</span>
+                <span className="schedule-title">Presentation Period</span>
+                <p className="schedule-desc">
+                  Teams that opt to present will give formal presentations during this block. Attendees can watch project demos, hear from student teams, and join Q&amp;A in a structured session.
+                </p>
+              </li>
+              <li className="schedule-item">
+                <span className="schedule-time">2:00 – 4:00</span>
+                <span className="schedule-title">Showcase Period</span>
+                <p className="schedule-desc">
+                  Teams that opt to showcase will table their projects for walk-by viewing. Visitors can browse tables, view projects, and talk with teams. Food will be served during this time.
+                </p>
+              </li>
+            </ul>
           </div>
         </section>
       </main>

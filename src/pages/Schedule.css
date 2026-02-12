@@ -1,5 +1,17 @@
+.schedule-disclaimer {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 0.75rem;
+  font-style: italic;
+}
+
 .schedule-intro {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.schedule-list {
+  margin: 1.5rem 0;
 }
 
 .schedule-placeholder {

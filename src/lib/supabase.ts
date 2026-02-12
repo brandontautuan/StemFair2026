@@ -7,16 +7,22 @@
 
 export const isSupabaseConfigured = false;
 
-/** Stub client (no real calls). Used by supabaseProjects for type safety. */
+/** Stub client (no real calls). Accepts same args as real client so callers type-check. */
 export const supabase = {
-  from: () => ({
-    select: () => ({ order: () => Promise.resolve({ data: [], error: null }) }),
+  from: (_table: string) => ({
+    select: (_columns?: string) => ({
+      order: (_column: string, _opts?: { ascending?: boolean }) =>
+        Promise.resolve({ data: [], error: null }),
+    }),
   }),
-  channel: () => ({
-    on: () => ({ subscribe: () => {} }),
+  channel: (_name: string) => ({
+    on: (_event: string, _opts: unknown, _callback?: (payload: unknown) => void) => ({
+      subscribe: () => {},
+    }),
   }),
-  removeChannel: () => {},
-  rpc: () => Promise.resolve({ data: false, error: { message: 'No database configured.' } }),
+  removeChannel: (_channel: unknown) => {},
+  rpc: (_fn: string, _params?: Record<string, unknown>) =>
+    Promise.resolve({ data: false, error: { message: 'No database configured.' } }),
 };
 
 /** Project row type (for display/types only) */
