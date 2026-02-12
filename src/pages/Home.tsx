@@ -57,6 +57,9 @@ function Home() {
 
         <section className="user-funnel">
           <h2 className="section-title">How to Participate</h2>
+          <p className="funnel-intro">
+            General attendees who are interested in visiting and checking out projects are encouraged to come visit.
+          </p>
           <div className="funnel-lanes">
             <div className="funnel-lane funnel-lane-participants">
               <h3 className="funnel-lane-title">Register a Project</h3>

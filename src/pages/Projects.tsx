@@ -80,7 +80,7 @@ function Projects() {
   }, []);
 
   return (
-    <main className="main-content">
+    <main className="main-content projects-page">
       <section className="projects-section">
         <h1 className="page-title projects-title">Projects</h1>
         <p className="projects-intro">
