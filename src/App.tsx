@@ -4,7 +4,6 @@ import Home from './pages/Home';
 import Register from './pages/Register';
 import EventFlow from './pages/EventFlow';
 import Requirements from './pages/Requirements';
-import Industry from './pages/Industry';
 import FAQ from './pages/FAQ';
 import Projects from './pages/Projects';
 import Schedule from './pages/Schedule';
@@ -20,7 +19,6 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/event-flow" element={<EventFlow />} />
           <Route path="/requirements" element={<Requirements />} />
-          <Route path="/industry" element={<Industry />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/schedule" element={<Schedule />} />

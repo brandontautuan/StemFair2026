@@ -1,6 +1,6 @@
+import { Link } from 'react-router-dom';
 import './GetInvolved.css';
 
-const INDUSTRY_FORM_URL = '#';
 const SPONSORSHIP_FORM_URL = '#';
 
 function GetInvolved() {
@@ -25,18 +25,9 @@ function GetInvolved() {
             <li>Mentor and provide feedback to the next generation</li>
             <li>Network with faculty, peers, and collaborators</li>
           </ul>
-          {INDUSTRY_FORM_URL !== '#' ? (
-            <a
-              href={INDUSTRY_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="involved-cta"
-            >
-              Open Industry Form →
-            </a>
-          ) : (
-            <span className="involved-placeholder">Form coming soon—email abaanmajid15@gmail.com</span>
-          )}
+          <Link to="/sponsors#industry" className="involved-cta">
+            Open Industry Form →
+          </Link>
         </div>
 
         {/* Sponsors Section */}

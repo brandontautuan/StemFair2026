@@ -8,6 +8,7 @@ function Home() {
         <ParticleHero className="banner-canvas" />
         <div className="banner-text">
           <h1 className="banner-title">Los Rios STEM Fair</h1>
+          <p className="banner-tagline">Learn by Doing</p>
           <p className="banner-subtitle">April 17th • Folsom Lake College</p>
         </div>
       </div>
@@ -35,7 +36,7 @@ function Home() {
             <div className="funnel-lane funnel-lane-industry">
               <h3 className="funnel-lane-title">Industry &amp; Sponsors</h3>
               <p className="funnel-lane-desc">Support the fair as a mentor, sponsor, or industry partner. Connect with emerging talent.</p>
-              <Link to="/get-involved" className="cta-button cta-secondary">Get Involved</Link>
+              <Link to="/sponsors" className="cta-button cta-secondary">Get Involved</Link>
             </div>
           </div>
         </section>

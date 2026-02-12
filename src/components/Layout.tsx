@@ -35,11 +35,6 @@ function Layout({ children }: { children: React.ReactNode }) {
             </Link>
           </li>
           <li>
-            <Link to="/industry" className={isActive('/industry') ? 'active' : ''}>
-              Industry
-            </Link>
-          </li>
-          <li>
             <Link to="/sponsors" className={isActive('/sponsors') ? 'active' : ''}>
               Sponsors
             </Link>
