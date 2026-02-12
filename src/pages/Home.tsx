@@ -14,6 +14,20 @@ function Home() {
       </div>
       
       <main className="main-content">
+        <section className="event-intro event-intro-compact">
+          <h2 className="section-title">About the Fair</h2>
+          <div className="intro-content">
+            <p className="intro-text">
+              The Los Rios STEM Fair is where &quot;learning by doing&quot; meets professional opportunity. We are providing a rare platform for community college students to bridge the gap between academic theory and the industry, allowing you to showcase your technical skills directly to professionals and the Los Rios Community. Whether you want to start a solo endeavor or a large-scale group project, this is your stage to present your work to those who move the industry forward.
+            </p>
+            <div className="info-card info-card-inline">
+              <p className="info-text">
+                <strong>April 17th</strong> · Folsom Lake College · All day
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="user-funnel">
           <h2 className="section-title">How to Participate</h2>
           <p className="funnel-intro">
@@ -37,21 +51,6 @@ function Home() {
               <h3 className="funnel-lane-title">Industry &amp; Sponsors</h3>
               <p className="funnel-lane-desc">Support the fair as a mentor, sponsor, or industry partner. Connect with emerging talent.</p>
               <Link to="/sponsors" className="cta-button cta-secondary">Get Involved</Link>
-            </div>
-          </div>
-        </section>
-
-        <section className="event-intro event-intro-compact">
-          <h2 className="section-title">About the Fair</h2>
-          <div className="intro-content">
-            <p className="intro-text">
-              The Los Rios STEM Fair celebrates innovation and scientific discovery. Students present projects, 
-              connect with peers and professionals, and gain experience in STEM fields.
-            </p>
-            <div className="info-card info-card-inline">
-              <p className="info-text">
-                <strong>April 17th</strong> · Folsom Lake College · All day
-              </p>
             </div>
           </div>
         </section>
