@@ -57,22 +57,16 @@ function Home() {
 
         <section className="user-funnel">
           <h2 className="section-title">How to Participate</h2>
-          <p className="funnel-intro">
-            April 17th at Folsom Lake College. Choose your path and get involved:
-          </p>
           <div className="funnel-lanes">
             <div className="funnel-lane funnel-lane-participants">
-              <h3 className="funnel-lane-title">Students &amp; Professors</h3>
-              <p className="funnel-lane-desc">Present a project or research at the fair. Register and submit a proposal to get started.</p>
-              <div className="funnel-ctas">
-                <Link to="/register" className="cta-button cta-secondary">Register</Link>
-                <a href="#" className="cta-button cta-secondary" title="Proposal form coming soon">Submit Proposal</a>
-              </div>
-            </div>
-            <div className="funnel-lane funnel-lane-attendees">
-              <h3 className="funnel-lane-title">General Attendees</h3>
-              <p className="funnel-lane-desc">Attend the fair, explore projects, and connect with students and innovators. No registration required—just show up!</p>
+              <h3 className="funnel-lane-title">Register a Project</h3>
+              <p className="funnel-lane-desc">Interested in leading your own project and bringing it to life? Start your own project for the STEM Fair today by filling out a proposal form.</p>
               <Link to="/register" className="cta-button cta-secondary">Register</Link>
+            </div>
+            <div className="funnel-lane funnel-lane-participants">
+              <h3 className="funnel-lane-title">Join a Project</h3>
+              <p className="funnel-lane-desc">If you&apos;re looking to join an ongoing project, you can browse the Projects tab and contribute your skills to an existing team that&apos;s looking for members.</p>
+              <Link to="/projects" className="cta-button cta-secondary">Browse Projects</Link>
             </div>
             <div className="funnel-lane funnel-lane-industry">
               <h3 className="funnel-lane-title">Industry &amp; Sponsors</h3>
