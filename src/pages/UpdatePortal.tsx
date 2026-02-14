@@ -7,9 +7,29 @@
 
 import { useState } from 'react';
 import type { FormEvent } from 'react';
+import { motion } from 'framer-motion';
 import { updateProjectProgress } from '../lib/supabaseProjects';
 import { isSupabaseConfigured } from '../lib/supabase';
 import './UpdatePortal.css';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.12, delayChildren: 0.08 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: 'easeOut' as const },
+  },
+};
+
+const viewport = { once: false, amount: 0.12 };
 
 function UpdatePortal() {
   const [projectId, setProjectId] = useState('');
@@ -46,27 +66,43 @@ function UpdatePortal() {
   if (!isSupabaseConfigured) {
     return (
       <main className="main-content">
-        <section className="update-portal-section">
-          <h1 className="page-title">Team Lead Update Portal</h1>
-          <p className="update-portal-intro">
+        <motion.section
+          className="update-portal-section"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+        >
+          <motion.h1 className="page-title" variants={itemVariants}>
+            Team Lead Update Portal
+          </motion.h1>
+          <motion.p className="update-portal-intro" variants={itemVariants}>
             Project updates are not available—this site is frontend-only with no database.
             Contact the event organizers for other ways to submit progress.
           </p>
-        </section>
+        </motion.section>
       </main>
     );
   }
 
   return (
     <main className="main-content">
-      <section className="update-portal-section">
-        <h1 className="page-title">Team Lead Update Portal</h1>
-        <p className="update-portal-intro">
+      <motion.section
+        className="update-portal-section"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+      >
+        <motion.h1 className="page-title" variants={itemVariants}>
+          Team Lead Update Portal
+        </motion.h1>
+        <motion.p className="update-portal-intro" variants={itemVariants}>
           Enter your project ID and secret key to update your project&apos;s progress.
           Contact the event organizers if you need your credentials.
-        </p>
+        </motion.p>
 
-        <form className="update-portal-form" onSubmit={handleSubmit}>
+        <motion.form className="update-portal-form" onSubmit={handleSubmit} variants={itemVariants}>
           <div className="form-group">
             <label htmlFor="projectId">Project ID (UUID)</label>
             <input
@@ -123,8 +159,8 @@ function UpdatePortal() {
           <button type="submit" className="update-portal-submit" disabled={loading}>
             {loading ? 'Updating...' : 'Update Progress'}
           </button>
-        </form>
-      </section>
+        </motion.form>
+      </motion.section>
     </main>
   );
 }

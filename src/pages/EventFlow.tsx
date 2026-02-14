@@ -21,23 +21,27 @@ const phaseVariants = {
   },
 };
 
+const viewport = { once: false, amount: 0.12 };
+
 function EventFlow() {
   return (
     <main className="main-content">
-      <section className="event-flow-section">
+      <motion.section
+        className="event-flow-section"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+      >
         <motion.h1
           className="page-title event-flow-title"
-          initial={{ opacity: 0, y: -16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
+          variants={phaseVariants}
         >
           Event Flow
         </motion.h1>
         <motion.p
           className="event-flow-intro"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.4 }}
+          variants={phaseVariants}
         >
           Follow these three phases to participate in the Los Rios STEM Fair and present your project on April 17th.
         </motion.p>
@@ -45,8 +49,6 @@ function EventFlow() {
         <motion.div
           className="event-flow-phases"
           variants={containerVariants}
-          initial="hidden"
-          animate="visible"
         >
           <motion.div className="flow-phase" variants={phaseVariants}>
             <div className="flow-phase-header">
@@ -124,7 +126,7 @@ function EventFlow() {
             </div>
           </motion.div>
         </motion.div>
-      </section>
+      </motion.section>
     </main>
   );
 }

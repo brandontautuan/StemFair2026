@@ -1,20 +1,48 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './GetInvolved.css';
 
 const SPONSORSHIP_FORM_URL = '#';
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.12, delayChildren: 0.08 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: 'easeOut' as const },
+  },
+};
+
+const viewport = { once: false, amount: 0.12 };
+
 function GetInvolved() {
   return (
     <main className="main-content">
-      <section className="get-involved-section">
-        <h1 className="page-title get-involved-title">Get Involved</h1>
-        <p className="get-involved-intro">
+      <motion.section
+        className="get-involved-section"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+      >
+        <motion.h1 className="page-title get-involved-title" variants={itemVariants}>
+          Get Involved
+        </motion.h1>
+        <motion.p className="get-involved-intro" variants={itemVariants}>
           Industry professionals, mentors, and sponsors—support the Los Rios STEM Fair and 
           connect with emerging talent.
-        </p>
+        </motion.p>
 
         {/* Industry / Mentors Section */}
-        <div className="involved-block involved-industry">
+        <motion.div className="involved-block involved-industry" variants={itemVariants}>
           <h2 className="involved-block-title">Industry &amp; Mentors</h2>
           <p className="involved-block-desc">
             Are you an industry professional interested in attending? We welcome mentors, judges, 
@@ -28,10 +56,10 @@ function GetInvolved() {
           <Link to="/sponsors#industry" className="involved-cta">
             Open Industry Form →
           </Link>
-        </div>
+        </motion.div>
 
         {/* Sponsors Section */}
-        <div className="involved-block involved-sponsors">
+        <motion.div className="involved-block involved-sponsors" variants={itemVariants}>
           <h2 className="involved-block-title">Sponsors</h2>
           <p className="involved-block-desc">
             We are grateful to our sponsors for supporting the Los Rios STEM Fair. 
@@ -83,8 +111,8 @@ function GetInvolved() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </main>
   );
 }

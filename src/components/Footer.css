@@ -1,8 +1,8 @@
 .site-footer {
   margin-top: auto;
   padding: 2rem;
-  background-color: #1a2f4a;
-  color: #e0e0e0;
+  background-color: #0A2F3D;
+  color: #D6DEE2;
 }
 
 .footer-content {
@@ -15,19 +15,21 @@
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0 0 0.75rem;
+  color: #A9B7BE;
 }
 
 .footer-contact a {
-  color: #7eb8ff;
+  color: #A9B7BE;
   text-decoration: none;
 }
 
 .footer-contact a:hover {
+  color: #D6DEE2;
   text-decoration: underline;
 }
 
 .footer-copy {
   font-size: 0.85rem;
-  color: #999;
+  color: #A9B7BE;
   margin: 0;
 }

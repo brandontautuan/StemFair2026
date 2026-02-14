@@ -1,19 +1,49 @@
+import { motion } from 'framer-motion';
+
 const INDUSTRY_FORM_URL = '#'; // Placeholder—add when available
 const SPONSORSHIP_FORM_URL = '#'; // Placeholder—add when available
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.12, delayChildren: 0.08 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: 'easeOut' as const },
+  },
+};
+
+const viewport = { once: false, amount: 0.12 };
 
 function Sponsors() {
   return (
     <main className="main-content">
       {/* Industry & Mentors section (combined from former Industry page) */}
-      <section id="industry" className="industry-section">
-        <h2 className="page-title industry-title">Industry &amp; Mentors</h2>
-        <p className="industry-intro">
+      <motion.section
+        id="industry"
+        className="industry-section"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+      >
+        <motion.h2 className="page-title industry-title" variants={itemVariants}>
+          Industry &amp; Mentors
+        </motion.h2>
+        <motion.p className="industry-intro" variants={itemVariants}>
           Are you an industry professional interested in attending the Los Rios STEM Fair? 
           We welcome mentors, judges, recruiters, and professionals who want to connect with 
           emerging STEM talent and support student innovation.
-        </p>
+        </motion.p>
 
-        <div className="industry-benefits">
+        <motion.div className="industry-benefits" variants={itemVariants}>
           <h3 className="industry-subtitle">Why Get Involved?</h3>
           <ul className="industry-list">
             <li>Connect with talented students and their innovative projects</li>
@@ -21,9 +51,9 @@ function Sponsors() {
             <li>Network with faculty, peers, and potential collaborators</li>
             <li>Support student success and STEM education in the Los Rios community</li>
           </ul>
-        </div>
+        </motion.div>
 
-        <div className="industry-cta-card">
+        <motion.div className="industry-cta-card" variants={itemVariants}>
           <h3 className="industry-cta-title">Register</h3>
           <p className="industry-cta-desc">
             Fill out the form below to register as an industry professional or mentor. We&apos;ll reach out with more details.
@@ -40,19 +70,27 @@ function Sponsors() {
           ) : (
             <span className="industry-placeholder">Form coming soon—check back later or email abaanmajid15@gmail.com</span>
           )}
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
-      <section className="page-section sponsors-section">
-        <h1 className="page-title">Sponsors</h1>
-        <div className="section-content">
-          <p className="section-text">
+      <motion.section
+        className="page-section sponsors-section"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+      >
+        <motion.h1 className="page-title" variants={itemVariants}>
+          Sponsors
+        </motion.h1>
+        <motion.div className="section-content" variants={containerVariants}>
+          <motion.p className="section-text" variants={itemVariants}>
             We are grateful to our sponsors for their generous support of the Los Rios STEM Fair. 
             Their contributions help make this event possible and enable students to showcase 
             their innovative work.
-          </p>
+          </motion.p>
 
-          <div className="info-card sponsors-cta-card">
+          <motion.div className="info-card sponsors-cta-card" variants={itemVariants}>
             <h2 className="info-title">Become a Sponsor</h2>
             <p className="info-text">
               Interested in supporting the Los Rios STEM Fair? Fill out the Sponsorship Form to express 
@@ -71,10 +109,10 @@ function Sponsors() {
             ) : (
               <span className="sponsors-form-placeholder">Sponsorship Form coming soon—email abaanmajid15@gmail.com in the meantime</span>
             )}
-          </div>
+          </motion.div>
 
           {/* Gold Sponsors Section */}
-          <div className="sponsor-tier gold-tier">
+          <motion.div className="sponsor-tier gold-tier" variants={itemVariants}>
             <h2 className="tier-title">Gold Sponsors (Coming Soon)</h2>
             <div className="sponsors-grid">
               <div className="sponsor-card gold-card">
@@ -90,10 +128,10 @@ function Sponsors() {
                 <h3 className="sponsor-name">Sponsor Name</h3>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Silver Sponsors Section */}
-          <div className="sponsor-tier silver-tier">
+          <motion.div className="sponsor-tier silver-tier" variants={itemVariants}>
             <h2 className="tier-title">Silver Sponsors (Coming Soon)</h2>
             <div className="sponsors-grid">
               <div className="sponsor-card silver-card">
@@ -113,10 +151,10 @@ function Sponsors() {
                 <h3 className="sponsor-name">Sponsor Name</h3>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Bronze Sponsors Section */}
-          <div className="sponsor-tier bronze-tier">
+          <motion.div className="sponsor-tier bronze-tier" variants={itemVariants}>
             <h2 className="tier-title">Bronze Sponsors (Coming Soon)</h2>
             <div className="sponsors-grid">
               <div className="sponsor-card bronze-card">
@@ -144,9 +182,9 @@ function Sponsors() {
                 <h3 className="sponsor-name">Sponsor Name</h3>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        </motion.div>
+      </motion.section>
     </main>
   );
 }

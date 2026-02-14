@@ -1,18 +1,19 @@
 .event-flow-section {
-  background-color: #fff;
+  background-color: #6F8895;
   border-radius: 8px;
   padding: 3rem 2.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   margin-bottom: 2rem;
 }
 
 .event-flow-title {
   text-align: center;
   margin-bottom: 1rem;
+  color: #D6DEE2;
 }
 
 .event-flow-intro {
-  color: #555;
+  color: #A9B7BE;
   font-size: 1.1rem;
   text-align: center;
   max-width: 640px;
@@ -29,13 +30,13 @@
 .flow-phase {
   padding: 2rem;
   border-radius: 12px;
-  border-left: 4px solid #0066cc;
-  background-color: #fafafa;
+  border-left: 4px solid #A9B7BE;
+  background-color: #355766;
   transition: box-shadow 0.3s ease;
 }
 
 .flow-phase:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .flow-phase-header {
@@ -52,21 +53,21 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #0066cc;
-  color: #fff;
+  background-color: #0A2F3D;
+  color: #D6DEE2;
   font-size: 1.25rem;
   font-weight: 700;
 }
 
 .flow-phase-title {
-  color: #333;
+  color: #D6DEE2;
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0;
 }
 
 .flow-phase-desc {
-  color: #555;
+  color: #A9B7BE;
   font-size: 1rem;
   line-height: 1.7;
   margin: 0 0 1.5rem;
@@ -115,20 +116,20 @@
 .flow-event-formats {
   margin: 1.5rem 0;
   padding: 1.5rem;
-  background-color: #fff;
+  background-color: #6F8895;
   border-radius: 8px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid rgba(214, 222, 226, 0.3);
 }
 
 .flow-formats-title {
-  color: #333;
+  color: #D6DEE2;
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0 0 0.5rem;
 }
 
 .flow-formats-intro {
-  color: #555;
+  color: #A9B7BE;
   font-size: 0.95rem;
   margin: 0 0 1rem;
 }
@@ -141,20 +142,20 @@
 
 .flow-format-card {
   padding: 1rem;
-  background-color: #f8f9fa;
+  background-color: #355766;
   border-radius: 6px;
-  border-left: 3px solid #0066cc;
+  border-left: 3px solid #A9B7BE;
 }
 
 .flow-format-name {
-  color: #0066cc;
+  color: #D6DEE2;
   font-size: 1rem;
   font-weight: 600;
   margin: 0 0 0.35rem;
 }
 
 .flow-format-desc {
-  color: #555;
+  color: #A9B7BE;
   font-size: 0.9rem;
   line-height: 1.5;
   margin: 0;
@@ -169,15 +170,15 @@
 
 .flow-timeline-badge {
   padding: 0.4rem 0.8rem;
-  background-color: #0066cc;
-  color: #fff;
+  background-color: #0A2F3D;
+  color: #D6DEE2;
   font-size: 0.85rem;
   font-weight: 600;
   border-radius: 6px;
 }
 
 .flow-timeline-date {
-  color: #333;
+  color: #A9B7BE;
   font-size: 1rem;
   font-weight: 500;
 }

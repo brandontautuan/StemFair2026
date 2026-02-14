@@ -1,8 +1,27 @@
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Footer from './Footer';
 
+const HERO_SCROLL_THRESHOLD = 0.85; // fraction of viewport height to consider "past hero"
+
 function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
+  const isHome = location.pathname === '/';
+  const [scrolledPastHero, setScrolledPastHero] = useState(!isHome);
+
+  useEffect(() => {
+    if (!isHome) {
+      setScrolledPastHero(true);
+      return;
+    }
+    const check = () => {
+      const threshold = window.innerHeight * HERO_SCROLL_THRESHOLD;
+      setScrolledPastHero(window.scrollY >= threshold);
+    };
+    check();
+    window.addEventListener('scroll', check, { passive: true });
+    return () => window.removeEventListener('scroll', check);
+  }, [isHome]);
 
   const isActive = (path: string) => {
     if (path === '/' && location.pathname === '/') return true;
@@ -10,9 +29,11 @@ function Layout({ children }: { children: React.ReactNode }) {
     return false;
   };
 
+  const navbarHero = isHome && !scrolledPastHero;
+
   return (
     <div className="app">
-      <nav className="navbar">
+      <nav className={`navbar ${navbarHero ? 'navbar--hero' : ''}`} aria-label="Main navigation">
         <ul className="nav-menu">
           <li>
             <Link to="/" className={isActive('/') ? 'active' : ''}>

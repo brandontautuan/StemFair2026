@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import './Projects.css';
 
 interface Project {
@@ -79,19 +80,46 @@ function Projects() {
     return () => window.removeEventListener('keydown', handleEscape);
   }, []);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.12, delayChildren: 0.08 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 24 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: 'easeOut' as const },
+    },
+  };
+
+  const viewport = { once: false, amount: 0.12 };
+
   return (
     <main className="main-content projects-page">
-      <section className="projects-section">
-        <h1 className="page-title projects-title">Projects</h1>
-        <p className="projects-intro">
+      <motion.section
+        className="projects-section"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+      >
+        <motion.h1 className="page-title projects-title" variants={itemVariants}>
+          Projects
+        </motion.h1>
+        <motion.p className="projects-intro" variants={itemVariants}>
           Explore the innovative projects from students participating in the Los Rios STEM Fair. 
           These projects span science, technology, engineering, and mathematics—showcasing the 
           creativity and dedication of our community.
-        </p>
+        </motion.p>
 
-        <div className="projects-grid">
+        <motion.div className="projects-grid" variants={containerVariants}>
           {mockProjects.map((project) => (
-            <article key={project.id} className="project-card">
+            <motion.article key={project.id} className="project-card" variants={itemVariants}>
               <span className="project-field">{project.field}</span>
               <h2 className="project-title">{project.title}</h2>
               <p className="project-team">{project.team}</p>
@@ -103,10 +131,10 @@ function Projects() {
               >
                 Read More
               </button>
-            </article>
+            </motion.article>
           ))}
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
       {selectedProject && (
         <div

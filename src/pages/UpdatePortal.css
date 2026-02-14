@@ -1,8 +1,8 @@
 .update-portal-section {
-  background-color: #fff;
+  background-color: #6F8895;
   border-radius: 8px;
   padding: 3rem 2.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   margin-bottom: 2rem;
   max-width: 560px;
   margin-left: auto;
@@ -10,7 +10,7 @@
 }
 
 .update-portal-intro {
-  color: #555;
+  color: #A9B7BE;
   font-size: 1rem;
   margin-bottom: 2rem;
   line-height: 1.6;
@@ -25,7 +25,7 @@
 .form-group label {
   display: block;
   font-weight: 600;
-  color: #333;
+  color: #D6DEE2;
   margin-bottom: 0.35rem;
 }
 
@@ -34,16 +34,23 @@
   width: 100%;
   padding: 0.6rem 0.75rem;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(214, 222, 226, 0.3);
   border-radius: 6px;
   font-family: inherit;
+  background-color: #355766;
+  color: #D6DEE2;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #A9B7BE;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
+  border-color: #A9B7BE;
+  box-shadow: 0 0 0 2px rgba(169, 183, 190, 0.3);
 }
 
 .update-portal-message {
@@ -53,13 +60,13 @@
 }
 
 .update-portal-message--success {
-  background-color: #d4edda;
-  color: #155724;
+  background-color: rgba(169, 183, 190, 0.3);
+  color: #D6DEE2;
 }
 
 .update-portal-message--error {
-  background-color: #f8d7da;
-  color: #721c24;
+  background-color: rgba(139, 69, 69, 0.4);
+  color: #D6DEE2;
 }
 
 .update-portal-submit {
