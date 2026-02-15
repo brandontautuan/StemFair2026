@@ -1,190 +1,162 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import './Sponsors.css';
 
-const INDUSTRY_FORM_URL = '#'; // Placeholder—add when available
 const SPONSORSHIP_FORM_URL = '#'; // Placeholder—add when available
+const CONTACT_EMAIL = 'abaanmajid15@gmail.com';
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.12, delayChildren: 0.08 },
+const tiers = [
+  {
+    name: 'Gold',
+    price: '$1,500',
+    colorClass: 'gold',
+    featured: true,
+    benefits: [
+      { text: 'Keynote speaker opportunity', highlight: true },
+      { text: 'Emphasized branding in a prime location', highlight: true },
+      { text: 'Showcase table at the event', highlight: false },
+    ],
   },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4, ease: 'easeOut' as const },
+  {
+    name: 'Silver',
+    price: '$1,000',
+    colorClass: 'silver',
+    featured: false,
+    benefits: [
+      { text: 'Branding on event communications', highlight: false },
+      { text: 'Showcase table at the event', highlight: false },
+    ],
   },
-};
+  {
+    name: 'Bronze',
+    price: '$500',
+    colorClass: 'bronze',
+    featured: false,
+    benefits: [
+      { text: 'Branding on event communications', highlight: false },
+    ],
+  },
+];
 
-const viewport = { once: false, amount: 0.12 };
+const whySponsor = [
+  {
+    title: 'Visibility',
+    desc: 'Showcase your brand to students, faculty, and industry peers.',
+  },
+  {
+    title: 'Talent Pipeline',
+    desc: 'Connect with motivated STEM students ready to make an impact.',
+  },
+  {
+    title: 'Community Impact',
+    desc: 'Fuel hands-on STEM education and student innovation.',
+  },
+];
 
 function Sponsors() {
+  const [showContact, setShowContact] = useState(false);
+
   return (
-    <main className="main-content">
-      {/* Industry & Mentors section (combined from former Industry page) */}
-      <motion.section
-        id="industry"
-        className="industry-section"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={viewport}
-      >
-        <motion.h2 className="page-title industry-title" variants={itemVariants}>
-          Industry &amp; Mentors
-        </motion.h2>
-        <motion.p className="industry-intro" variants={itemVariants}>
-          Are you an industry professional interested in attending the Los Rios STEM Fair? 
-          We welcome mentors, judges, recruiters, and professionals who want to connect with 
-          emerging STEM talent and support student innovation.
-        </motion.p>
+    <main className="main-content sponsors-page">
+      {/* Hero intro */}
+      <section className="sponsors-hero">
+        <h1 className="page-title">
+          Sponsor the Los Rios STEM Fair
+        </h1>
+        <p className="sponsors-hero-subtitle">
+          Partner with us to fuel student innovation. Your sponsorship directly supports
+          project showcases, keynote talks, and hands-on STEM experiences for hundreds of
+          community college students.
+        </p>
+      </section>
 
-        <motion.div className="industry-benefits" variants={itemVariants}>
-          <h3 className="industry-subtitle">Why Get Involved?</h3>
-          <ul className="industry-list">
-            <li>Connect with talented students and their innovative projects</li>
-            <li>Mentor and provide feedback to the next generation of STEM professionals</li>
-            <li>Network with faculty, peers, and potential collaborators</li>
-            <li>Support student success and STEM education in the Los Rios community</li>
-          </ul>
-        </motion.div>
+      {/* Why Sponsor */}
+      <section className="sponsors-why">
+        <h2 className="sponsors-section-title">
+          Why Sponsor?
+        </h2>
+        <div className="sponsors-why-grid">
+          {whySponsor.map((item) => (
+            <div className="sponsors-why-card" key={item.title}>
+              <h3 className="sponsors-why-card-title">{item.title}</h3>
+              <p className="sponsors-why-card-desc">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-        <motion.div className="industry-cta-card" variants={itemVariants}>
-          <h3 className="industry-cta-title">Register</h3>
-          <p className="industry-cta-desc">
-            Fill out the form below to register as an industry professional or mentor. We&apos;ll reach out with more details.
-          </p>
-          {INDUSTRY_FORM_URL !== '#' ? (
-            <a
-              href={INDUSTRY_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="industry-cta-button"
+      {/* Sponsorship Tiers */}
+      <section className="sponsors-tiers">
+        <h2 className="sponsors-section-title">
+          Sponsorship Levels
+        </h2>
+        <p className="sponsors-tiers-intro">
+          Choose the level that fits your organization. Every tier makes a meaningful difference.
+        </p>
+
+        <div className="sponsors-tiers-grid">
+          {tiers.map((tier) => (
+            <div
+              className={`sponsors-tier-card sponsors-tier-card--${tier.colorClass}${tier.featured ? ' sponsors-tier-card--featured' : ''}`}
+              key={tier.name}
             >
-              Open Industry Form →
-            </a>
-          ) : (
-            <span className="industry-placeholder">Form coming soon—check back later or email abaanmajid15@gmail.com</span>
-          )}
-        </motion.div>
-      </motion.section>
+              {tier.featured && <span className="sponsors-tier-badge">Most Popular</span>}
+              <h3 className={`sponsors-tier-name sponsors-tier-name--${tier.colorClass}`}>
+                {tier.name}
+              </h3>
+              <p className="sponsors-tier-price">{tier.price}</p>
+              <ul className="sponsors-tier-benefits">
+                {tier.benefits.map((b) => (
+                  <li key={b.text} className={b.highlight ? 'benefit-highlight' : ''}>
+                    {b.text}
+                  </li>
+                ))}
+              </ul>
+              <div className="sponsors-tier-cta-wrap">
+                {SPONSORSHIP_FORM_URL !== '#' ? (
+                  <a
+                    href={SPONSORSHIP_FORM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`sponsors-tier-btn sponsors-tier-btn--${tier.colorClass}`}
+                  >
+                    Become a {tier.name} Sponsor
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    className={`sponsors-tier-btn sponsors-tier-btn--${tier.colorClass}`}
+                    onClick={() => setShowContact(true)}
+                  >
+                    Get in Touch
+                  </button>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      <motion.section
-        className="page-section sponsors-section"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={viewport}
-      >
-        <motion.h1 className="page-title" variants={itemVariants}>
-          Sponsors
-        </motion.h1>
-        <motion.div className="section-content" variants={containerVariants}>
-          <motion.p className="section-text" variants={itemVariants}>
-            We are grateful to our sponsors for their generous support of the Los Rios STEM Fair. 
-            Their contributions help make this event possible and enable students to showcase 
-            their innovative work.
-          </motion.p>
-
-          <motion.div className="info-card sponsors-cta-card" variants={itemVariants}>
-            <h2 className="info-title">Become a Sponsor</h2>
-            <p className="info-text">
-              Interested in supporting the Los Rios STEM Fair? Fill out the Sponsorship Form to express 
-              your interest, or contact us at abaanmajid15@gmail.com to learn more about sponsorship 
-              opportunities and how your organization can contribute to student success in STEM fields.
+      {showContact && (
+        <div className="sponsors-modal-overlay" onClick={() => setShowContact(false)}>
+          <div className="sponsors-modal" onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className="sponsors-modal-close"
+              onClick={() => setShowContact(false)}
+              aria-label="Close"
+            >
+              &times;
+            </button>
+            <h2 className="sponsors-modal-title">Get in Touch</h2>
+            <p className="sponsors-modal-text">
+              Interested in sponsoring the Los Rios STEM Fair? Reach out to us at:
             </p>
-            {SPONSORSHIP_FORM_URL !== '#' ? (
-              <a
-                href={SPONSORSHIP_FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="sponsors-form-cta"
-              >
-                Open Sponsorship Form →
-              </a>
-            ) : (
-              <span className="sponsors-form-placeholder">Sponsorship Form coming soon—email abaanmajid15@gmail.com in the meantime</span>
-            )}
-          </motion.div>
-
-          {/* Gold Sponsors Section */}
-          <motion.div className="sponsor-tier gold-tier" variants={itemVariants}>
-            <h2 className="tier-title">Gold Sponsors (Coming Soon)</h2>
-            <div className="sponsors-grid">
-              <div className="sponsor-card gold-card">
-                <div className="sponsor-logo">Logo</div>
-                <h3 className="sponsor-name">Sponsor Name</h3>
-              </div>
-              <div className="sponsor-card gold-card">
-                <div className="sponsor-logo">Logo</div>
-                <h3 className="sponsor-name">Sponsor Name</h3>
-              </div>
-              <div className="sponsor-card gold-card">
-                <div className="sponsor-logo">Logo</div>
-                <h3 className="sponsor-name">Sponsor Name</h3>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Silver Sponsors Section */}
-          <motion.div className="sponsor-tier silver-tier" variants={itemVariants}>
-            <h2 className="tier-title">Silver Sponsors (Coming Soon)</h2>
-            <div className="sponsors-grid">
-              <div className="sponsor-card silver-card">
-                <div className="sponsor-logo">Logo</div>
-                <h3 className="sponsor-name">Sponsor Name</h3>
-              </div>
-              <div className="sponsor-card silver-card">
-                <div className="sponsor-logo">Logo</div>
-                <h3 className="sponsor-name">Sponsor Name</h3>
-              </div>
-              <div className="sponsor-card silver-card">
-                <div className="sponsor-logo">Logo</div>
-                <h3 className="sponsor-name">Sponsor Name</h3>
-              </div>
-              <div className="sponsor-card silver-card">
-                <div className="sponsor-logo">Logo</div>
-                <h3 className="sponsor-name">Sponsor Name</h3>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Bronze Sponsors Section */}
-          <motion.div className="sponsor-tier bronze-tier" variants={itemVariants}>
-            <h2 className="tier-title">Bronze Sponsors (Coming Soon)</h2>
-            <div className="sponsors-grid">
-              <div className="sponsor-card bronze-card">
-                <div className="sponsor-logo">Logo</div>
-                <h3 className="sponsor-name">Sponsor Name</h3>
-              </div>
-              <div className="sponsor-card bronze-card">
-                <div className="sponsor-logo">Logo</div>
-                <h3 className="sponsor-name">Sponsor Name</h3>
-              </div>
-              <div className="sponsor-card bronze-card">
-                <div className="sponsor-logo">Logo</div>
-                <h3 className="sponsor-name">Sponsor Name</h3>
-              </div>
-              <div className="sponsor-card bronze-card">
-                <div className="sponsor-logo">Logo</div>
-                <h3 className="sponsor-name">Sponsor Name</h3>
-              </div>
-              <div className="sponsor-card bronze-card">
-                <div className="sponsor-logo">Logo</div>
-                <h3 className="sponsor-name">Sponsor Name</h3>
-              </div>
-              <div className="sponsor-card bronze-card">
-                <div className="sponsor-logo">Logo</div>
-                <h3 className="sponsor-name">Sponsor Name</h3>
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-      </motion.section>
+            <a href={`mailto:${CONTACT_EMAIL}`} className="sponsors-modal-email">
+              {CONTACT_EMAIL}
+            </a>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
