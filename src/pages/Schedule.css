@@ -31,7 +31,6 @@
   padding: 1.5rem;
   background-color: #161616;
   border-radius: 8px;
-  border-left: 4px solid var(--color-accent);
 }
 
 .schedule-skeleton-time {

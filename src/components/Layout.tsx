@@ -39,41 +39,31 @@ function Layout({ children }: { children: React.ReactNode }) {
             <img src="/logo.svg" alt="" className="nav-logo-img" />
           </Link>
           <ul className="nav-menu">
-          <li>
-            <Link to="/" className={isActive('/') ? 'active' : ''}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/register" className={isActive('/register') ? 'active' : ''}>
-              Register
-            </Link>
-          </li>
-          <li>
-            <Link to="/event-flow" className={isActive('/event-flow') ? 'active' : ''}>
-              Event Flow
-            </Link>
-          </li>
-          <li>
-            <Link to="/requirements" className={isActive('/requirements') ? 'active' : ''}>
-              Requirements
-            </Link>
-          </li>
-          <li>
-            <Link to="/sponsors" className={isActive('/sponsors') ? 'active' : ''}>
-              Sponsors
-            </Link>
-          </li>
-          <li>
-            <Link to="/projects" className={isActive('/projects') ? 'active' : ''}>
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link to="/faq" className={isActive('/faq') ? 'active' : ''}>
-              FAQ
-            </Link>
-          </li>
+            <li>
+              <Link to="/" className={isActive('/') ? 'active' : ''}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/event-flow" className={isActive('/event-flow') ? 'active' : ''}>
+                Event Flow
+              </Link>
+            </li>
+            <li>
+              <Link to="/requirements" className={isActive('/requirements') ? 'active' : ''}>
+                Requirements
+              </Link>
+            </li>
+            <li>
+              <Link to="/sponsors" className={isActive('/sponsors') ? 'active' : ''}>
+                Sponsors
+              </Link>
+            </li>
+            <li>
+              <Link to="/projects" className={isActive('/projects') ? 'active' : ''}>
+                Projects
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

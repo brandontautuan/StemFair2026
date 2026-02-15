@@ -29,12 +29,10 @@
 }
 
 .involved-industry {
-  border-left: 4px solid var(--color-accent);
   background-color: #161616;
 }
 
 .involved-sponsors {
-  border-left: 4px solid var(--color-accent);
   background-color: #161616;
 }
 

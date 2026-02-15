@@ -41,7 +41,6 @@
   border-radius: 8px;
   padding: 1.25rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-left: 4px solid var(--color-accent);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
