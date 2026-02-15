@@ -5,67 +5,116 @@ import './Projects.css';
 interface Project {
   id: number;
   title: string;
-  team: string;
+  lead: string;
   field: string;
   description: string;
   longDescription: string;
   status: 'open' | 'closed';
+  showcaseFormat?: string;
 }
 
-const mockProjects: Project[] = [
+const projects: Project[] = [
   {
     id: 1,
-    title: 'Smart Irrigation System',
-    team: 'Green Tech Squad',
-    field: 'Engineering',
-    description: 'An IoT-based irrigation system that uses soil moisture sensors to optimize water usage for sustainable agriculture.',
-    longDescription: 'Our Smart Irrigation System addresses the growing need for sustainable agriculture by leveraging IoT technology. We use soil moisture sensors placed at multiple depths to monitor real-time conditions and deliver water precisely when and where crops need it. The system integrates with a mobile app that allows farmers to monitor their fields remotely, set thresholds, and receive alerts. We conducted field trials over two growing seasons and demonstrated a 35% reduction in water usage while maintaining crop yield. The project combines hardware design, embedded systems programming, and data analysis—offering a practical solution for water-scarce regions.',
+    title: 'Health and Dissolved Oxygen Levels of Wetlands',
+    lead: 'Nikolas Linn',
+    field: 'Chemistry / Biology',
+    description: 'Monitoring dissolved oxygen levels, pH, and turbidity of FLC\u2019s wetland using quantitative and qualitative methods to analyze water health.',
+    longDescription: 'Students will monitor dissolved oxygen levels, pH, and turbidity of FLC\u2019s wetland. Various quantitative and qualitative methods will be used to analyze water health from multiple standpoints (drinking water standards and capacity to support wildlife). The project compares water from the marsh behind the FLC campus to standard water quality metrics including temperature, dissolved oxygen, conductivity, pH, and turbidity, researching ways to improve the marsh water towards a drinkable state. Skills needed include chemistry and biology knowledge, lab skills, and teamworking ability.',
     status: 'open',
+    showcaseFormat: 'Both: Table display and a scheduled presentation',
   },
   {
     id: 2,
-    title: 'Machine Learning for Disease Prediction',
-    team: 'Data Medics',
-    field: 'Computer Science',
-    description: 'A predictive model that analyzes medical data to identify early signs of disease, with a focus on accessibility in underserved communities.',
-    longDescription: 'Data Medics is building an accessible machine learning platform for early disease prediction. Our model analyzes anonymized patient data—including lab results, vital signs, and family history—to flag individuals who may benefit from early screening. A key focus is making the tool usable in low-resource settings: we designed a lightweight version that runs on older hardware and provides results in multiple languages. We partnered with a local health clinic to validate our approach and are working toward an ethical framework for deployment. The project touches on data science, healthcare ethics, and human-centered design.',
-    status: 'closed',
+    title: 'FLC STEM Club Solar Regatta',
+    lead: 'Jack Brooks',
+    field: 'Engineering',
+    description: 'The FLC STEM Club\u2019s second-year entry into the SMUD Solar Regatta\u2014a competition where students design, build, and race solar-powered boats.',
+    longDescription: 'The FLC STEM Club entry into the SMUD Solar Regatta. "Working together in teams, students design, build and race their own solar-powered boats. They are judged for speed, distance, maneuverability and more. Students get hands-on, out-of-the-classroom experience with renewable energy and engineering." \u2014 SMUD Website. This will be the second year that Folsom Lake College participates in the Regatta. The team will be presenting the boat itself and what it took to build it, along with the challenges faced. Skills needed include an open mind to learning and working with your hands, research ability, and a safety-conscious mindset.',
+    status: 'open',
   },
   {
     id: 3,
-    title: 'Renewable Energy Microgrid',
-    team: 'Power Pioneers',
-    field: 'Physics / Engineering',
-    description: 'Design and simulation of a small-scale microgrid integrating solar and battery storage for local energy resilience.',
-    longDescription: 'The Renewable Energy Microgrid project explores how communities can become more energy-resilient using solar and battery storage. We built a physical scale model and a software simulation to test different configurations under varying load and weather conditions. Our findings show that a hybrid system with 60% solar and 40% battery capacity can provide reliable backup power for critical loads during grid outages. We presented our design at a regional sustainability conference and are now working with campus facilities to pilot a small installation. The project spans electrical engineering, simulation modeling, and policy considerations for renewable adoption.',
-    status: 'open',
-  },
-  {
-    id: 4,
-    title: 'Biodegradable Polymer Research',
-    team: 'Chem Innovators',
-    field: 'Chemistry',
-    description: 'Developing biodegradable plastics from plant-based materials to reduce environmental impact of single-use products.',
-    longDescription: 'Chem Innovators is developing biodegradable plastics from plant-based polymers, including corn starch and cellulose derivatives. Our goal is to create materials that perform like conventional plastics but break down naturally within months under composting conditions. We have tested several formulations for tensile strength, water resistance, and decomposition rates. The most promising blend meets the strength requirements for food packaging while degrading 90% within 120 days in industrial compost. We are now exploring scalability and cost reduction. This project involves organic chemistry, materials testing, and environmental impact assessment.',
+    title: 'Wetland Ecosystem & Mycoremediation Research',
+    lead: 'Jacob Ward',
+    field: 'Biology / Chemistry',
+    description: 'Research conducted at FLC and UC Davis on the protected wetland ecosystem at Folsom Lake College, integrating water quality analysis, biomonitoring, and mycoremediation.',
+    longDescription: 'Folsom Lake College (FLC) is home to a protected wetland ecosystem that is part of the historic Natoma Ditch. This area along the North East side of the campus property was set aside as part of an environmental mitigation plan during an expansion project at the FLC\u2013El Dorado Center in Placerville. The wetland area has cultural significance for the local Nisenan Maidu and Miwok communities.\n\nThe aim of this project and future research is to integrate the wetland as a key component of authentic learning experiences. Analyzing water quality and collecting data for biomonitoring helped to inform mycoremediation research at Folsom Lake College. The long-term research interest is to determine what role native species of fungi play in the degradation of environmental contaminants such as phthalates found in mass-manufactured products. Employing new and innovative technologies like nanopore sequencing has allowed a deeper level of inquiry for research internships. Skills involved include DNA sequencing, organic chemistry, and analytical chemistry.',
     status: 'closed',
   },
   {
-    id: 5,
-    title: 'Aquatic Ecosystem Restoration',
-    team: 'Eco Warriors',
-    field: 'Biology',
-    description: 'Study of wetland restoration techniques and their effectiveness in supporting native species and water quality.',
-    longDescription: 'Eco Warriors is studying wetland restoration techniques in local watersheds. We compare sites that have undergone different restoration interventions—native plant reintroduction, water flow restoration, and invasive species removal—and measure outcomes for water quality, biodiversity, and carbon sequestration. Over two years, we collected data on macroinvertebrates, plant cover, and water chemistry. Our preliminary results suggest that a combined approach yields the best outcomes, with native plant cover increasing by 40% and nitrate levels dropping significantly. We work closely with a regional conservancy and hope our findings will inform future restoration projects.',
+    id: 4,
+    title: 'Dying Light C++ Mod Loader',
+    lead: 'Brendon Bone',
+    field: 'Computer Science',
+    description: 'A mod loader for Dying Light (2015) that replaces the original executable with a custom one, enabling loading of custom resource packs, material packs, and DLLs.',
+    longDescription: 'This project is a mod loader for the game Dying Light (2015). The goal is to load mods such as custom resource packs (models/textures), custom material packs (shaders/material data) and DLLs (libraries that contain additional code).\n\nThe project works by replacing the original game executable with a custom executable. This is possible because of the way the game was programmed\u2014instead of having one program that contains the entire game, it is split into multiple parts (the engine, game, filesystem, renderer, and DyingLightGame.exe). The game executable is relatively simple, calling only a few needed functions from the engine and filesystem in order to start the game and load assets. Once re-implemented, the custom executable can load extra data the original game would not have intended.\n\nBy treating the engine like an API, a structured, reliable pathway for customization is created without rewriting the engine itself. The project requires C++ experience, reverse engineering through programs like IDA and Ghidra, and understanding of how functions are exported and imported across libraries.',
     status: 'open',
+    showcaseFormat: 'Present: Speaking in front of an audience/panel',
+  },
+  {
+    id: 5,
+    title: 'Macrocyclic Peptide Chemistry Research',
+    lead: 'Emma Lawler',
+    field: 'Chemistry',
+    description: 'A presentation on research from the UC Berkeley C-GEM Summer Research Program, focusing on macrocyclic peptide chemistry and rational drug design.',
+    longDescription: 'A talk based on research conducted during the UC Berkeley C-GEM Summer Research Program in the field of chemical biology with a focus on peptide chemistry.\n\nMacrocyclic peptides are highly valuable as a drug modality due to their size and rigidity, providing these scaffolds the ability to target "undruggable targets". Recent work from the Schepartz lab has demonstrated a novel way to additionally rigidify macrocyclic peptide conformations via a modified Friedl\u00e4nder reaction that installs a heterocyclic quinoline motif directly in the peptide backbone, producing a high rotational barrier around the adjacent chiral aryl-amide atropisomeric axis.\n\nThis work aims to elucidate the design rules for such peptides in three aspects: identifying the relationship between ring size and rotational barrier, elucidating the impact of peptide sequence on product distribution, and improving the solid-phase synthesis of these macrocycles by adapting new synthetic strategies. Expanding these design rules should lay the groundwork for the rational design of libraries of atropisomeric macrocycles to screen for peptides able to target "undruggable targets".',
+    status: 'closed',
   },
   {
     id: 6,
-    title: 'Accessible STEM Education Platform',
-    team: 'Inclusive Code',
-    field: 'Computer Science',
-    description: 'A web platform that makes STEM learning resources available in multiple languages and formats for diverse learners.',
-    longDescription: 'Inclusive Code is building a web platform that makes STEM learning resources accessible to diverse learners. The platform offers content in multiple languages, supports screen readers and keyboard navigation, and provides alternative formats (text, audio, video). We conducted usability testing with students who have visual impairments, dyslexia, and English as a second language to ensure our design meets real needs. The platform includes interactive modules for physics, math, and coding—all built with accessibility standards in mind. We plan to launch a pilot with three local schools this fall and iterate based on educator feedback.',
+    title: 'Interactive Math Learning Game',
+    lead: 'Almar Abu Alkhair',
+    field: 'Mathematics / Computer Science',
+    description: 'An interactive web-based game that helps math students by leading them through mini-challenges where they solve problems step-by-step in a fun, guided way.',
+    longDescription: 'The idea is an interactive web-based game that helps math students. Each math problem leads them into a mini-challenge or small game, where they solve it step-by-step in a fun way, and by the end, they arrive at the solution through guided, playful interaction.\n\nThis project requires basic math knowledge, beginner web development skills, and simple tools like HTML, CSS, and JavaScript, along with access to a computer and internet.',
     status: 'open',
+  },
+  {
+    id: 7,
+    title: 'MuseOn \u2014 Social Event App',
+    lead: 'Denis Polyakov',
+    field: 'Computer Science / Physics',
+    description: 'A social event app that helps students, athletes, and artists host semi-spontaneous events unified by music, with smart playlist algorithms and community safety features.',
+    longDescription: 'A social event app called MuseOn assists students, athletes, and artists in forming and hosting semi-spontaneous events in their community. The app\u2019s central theme is music and its ability to unite; hosts create a plan (study group, pickup sports, art exposition), set a location, and a playlist, then publish their post on the app, which notifies members within a set radius. Passersby can also join by scanning a QR code or receiving a Bluetooth invitation.\n\nUpon joining the "bubble," members can link their music preferences through the app, which uses an algorithm based on the surrounding environment, set goals, and member preferences to pick the next song. Hosts are responsible for maintaining order at events and are assisted by the app. Anyone walking by who deems the music too loud or notices other unruly behaviors can report it through the same QR/Bluetooth system. Hosts then receive a Mu score based on these inputs and can credit participants for positive contributions, creating a system that reinforces positive behavior.\n\nUltimately, connections are formed between interest groups that otherwise would have never interacted, and members are incentivized to spend more time outside their comfort zone while maintaining peace and safety. Skills needed include physics of sound waves, programming, machine/statistical learning, and event hosting.',
+    status: 'open',
+  },
+  {
+    id: 8,
+    title: 'Live Game Theory Simulation',
+    lead: 'Jolie Carroll',
+    field: 'Economics',
+    description: 'An interactive economics project using a crowd of students as real-time participants to recreate experiments like the Prisoner\u2019s Dilemma, Public Goods, and Ultimatum Game.',
+    longDescription: 'Using a crowd of students as real-time participants, this project recreates simple experiments modeling economic behavior, such as the Prisoner\u2019s Dilemma, Public Goods, and Ultimatum Game. The team uses either Google Sheets or a Streamlit app to keep track of participants\u2019 choices and then displays the aggregate data anonymously for students to view.\n\nStudents will walk away from the booth with an understanding of basic behavioral economics: Why do agents make the choices they do? Which choice is the best strategy? What happens when participants free ride?\n\nSkills involved include Python and Excel/Google Sheets knowledge (desirable but not required\u2014the team can learn along the way). An interest in economics is important. A large projector or screen is ideal to project results visually.',
+    status: 'open',
+  },
+  {
+    id: 9,
+    title: 'AI Ping Pong Scorer',
+    lead: 'Tarek Sakakini',
+    field: 'Computer Science / AI',
+    description: 'An AI-based phone app that uses computer vision to automatically score ping pong matches, identifying the winner of each point in real time.',
+    longDescription: 'In this project, the team builds an AI-based phone app that automatically scores ping pong matches. The app uses the phone\u2019s camera and computer vision techniques to identify the winner of each point and maintain score. To speed up development, AI coding tools are also used to develop the app.\n\nThis project requires a basic understanding of software development and AI. It is part of a course submission.',
+    status: 'open',
+  },
+  {
+    id: 10,
+    title: 'CISC 310 \u2014 Vibe-Coded Mobile Apps',
+    lead: 'Tarek Sakakini',
+    field: 'Computer Science',
+    description: 'Students in CISC 310 use Cursor IDE and AI-assisted coding to develop full mobile apps\u2014iOS, Android, or Web\u2014to solve real-world problems.',
+    longDescription: 'In the CISC 310 course, students get the chance to vibe code a full mobile app. The creativity of students goes wild and many amazing products come out. Students utilize Cursor IDE for AI-assisted coding to develop one of iOS, Android, or a Web App to solve a problem they have or that they think people in general have.\n\nThis project requires basic comfort with computer tools and is part of a course submission.',
+    status: 'open',
+  },
+  {
+    id: 11,
+    title: 'Self-Navigating Smart Sofa',
+    lead: 'Scott Bohn',
+    field: 'Computer Science / Engineering',
+    description: 'A "Waymo on wheels" sofa controllable via remote control with obstacle avoidance, combining programming, machine learning, and mechanical engineering.',
+    longDescription: 'A Waymo on wheels, this sofa will be controllable via remote control and faith in obstacle collision. Utilizing both programming and engineering principles, along with bay-area tech influence, the group attempts a twist on a conventional project by embedding autonomy into a seemingly comfortable couch.\n\nSkills needed include programming, machine learning, mechanical engineering, electrical engineering, Solidworks/AutoCAD, and craftsmanship. The project requires a large space to fit a sofa (could be outside), accompanied by a table to present information and a screen to display a video of the creation process.',
+    status: 'closed',
+    showcaseFormat: 'Both: Table display and a scheduled presentation',
   },
 ];
 
@@ -118,11 +167,11 @@ function Projects() {
         </motion.p>
 
         <motion.div className="projects-grid" variants={containerVariants}>
-          {mockProjects.map((project) => (
+          {projects.map((project) => (
             <motion.article key={project.id} className="project-card" variants={itemVariants}>
               <span className="project-field">{project.field}</span>
               <h2 className="project-title">{project.title}</h2>
-              <p className="project-team">{project.team}</p>
+              <p className="project-team">{project.lead}</p>
               <p className="project-description">{project.description}</p>
               <button
                 type="button"
@@ -169,9 +218,11 @@ function Projects() {
               <h2 id="project-modal-title" className="project-modal-title">
                 {selectedProject.title}
               </h2>
-              <p className="project-modal-team">{selectedProject.team} · {selectedProject.field}</p>
+              <p className="project-modal-team">{selectedProject.lead} · {selectedProject.field}</p>
               <div className="project-modal-description">
-                {selectedProject.longDescription}
+                {selectedProject.longDescription.split('\n\n').map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
               </div>
             </div>
           </div>

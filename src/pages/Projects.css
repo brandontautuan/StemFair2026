@@ -198,6 +198,14 @@
   line-height: 1.7;
 }
 
+.project-modal-description p {
+  margin: 0 0 1rem;
+}
+
+.project-modal-description p:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 900px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
