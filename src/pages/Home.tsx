@@ -100,8 +100,8 @@ function Home() {
             How to Participate
           </h2>
           <p className="participate-intro">
-            There are two ways to be part of the Los Rios STEM Fair. Whether you want to attend and explore
-            or present your own work, we&apos;d love to have you there.
+            There are three ways to be part of the Los Rios STEM Fair. Whether you want to attend and explore,
+            present your own work, or join an existing project, we&apos;d love to have you there.
           </p>
           <div className="participate-paths">
             <div className="participate-card">
@@ -135,6 +135,22 @@ function Home() {
                 broader Los Rios community on April 17th.
               </p>
               <Link to="/proposal-form" className="participate-card-btn">Submit a Proposal</Link>
+            </div>
+            <div className="participate-card">
+              <div className="participate-card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="36" height="36">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <line x1="19" y1="8" x2="19" y2="14" />
+                  <line x1="22" y1="11" x2="16" y2="11" />
+                </svg>
+              </div>
+              <h3 className="participate-card-title">Join an Existing Project</h3>
+              <p className="participate-card-desc">
+                Want to contribute but don&apos;t have your own project? Browse the list of registered
+                projects looking for team members and ask to join one that interests you.
+              </p>
+              <Link to="/projects" className="participate-card-btn">Browse Projects</Link>
             </div>
           </div>
         </section>
