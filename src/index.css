@@ -112,8 +112,7 @@ select:focus-visible {
   background-color: var(--bg-page);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   padding: 1rem 0;
-  position: sticky;
-  top: 0;
+  position: static;
   z-index: 100;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -215,8 +214,8 @@ select:focus-visible {
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, var(--color-banner-start) 0%, var(--color-banner-mid) 50%, var(--color-banner-end) 100%);
-  min-height: 100vh;
-  height: 100vh;
+  min-height: 50vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -291,11 +290,11 @@ select:focus-visible {
   margin-top: 1.25rem;
 }
 
-/* Reverse pyramid: two buttons on top, one centered below */
+/* All buttons on one row */
 .banner-actions-pyramid {
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .banner-actions-row {
@@ -355,8 +354,8 @@ select:focus-visible {
 
 @media (max-width: 768px) {
   .banner-container {
-    min-height: 100vh;
-    height: 100vh;
+    min-height: 50vh;
+    height: 50vh;
   }
   
   .banner-text {
@@ -427,8 +426,6 @@ select:focus-visible {
 
 .intro-content {
   text-align: left;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .intro-text {
@@ -442,8 +439,12 @@ select:focus-visible {
   margin-bottom: 0;
 }
 
+.event-intro-compact .section-title {
+  text-align: left;
+}
+
 .event-intro-compact .intro-text {
-  text-align: center;
+  text-align: left;
 }
 
 .info-card-inline {
@@ -672,13 +673,13 @@ select:focus-visible {
 .key-dates-schedule-inline {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .key-dates-schedule-heading {
   color: var(--text-primary);
-  font-size: 1.25rem;
+  font-size: 2.5rem;
   font-weight: 700;
+  text-align: left;
   margin: 0 0 0.75rem;
 }
 
@@ -725,6 +726,7 @@ select:focus-visible {
   font-weight: 700;
   color: var(--text-secondary);
   margin-bottom: 0.25rem;
+  white-space: nowrap;
 }
 
 .schedule-title {
@@ -1063,37 +1065,8 @@ select:focus-visible {
   margin-top: 2rem;
 }
 
-.schedule-item {
-  display: flex;
-  gap: 2rem;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  background-color: #161616;
-  border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.schedule-item:hover {
-  transform: translateX(5px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.schedule-time {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  min-width: 100px;
-}
-
 .schedule-details {
   flex: 1;
-}
-
-.schedule-title {
-  color: var(--text-primary);
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
 }
 
 .schedule-description {
@@ -1262,15 +1235,6 @@ select:focus-visible {
 }
 
 @media (max-width: 768px) {
-  .schedule-item {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .schedule-time {
-    min-width: auto;
-  }
-  
   .teams-grid,
   .sponsors-grid {
     grid-template-columns: 1fr;

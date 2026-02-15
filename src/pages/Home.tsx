@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import ParticleHero from '../components/ParticleHero';
 import './EventFlow.css';
 import './FAQ.css';
@@ -12,26 +11,6 @@ const faqs = [
   { question: 'What is the team size?', answer: 'TBD' },
   { question: 'Is prior experience required?', answer: 'Coming soon' },
 ];
-
-/* Same pattern as Event Flow: container with stagger, items fade in with y: 24 → 0 */
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.12, delayChildren: 0.08 },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4, ease: 'easeOut' as const },
-  },
-};
-
-const viewport = { once: false, amount: 0.12 };
 
 const HOME_PAGE_CLASS = 'home-page';
 
@@ -50,82 +29,77 @@ function Home() {
           <p className="banner-tagline">Learn by Doing</p>
           <p className="banner-subtitle">April 17th • Folsom Lake College</p>
           <div className="banner-actions banner-actions-pyramid" role="group" aria-label="Hero actions">
-            <div className="banner-actions-row banner-actions-row-top">
-              <Link to="/register" className="banner-btn banner-btn-primary">Register</Link>
-              <Link to="/proposal-form" className="banner-btn banner-btn-secondary">Propose a Project</Link>
-            </div>
-            <div className="banner-actions-row banner-actions-row-bottom">
-              <Link to="/projects" className="banner-btn banner-btn-secondary">Join a Project</Link>
-            </div>
+            <Link to="/register" className="banner-btn banner-btn-primary">Register</Link>
+            <Link to="/proposal-form" className="banner-btn banner-btn-secondary">Propose a Project</Link>
+            <Link to="/projects" className="banner-btn banner-btn-secondary">Join a Project</Link>
           </div>
         </div>
       </div>
 
       <main className="main-content home-content">
-        <motion.section
-          className="event-intro event-intro-compact"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewport}
-        >
-          <motion.h2 className="section-title" variants={itemVariants}>
-            About the Fair
-          </motion.h2>
-          <motion.div className="intro-content" variants={itemVariants}>
+        <section className="event-intro event-intro-compact">
+          <h2 className="section-title">
+            What is the Los Rios STEM Fair
+          </h2>
+          <div className="intro-content">
             <p className="intro-text">
-              The Los Rios STEM Fair is where &quot;learning by doing&quot; meets professional opportunity. We are providing a rare platform for community college students to bridge the gap between academic theory and the industry, allowing you to showcase your technical skills directly to professionals and the Los Rios Community. Whether you want to start a solo endeavor or a large-scale group project, this is your stage to present your work to those who move the industry forward.
+              The Los Rios STEM Fair is where &quot;learning by doing&quot; meets professional opportunity. We are providing a platform for community college students to bridge the gap between academic theory and the industry, allowing you to showcase your technical skills directly to professionals and the Los Rios Community. Whether you want to start a solo endeavor or a large-scale group project, this is your stage to present your work to those who move the industry forward.
             </p>
-            <div className="key-dates-schedule-inline">
-              <h3 className="key-dates-schedule-heading">Day-of Schedule</h3>
-              <p className="key-dates-schedule-disclaimer">
-                <strong>This schedule is prone to heavy change and is not finalized yet.</strong>
-              </p>
-              <p className="key-dates-schedule-intro">
-                April 17th at Folsom Lake College. Times and sessions may be updated closer to the event.
-              </p>
-              <ul className="schedule-list" aria-label="Event schedule">
-                <li className="schedule-item">
-                  <span className="schedule-time">12:00 – 12:30</span>
-                  <span className="schedule-title">Intro Period</span>
-                  <p className="schedule-desc">
-                    Guests arrive and get settled. Coffee and light refreshments will be available—a good time to mingle, chat, and connect. Tables and materials will be set up during this window.
-                  </p>
-                </li>
-                <li className="schedule-item">
-                  <span className="schedule-time">12:30 – 2:00</span>
-                  <span className="schedule-title">Presentation Period</span>
-                  <p className="schedule-desc">
-                    Teams that opt to present will give formal presentations during this block. Attendees can watch project demos, hear from student teams, and join Q&amp;A in a structured session.
-                  </p>
-                </li>
-                <li className="schedule-item">
-                  <span className="schedule-time">2:00 – 4:00</span>
-                  <span className="schedule-title">Showcase Period</span>
-                  <p className="schedule-desc">
-                    Teams that opt to showcase will table their projects for walk-by viewing. Visitors can browse tables, view projects, and talk with teams. Food will be served during this time.
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </motion.div>
-        </motion.section>
+          </div>
+          <div className="key-dates-schedule-inline">
+            <h3 className="section-title key-dates-schedule-heading">Event Schedule (Tentative)</h3>
+            <p className="key-dates-schedule-intro">
+              April 17th at Folsom Lake College.
+            </p>
+            <ul className="schedule-list" aria-label="Event schedule">
+              <li className="schedule-item">
+                <span className="schedule-time">8:30 – 9:30 AM</span>
+                <span className="schedule-title">Check-In &amp; Refreshments</span>
+                <p className="schedule-desc">
+                  Guests arrive, check in, and enjoy light refreshments. A chance to settle in, mingle, and get ready for the day ahead.
+                </p>
+              </li>
+              <li className="schedule-item">
+                <span className="schedule-time">9:30 – 10:00 AM</span>
+                <span className="schedule-title">Welcome Address</span>
+                <p className="schedule-desc">
+                  Opening remarks and an overview of the day&apos;s events to kick off the Los Rios STEM Fair.
+                </p>
+              </li>
+              <li className="schedule-item">
+                <span className="schedule-time">9:40 AM – 12:15 PM</span>
+                <span className="schedule-title">Project Presentations</span>
+                <p className="schedule-desc">
+                  Teams deliver formal presentations of their projects to judges and attendees in scheduled time slots.
+                </p>
+              </li>
+              <li className="schedule-item">
+                <span className="schedule-time">12:30 – 2:30 PM</span>
+                <span className="schedule-title">Project Showcase &amp; Lunch</span>
+                <p className="schedule-desc">
+                  Browse project tables at your own pace while enjoying lunch. A great opportunity to chat with teams, see demos, and explore hands-on exhibits.
+                </p>
+              </li>
+              <li className="schedule-item">
+                <span className="schedule-time">2:30 – 3:15 PM</span>
+                <span className="schedule-title">Awards &amp; Closing Remarks</span>
+                <p className="schedule-desc">
+                  Recognition of outstanding projects followed by closing remarks to wrap up the fair.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-        <motion.section
-          className="event-flow-section"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewport}
-        >
-          <motion.h2 className="section-title event-flow-title" variants={itemVariants}>
+        <section className="event-flow-section">
+          <h2 className="section-title event-flow-title">
             Event Flow
-          </motion.h2>
-          <motion.p className="event-flow-intro" variants={itemVariants}>
+          </h2>
+          <p className="event-flow-intro">
             Follow these three phases to participate in the Los Rios STEM Fair and present your project on April 17th.
-          </motion.p>
-          <motion.div className="event-flow-phases" variants={containerVariants}>
-            <motion.div className="flow-phase" variants={itemVariants}>
+          </p>
+          <div className="event-flow-phases">
+            <div className="flow-phase">
               <div className="flow-phase-header">
                 <span className="flow-phase-number">1</span>
                 <h3 className="flow-phase-title">Registration &amp; Proposal</h3>
@@ -141,8 +115,8 @@ function Home() {
                 <Link to="/register" className="flow-cta flow-cta-primary">Register</Link>
                 <Link to="/proposal-form" className="flow-cta flow-cta-secondary">Submit Proposal</Link>
               </div>
-            </motion.div>
-            <motion.div className="flow-phase" variants={itemVariants}>
+            </div>
+            <div className="flow-phase">
               <div className="flow-phase-header">
                 <span className="flow-phase-number">2</span>
                 <h3 className="flow-phase-title">Team Formation via Discord</h3>
@@ -154,8 +128,8 @@ function Home() {
               <div className="flow-phase-actions">
                 <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer" className="flow-cta flow-cta-primary">Join Discord</a>
               </div>
-            </motion.div>
-            <motion.div className="flow-phase" variants={itemVariants}>
+            </div>
+            <div className="flow-phase">
               <div className="flow-phase-header">
                 <span className="flow-phase-number">3</span>
                 <h3 className="flow-phase-title">Project Development</h3>
@@ -186,37 +160,30 @@ function Home() {
                 <span className="flow-timeline-badge">Event Day</span>
                 <span className="flow-timeline-date">April 17th • Folsom Lake College</span>
               </div>
-            </motion.div>
-          </motion.div>
-        </motion.section>
+            </div>
+          </div>
+        </section>
 
-        <motion.section
-          className="faq-section"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewport}
-        >
-          <motion.h2 className="section-title faq-title" variants={itemVariants}>
+        <section className="faq-section">
+          <h2 className="section-title faq-title">
             Frequently Asked Questions
-          </motion.h2>
-          <motion.p className="faq-intro" variants={itemVariants}>
+          </h2>
+          <p className="faq-intro">
             Have questions about the Los Rios STEM Fair? Find answers below. For additional help,
             reach out via email or ping an admin on Discord.
-          </motion.p>
+          </p>
           <dl className="faq-list">
             {faqs.map((faq, index) => (
-              <motion.div key={index} className="faq-item" variants={itemVariants}>
+              <div key={index} className="faq-item">
                 <dt className="faq-question">{faq.question}</dt>
                 <dd className="faq-answer">{faq.answer}</dd>
-              </motion.div>
+              </div>
             ))}
           </dl>
-        </motion.section>
+        </section>
       </main>
     </>
   );
 }
 
 export default Home;
-
