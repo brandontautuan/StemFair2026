@@ -46,12 +46,12 @@ function Layout({ children }: { children: React.ReactNode }) {
             </li>
             <li>
               <Link to="/event-flow" className={isActive('/event-flow') ? 'active' : ''}>
-                Event Flow
+                Important Deadlines
               </Link>
             </li>
             <li>
-              <Link to="/requirements" className={isActive('/requirements') ? 'active' : ''}>
-                Requirements
+              <Link to="/projects" className={isActive('/projects') ? 'active' : ''}>
+                Projects
               </Link>
             </li>
             <li>
@@ -60,8 +60,8 @@ function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             </li>
             <li>
-              <Link to="/projects" className={isActive('/projects') ? 'active' : ''}>
-                Projects
+              <Link to="/contact" className={isActive('/contact') ? 'active' : ''}>
+                Contact Us
               </Link>
             </li>
           </ul>
