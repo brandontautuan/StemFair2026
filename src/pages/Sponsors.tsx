@@ -9,7 +9,7 @@ const tiers = [
     name: 'Gold',
     price: '$1,500',
     colorClass: 'gold',
-    featured: true,
+    featured: false,
     benefits: [
       { text: 'Keynote speaker opportunity', highlight: true },
       { text: 'Emphasized branding in a prime location', highlight: true },

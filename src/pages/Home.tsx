@@ -8,7 +8,7 @@ const faqs = [
   {
     question: 'Who can participate?',
     answer:
-      'The STEM Fair is open to all students currently enrolled in a college within the Los Rios Community College District. Whether you attend American River College, Cosumnes River College, Folsom Lake College, or Sacramento City College, you are welcome to participate!',
+      'The STEM Fair is open to all members of the Los Rios Community College District — students, faculty, and staff alike. Whether you are at American River College, Cosumnes River College, Folsom Lake College, or Sacramento City College, you are welcome to participate!',
   },
   {
     question: 'What is the team size limit?',

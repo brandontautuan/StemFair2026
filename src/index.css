@@ -214,8 +214,8 @@ select:focus-visible {
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, var(--color-banner-start) 0%, var(--color-banner-mid) 50%, var(--color-banner-end) 100%);
-  min-height: 50vh;
-  height: 50vh;
+  min-height: 75vh;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -354,8 +354,8 @@ select:focus-visible {
 
 @media (max-width: 768px) {
   .banner-container {
-    min-height: 50vh;
-    height: 50vh;
+    min-height: 75vh;
+    height: 75vh;
   }
   
   .banner-text {

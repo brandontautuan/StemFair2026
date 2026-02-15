@@ -80,7 +80,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 /* Tier card */
@@ -94,6 +94,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  height: 100%;
 }
 
 /* Gold */
@@ -111,9 +112,9 @@
   border-color: rgba(205, 127, 50, 0.4);
 }
 
-/* Featured badge */
+/* Featured badge — same padding as other cards; badge is absolutely positioned */
 .sponsors-tier-card--featured {
-  padding-top: 3.25rem;
+  padding-top: 2.5rem;
 }
 
 .sponsors-tier-badge {
