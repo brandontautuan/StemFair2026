@@ -79,7 +79,7 @@ function UpdatePortal() {
           <motion.p className="update-portal-intro" variants={itemVariants}>
             Project updates are not available—this site is frontend-only with no database.
             Contact the event organizers for other ways to submit progress.
-          </p>
+          </motion.p>
         </motion.section>
       </main>
     );
