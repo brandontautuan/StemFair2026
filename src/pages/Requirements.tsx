@@ -75,15 +75,17 @@ function Requirements() {
             </div>
           </motion.div>
 
-          <motion.div className="requirement-card requirement-card-placeholder" variants={itemVariants}>
+          <motion.div className="requirement-card" variants={itemVariants}>
             <div className="requirement-icon" aria-hidden>📄</div>
             <div className="requirement-content">
               <h2 className="requirement-name">Proposal Form</h2>
               <p className="requirement-desc">
-                Submit your project proposal. This form will be available soon—check back later or 
-                join Discord for updates.
+                Submit your project proposal for the STEM Fair. Complete the form to propose
+                a presentation or showcase for April 17th.
               </p>
-              <span className="requirement-placeholder">Coming soon</span>
+              <Link to="/proposal-form" className="requirements-cta-link requirement-card-link">
+                Open Proposal Form →
+              </Link>
             </div>
           </motion.div>
         </motion.div>

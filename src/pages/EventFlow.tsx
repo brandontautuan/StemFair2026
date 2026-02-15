@@ -66,9 +66,9 @@ function EventFlow() {
               <Link to="/register" className="flow-cta flow-cta-primary">
                 Register
               </Link>
-              <a href="#" className="flow-cta flow-cta-secondary" title="Proposal form coming soon">
+              <Link to="/proposal-form" className="flow-cta flow-cta-secondary">
                 Submit Proposal
-              </a>
+              </Link>
             </div>
           </motion.div>
 

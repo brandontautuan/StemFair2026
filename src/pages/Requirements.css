@@ -105,6 +105,10 @@
   border-radius: 6px;
 }
 
+.requirement-card-link {
+  margin-top: 0.5rem;
+}
+
 .requirements-cta {
   text-align: center;
   margin-top: 2.5rem;

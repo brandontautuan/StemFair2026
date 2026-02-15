@@ -9,6 +9,7 @@ import Projects from './pages/Projects';
 import Schedule from './pages/Schedule';
 import Teams from './pages/Teams';
 import Sponsors from './pages/Sponsors';
+import ProposalForm from './pages/ProposalForm';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/proposal-form" element={<ProposalForm />} />
           <Route path="/event-flow" element={<EventFlow />} />
           <Route path="/requirements" element={<Requirements />} />
           <Route path="/faq" element={<FAQ />} />
