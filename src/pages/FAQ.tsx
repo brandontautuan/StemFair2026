@@ -1,18 +1,28 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import './FAQ.css';
 
 const faqs = [
   {
     question: 'Who can participate?',
-    answer: 'Coming soon',
+    answer:
+      'The STEM Fair is open to all students currently enrolled in a college within the Los Rios Community College District. Whether you attend American River College, Cosumnes River College, Folsom Lake College, or Sacramento City College, you are welcome to participate!',
   },
   {
-    question: 'What is the team size?',
-    answer: 'TBD',
+    question: 'What is the team size limit?',
+    answer:
+      'Teams can have up to 6 members. You are also welcome to participate individually or in a smaller group.',
   },
   {
     question: 'Is prior experience required?',
-    answer: 'Coming soon',
+    answer:
+      'No prior experience is required! The STEM Fair is designed to be inclusive for participants of all skill levels. Come with curiosity and a willingness to learn.',
+  },
+  {
+    question:
+      'If I\'m already part of a participating project, do I still need to register to attend?',
+    answer:
+      'No — if you are already on a registered project team, you do not need to separately register as an attendee. Your project registration covers your participation.',
   },
 ];
 
@@ -35,6 +45,41 @@ const itemVariants = {
 
 const viewport = { once: false, amount: 0.12 };
 
+function FAQAccordion() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <dl className="faq-list">
+      {faqs.map((faq, index) => (
+        <motion.div
+          key={index}
+          className={`faq-item ${openIndex === index ? 'faq-item--open' : ''}`}
+          variants={itemVariants}
+        >
+          <dt
+            className="faq-question"
+            role="button"
+            tabIndex={0}
+            onClick={() => toggle(index)}
+            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(index); } }}
+            aria-expanded={openIndex === index}
+          >
+            <span>{faq.question}</span>
+            <span className="faq-chevron" aria-hidden="true" />
+          </dt>
+          <dd className="faq-answer">
+            <div className="faq-answer-inner">{faq.answer}</div>
+          </dd>
+        </motion.div>
+      ))}
+    </dl>
+  );
+}
+
 function FAQ() {
   return (
     <main className="main-content">
@@ -53,14 +98,7 @@ function FAQ() {
           reach out via email or ping an admin on Discord.
         </motion.p>
 
-        <dl className="faq-list">
-          {faqs.map((faq, index) => (
-            <motion.div key={index} className="faq-item" variants={itemVariants}>
-              <dt className="faq-question">{faq.question}</dt>
-              <dd className="faq-answer">{faq.answer}</dd>
-            </motion.div>
-          ))}
-        </dl>
+        <FAQAccordion />
       </motion.section>
     </main>
   );
