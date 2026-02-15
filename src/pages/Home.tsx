@@ -4,8 +4,6 @@ import ParticleHero from '../components/ParticleHero';
 import './EventFlow.css';
 import './FAQ.css';
 
-const DISCORD_URL = 'https://discord.gg/twRRrEyANK';
-
 const faqs = [
   { question: 'Who can participate?', answer: 'Coming soon' },
   { question: 'What is the team size?', answer: 'TBD' },
@@ -46,6 +44,53 @@ function Home() {
               The Los Rios STEM Fair is where &quot;learning by doing&quot; meets professional opportunity. We are providing a platform for community college students to bridge the gap between academic theory and the industry, allowing you to showcase your technical skills directly to professionals and the Los Rios Community. Whether you want to start a solo endeavor or a large-scale group project, this is your stage to present your work to those who move the industry forward.
             </p>
           </div>
+        </section>
+
+        <section className="participate-section">
+          <h2 className="section-title participate-title">
+            How to Participate
+          </h2>
+          <p className="participate-intro">
+            There are two ways to be part of the Los Rios STEM Fair. Whether you want to attend and explore
+            or present your own work, we&apos;d love to have you there.
+          </p>
+          <div className="participate-paths">
+            <div className="participate-card">
+              <div className="participate-card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="36" height="36">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <h3 className="participate-card-title">Attend the Event</h3>
+              <p className="participate-card-desc">
+                Register to attend the STEM Fair as a guest. Watch project presentations, explore
+                the showcase floor, network with students and industry professionals, and be part
+                of the Los Rios STEM community.
+              </p>
+              <Link to="/register" className="participate-card-btn">Register to Attend</Link>
+            </div>
+            <div className="participate-card">
+              <div className="participate-card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="36" height="36">
+                  <path d="M12 20h9" />
+                  <path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                </svg>
+              </div>
+              <h3 className="participate-card-title">Showcase Your Project</h3>
+              <p className="participate-card-desc">
+                Have a project idea you&apos;d like to present? Submit a project proposal and get
+                the chance to showcase your work to judges, industry professionals, and the
+                broader Los Rios community on April 17th.
+              </p>
+              <Link to="/proposal-form" className="participate-card-btn">Submit a Proposal</Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="event-intro event-intro-compact">
           <div className="key-dates-schedule-inline">
             <h3 className="section-title key-dates-schedule-heading">Event Schedule (Tentative)</h3>
             <p className="key-dates-schedule-intro">
@@ -88,79 +133,6 @@ function Home() {
                 </p>
               </li>
             </ul>
-          </div>
-        </section>
-
-        <section className="event-flow-section">
-          <h2 className="section-title event-flow-title">
-            Event Flow
-          </h2>
-          <p className="event-flow-intro">
-            Follow these three phases to participate in the Los Rios STEM Fair and present your project on April 17th.
-          </p>
-          <div className="event-flow-phases">
-            <div className="flow-phase">
-              <div className="flow-phase-header">
-                <span className="flow-phase-number">1</span>
-                <h3 className="flow-phase-title">Registration &amp; Proposal</h3>
-              </div>
-              <p className="flow-phase-desc">
-                Register and submit a project proposal. Complete the Registration Form to sign up,
-                then submit a Proposal Form with your project idea. When registering, you&apos;ll indicate
-                whether your project will participate in the <strong>Presentation Period</strong> (scheduled
-                formal presentations) or the <strong>Showcase/Open Floor</strong> (informal walk-by viewing).
-                This helps us organize the fair and connect you with potential team members.
-              </p>
-              <div className="flow-phase-actions">
-                <Link to="/register" className="flow-cta flow-cta-primary">Register</Link>
-                <Link to="/proposal-form" className="flow-cta flow-cta-secondary">Submit Proposal</Link>
-              </div>
-            </div>
-            <div className="flow-phase">
-              <div className="flow-phase-header">
-                <span className="flow-phase-number">2</span>
-                <h3 className="flow-phase-title">Team Formation via Discord</h3>
-              </div>
-              <p className="flow-phase-desc">
-                Join our Discord server to find teammates, form project groups, and stay updated on announcements.
-                Discord is the primary hub for team formation and event coordination—don&apos;t miss out!
-              </p>
-              <div className="flow-phase-actions">
-                <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer" className="flow-cta flow-cta-primary">Join Discord</a>
-              </div>
-            </div>
-            <div className="flow-phase">
-              <div className="flow-phase-header">
-                <span className="flow-phase-number">3</span>
-                <h3 className="flow-phase-title">Project Development</h3>
-              </div>
-              <p className="flow-phase-desc">
-                Develop your project with your team. Use Discord to collaborate, ask questions, and get support.
-                Your work culminates at the Los Rios STEM Fair on <strong>April 17th</strong> at Folsom Lake College.
-              </p>
-              <div className="flow-event-formats">
-                <h4 className="flow-formats-title">Event Day Formats</h4>
-                <p className="flow-formats-intro">Choose which format fits your project when you register:</p>
-                <div className="flow-format-cards">
-                  <div className="flow-format-card">
-                    <h5 className="flow-format-name">Presentation Period</h5>
-                    <p className="flow-format-desc">
-                      Scheduled, formal presentations. Your team presents to judges and attendees in a dedicated time slot.
-                    </p>
-                  </div>
-                  <div className="flow-format-card">
-                    <h5 className="flow-format-name">Showcase / Open Floor</h5>
-                    <p className="flow-format-desc">
-                      Free-roam, informal viewing. Attendees browse projects at their own pace—great for demos and hands-on exhibits.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="flow-phase-timeline">
-                <span className="flow-timeline-badge">Event Day</span>
-                <span className="flow-timeline-date">April 17th • Folsom Lake College</span>
-              </div>
-            </div>
           </div>
         </section>
 

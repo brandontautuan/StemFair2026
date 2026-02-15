@@ -1,84 +1,80 @@
-.event-flow-section {
+/* ── How to Participate Section ─────────────────────────────── */
+
+.participate-section {
   padding: 3rem 2.5rem;
   margin-bottom: 2rem;
 }
 
-.event-flow-title {
-  text-align: center;
+.participate-title {
+  text-align: left;
   margin-bottom: 1rem;
   color: var(--text-primary);
 }
 
-.event-flow-intro {
+.participate-intro {
   color: var(--text-secondary);
   font-size: 1.1rem;
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 3rem;
+  text-align: left;
+  max-width: none;
+  margin: 0 0 3rem;
   line-height: 1.7;
 }
 
-.event-flow-phases {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+.participate-paths {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.flow-phase {
-  padding: 2rem;
+.participate-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 2rem;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background-color: #161616;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.flow-phase:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+.participate-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  transform: translateY(-4px);
 }
 
-.flow-phase-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.flow-phase-number {
+.participate-card-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.08);
+  margin-bottom: 1.5rem;
   color: var(--text-primary);
-  font-size: 1.25rem;
-  font-weight: 700;
 }
 
-.flow-phase-title {
+.participate-card-title {
   color: var(--text-primary);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  margin: 0;
+  margin: 0 0 1rem;
 }
 
-.flow-phase-desc {
+.participate-card-desc {
   color: var(--text-secondary);
   font-size: 1rem;
   line-height: 1.7;
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.75rem;
+  flex-grow: 1;
 }
 
-.flow-phase-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.flow-cta {
+.participate-card-btn {
   display: inline-block;
-  padding: 0.6rem 1.25rem;
+  padding: 0.7rem 1.5rem;
   font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
@@ -89,118 +85,24 @@
   transition: var(--button-transition);
 }
 
-.flow-cta:hover {
+.participate-card-btn:hover {
   background-color: var(--button-hover-bg);
   color: var(--button-hover-color);
   border-color: var(--button-hover-bg);
   transform: translateY(-2px);
 }
 
-.flow-cta-primary,
-.flow-cta-secondary {
-  background-color: var(--button-idle-bg);
-  color: var(--button-idle-color);
-  border: var(--button-idle-border);
-}
-
-.flow-cta-primary:hover,
-.flow-cta-secondary:hover {
-  background-color: var(--button-hover-bg);
-  color: var(--button-hover-color);
-  border-color: var(--button-hover-bg);
-}
-
-.flow-event-formats {
-  margin: 1.5rem 0;
-  padding: 1.5rem;
-  background-color: #0d0d0d;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.flow-formats-title {
-  color: var(--text-primary);
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem;
-}
-
-.flow-formats-intro {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  margin: 0 0 1rem;
-}
-
-.flow-format-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-}
-
-.flow-format-card {
-  padding: 1rem;
-  background-color: #161616;
-  border-radius: 6px;
-}
-
-.flow-format-name {
-  color: var(--text-primary);
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 0.35rem;
-}
-
-.flow-format-desc {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.flow-phase-timeline {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.flow-timeline-badge {
-  padding: 0.4rem 0.8rem;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: var(--text-primary);
-  font-size: 0.85rem;
-  font-weight: 600;
-  border-radius: 6px;
-}
-
-.flow-timeline-date {
-  color: var(--text-secondary);
-  font-size: 1rem;
-  font-weight: 500;
-}
-
 @media (max-width: 768px) {
-  .event-flow-section {
+  .participate-section {
     padding: 2rem 1.5rem;
   }
 
-  .flow-phase {
-    padding: 1.5rem;
-  }
-
-  .flow-phase-title {
-    font-size: 1.25rem;
-  }
-
-  .flow-phase-actions {
-    flex-direction: column;
-  }
-
-  .flow-format-cards {
+  .participate-paths {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  .flow-cta {
-    text-align: center;
+  .participate-card {
+    padding: 2rem 1.5rem;
   }
 }
