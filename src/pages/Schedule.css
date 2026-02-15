@@ -1,5 +1,5 @@
 .schedule-disclaimer {
-  color: #A9B7BE;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.5;
   margin: 0 0 0.75rem;
@@ -29,15 +29,15 @@
   display: flex;
   gap: 2rem;
   padding: 1.5rem;
-  background-color: #355766;
+  background-color: #161616;
   border-radius: 8px;
-  border-left: 4px solid rgba(214, 222, 226, 0.3);
+  border-left: 4px solid var(--color-accent);
 }
 
 .schedule-skeleton-time {
   width: 80px;
   height: 24px;
-  background-color: rgba(214, 222, 226, 0.3);
+  background-color: rgba(255, 255, 255, 0.15);
   border-radius: 4px;
   flex-shrink: 0;
 }
@@ -52,20 +52,20 @@
 .schedule-skeleton-title {
   width: 60%;
   height: 20px;
-  background-color: rgba(214, 222, 226, 0.25);
+  background-color: rgba(255, 255, 255, 0.12);
   border-radius: 4px;
 }
 
 .schedule-skeleton-desc {
   width: 90%;
   height: 16px;
-  background-color: rgba(214, 222, 226, 0.2);
+  background-color: rgba(255, 255, 255, 0.08);
   border-radius: 4px;
 }
 
 .schedule-coming-soon {
   text-align: center;
-  color: #A9B7BE;
+  color: var(--text-secondary);
   font-size: 1rem;
 }
 

@@ -39,6 +39,10 @@ function Home() {
           <h1 className="banner-title">Los Rios STEM Fair</h1>
           <p className="banner-tagline">Learn by Doing</p>
           <p className="banner-subtitle">April 17th • Folsom Lake College</p>
+          <div className="banner-actions" role="group" aria-label="Hero actions">
+            <Link to="/register" className="banner-btn banner-btn-primary">Register</Link>
+            <Link to="/projects" className="banner-btn banner-btn-secondary">Join a Project</Link>
+          </div>
         </div>
       </div>
 

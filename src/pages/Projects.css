@@ -7,21 +7,22 @@
 }
 
 .projects-section {
-  background-color: #6F8895;
+  background-color: var(--bg-card);
   border-radius: 8px;
   padding: 1.5rem 1.25rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .projects-title {
   text-align: center;
   margin-bottom: 0.5rem;
-  color: #D6DEE2;
+  color: var(--text-primary);
 }
 
 .projects-intro {
-  color: #A9B7BE;
+  color: var(--text-secondary);
   font-size: 1rem;
   text-align: center;
   max-width: 640px;
@@ -36,30 +37,31 @@
 }
 
 .project-card {
-  background-color: #355766;
+  background-color: #161616;
   border-radius: 8px;
   padding: 1.25rem;
-  border-left: 4px solid #A9B7BE;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 4px solid var(--color-accent);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .project-field {
   display: inline-block;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #A9B7BE;
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
 }
 
 .project-title {
-  color: #D6DEE2;
+  color: var(--text-primary);
   font-size: 1.3rem;
   font-weight: 700;
   margin: 0 0 0.25rem;
@@ -67,14 +69,14 @@
 }
 
 .project-team {
-  color: #A9B7BE;
+  color: var(--text-secondary);
   font-size: 0.9rem;
   font-style: italic;
   margin: 0 0 0.5rem;
 }
 
 .project-description {
-  color: #A9B7BE;
+  color: var(--text-secondary);
   font-size: 0.9rem;
   line-height: 1.55;
   margin: 0 0 0.75rem;
@@ -113,9 +115,10 @@
 }
 
 .project-modal {
-  background-color: #6F8895;
+  background-color: var(--bg-card);
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   max-width: 600px;
   max-height: 80vh;
   display: flex;
@@ -129,7 +132,7 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid rgba(214, 222, 226, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   flex-shrink: 0;
 }
 
@@ -141,13 +144,13 @@
 }
 
 .project-modal-badge--open {
-  background-color: rgba(169, 183, 190, 0.3);
-  color: #D6DEE2;
+  background-color: rgba(34, 197, 94, 0.2);
+  color: var(--text-primary);
 }
 
 .project-modal-badge--closed {
-  background-color: rgba(111, 136, 149, 0.8);
-  color: #A9B7BE;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--text-secondary);
 }
 
 .project-modal-close {
@@ -177,21 +180,21 @@
 }
 
 .project-modal-title {
-  color: #D6DEE2;
+  color: var(--text-primary);
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 0 0.5rem;
 }
 
 .project-modal-team {
-  color: #A9B7BE;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   font-style: italic;
   margin: 0 0 1.25rem;
 }
 
 .project-modal-description {
-  color: #A9B7BE;
+  color: var(--text-secondary);
   font-size: 1rem;
   line-height: 1.7;
 }

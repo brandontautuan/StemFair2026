@@ -149,15 +149,15 @@ const ParticleHero: React.FC<ParticleHeroProps> = ({
         if (particle.y < 0) particle.y = rect.height;
         if (particle.y > rect.height) particle.y = 0;
 
-        // Draw particle
+        // Draw particle (white on black)
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0, 102, 204, 0.6)';
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
         ctx.fill();
       });
 
-      // Draw connections
-      ctx.strokeStyle = 'rgba(0, 102, 204, 0.2)';
+      // Draw connections (dark blue on black)
+      ctx.strokeStyle = 'rgba(37, 99, 235, 0.2)';
       ctx.lineWidth = 1;
 
       for (let i = 0; i < particles.length; i++) {
@@ -168,7 +168,7 @@ const ParticleHero: React.FC<ParticleHeroProps> = ({
 
           if (distance < connectionDistance) {
             const opacity = 1 - distance / connectionDistance;
-            ctx.strokeStyle = `rgba(0, 102, 204, ${opacity * 0.3})`;
+            ctx.strokeStyle = `rgba(37, 99, 235, ${opacity * 0.3})`;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -194,7 +194,7 @@ const ParticleHero: React.FC<ParticleHeroProps> = ({
       particlesRef.current.forEach((particle) => {
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0, 102, 204, 0.6)';
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
         ctx.fill();
       });
     }

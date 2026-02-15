@@ -34,7 +34,11 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="app">
       <nav className={`navbar ${navbarHero ? 'navbar--hero' : ''}`} aria-label="Main navigation">
-        <ul className="nav-menu">
+        <div className="navbar-inner">
+          <Link to="/" className="nav-logo" aria-label="Home">
+            <img src="/logo.svg" alt="" className="nav-logo-img" />
+          </Link>
+          <ul className="nav-menu">
           <li>
             <Link to="/" className={isActive('/') ? 'active' : ''}>
               Home
@@ -70,7 +74,8 @@ function Layout({ children }: { children: React.ReactNode }) {
               FAQ
             </Link>
           </li>
-        </ul>
+          </ul>
+        </div>
       </nav>
       <div className="app-body">
         {children}

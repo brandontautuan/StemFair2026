@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Reconstruct (local preferences, not committed)
+.reconstruct/
