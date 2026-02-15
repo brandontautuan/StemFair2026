@@ -46,7 +46,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             </li>
             <li>
               <Link to="/event-flow" className={isActive('/event-flow') ? 'active' : ''}>
-                Important Deadlines
+                Important Dates
               </Link>
             </li>
             <li>
