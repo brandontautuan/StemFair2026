@@ -7,7 +7,6 @@ const CONTACT_EMAIL = 'abaanmajid15@gmail.com';
 const tiers = [
   {
     name: 'Gold',
-    price: '$1,500',
     colorClass: 'gold',
     featured: false,
     benefits: [
@@ -18,7 +17,6 @@ const tiers = [
   },
   {
     name: 'Silver',
-    price: '$1,000',
     colorClass: 'silver',
     featured: false,
     benefits: [
@@ -28,7 +26,6 @@ const tiers = [
   },
   {
     name: 'Bronze',
-    price: '$500',
     colorClass: 'bronze',
     featured: false,
     benefits: [
@@ -103,7 +100,6 @@ function Sponsors() {
               <h3 className={`sponsors-tier-name sponsors-tier-name--${tier.colorClass}`}>
                 {tier.name}
               </h3>
-              <p className="sponsors-tier-price">{tier.price}</p>
               <ul className="sponsors-tier-benefits">
                 {tier.benefits.map((b) => (
                   <li key={b.text} className={b.highlight ? 'benefit-highlight' : ''}>
