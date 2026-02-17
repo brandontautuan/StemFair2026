@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Footer from './Footer';
 
@@ -9,18 +9,18 @@ function Layout({ children }: { children: React.ReactNode }) {
   const isHome = location.pathname === '/';
   const [scrolledPastHero, setScrolledPastHero] = useState(!isHome);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location.pathname]);
 
+  // Close mobile menu on scroll so it doesn't interfere with hero transition
   useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => { document.body.style.overflow = ''; };
+    if (!mobileMenuOpen) return;
+    const onScroll = () => setMobileMenuOpen(false);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, [mobileMenuOpen]);
 
   useEffect(() => {
@@ -43,7 +43,8 @@ function Layout({ children }: { children: React.ReactNode }) {
     return false;
   };
 
-  const navbarHero = isHome && !scrolledPastHero;
+  // Force solid background when mobile menu is open so text is readable
+  const navbarHero = isHome && !scrolledPastHero && !mobileMenuOpen;
 
   const toggleMenu = useCallback(() => {
     setMobileMenuOpen((prev) => !prev);
@@ -67,7 +68,10 @@ function Layout({ children }: { children: React.ReactNode }) {
             <span className="nav-hamburger-bar" />
             <span className="nav-hamburger-bar" />
           </button>
-          <ul className={`nav-menu ${mobileMenuOpen ? 'nav-menu--open' : ''}`}>
+          <ul
+            ref={menuRef}
+            className={`nav-menu ${mobileMenuOpen ? 'nav-menu--open' : ''}`}
+          >
             <li>
               <Link to="/" className={isActive('/') ? 'active' : ''}>
                 Home
