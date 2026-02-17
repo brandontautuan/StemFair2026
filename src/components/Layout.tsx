@@ -1,13 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Footer from './Footer';
 
-const HERO_SCROLL_THRESHOLD = 0.85; // fraction of viewport height to consider "past hero"
+const HERO_SCROLL_THRESHOLD = 0.85;
 
 function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
   const isHome = location.pathname === '/';
   const [scrolledPastHero, setScrolledPastHero] = useState(!isHome);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileMenuOpen]);
 
   useEffect(() => {
     if (!isHome) {
@@ -31,6 +45,10 @@ function Layout({ children }: { children: React.ReactNode }) {
 
   const navbarHero = isHome && !scrolledPastHero;
 
+  const toggleMenu = useCallback(() => {
+    setMobileMenuOpen((prev) => !prev);
+  }, []);
+
   return (
     <div className="app">
       <nav className={`navbar ${navbarHero ? 'navbar--hero' : ''}`} aria-label="Main navigation">
@@ -38,7 +56,18 @@ function Layout({ children }: { children: React.ReactNode }) {
           <Link to="/" className="nav-logo" aria-label="Home">
             <img src="/logo.svg" alt="" className="nav-logo-img" />
           </Link>
-          <ul className="nav-menu">
+          <button
+            className={`nav-hamburger ${mobileMenuOpen ? 'nav-hamburger--open' : ''}`}
+            onClick={toggleMenu}
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileMenuOpen}
+            type="button"
+          >
+            <span className="nav-hamburger-bar" />
+            <span className="nav-hamburger-bar" />
+            <span className="nav-hamburger-bar" />
+          </button>
+          <ul className={`nav-menu ${mobileMenuOpen ? 'nav-menu--open' : ''}`}>
             <li>
               <Link to="/" className={isActive('/') ? 'active' : ''}>
                 Home

@@ -208,6 +208,82 @@ select:focus-visible {
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Hamburger button — hidden on desktop */
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  z-index: 201;
+}
+
+.nav-hamburger-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-hamburger--open .nav-hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger--open .nav-hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger--open .nav-hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .navbar-inner {
+    flex-wrap: wrap;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    padding: 0.5rem 0 1rem;
+    order: 3;
+  }
+
+  .nav-menu--open {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu li a {
+    padding: 0.75rem 1rem;
+    font-size: 1.05rem;
+    border-bottom: none !important;
+  }
+
+  .nav-menu li a.active {
+    color: var(--color-accent);
+    border-bottom: none !important;
+  }
+}
+
 /* Banner / Hero (full viewport on home) */
 .banner-container {
   width: 100%;
@@ -1008,6 +1084,40 @@ select:focus-visible {
   line-height: 1.8;
   margin-bottom: 2rem;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 2rem 1.25rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .event-intro {
+    padding: 1.5rem 1rem;
+  }
+
+  .user-funnel {
+    padding: 2rem 1.5rem;
+  }
+
+  .key-dates-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .key-dates-schedule-heading {
+    font-size: 2rem;
+  }
+
+  .page-section {
+    padding: 2rem 1.5rem;
+  }
 }
 
 /* Info Cards */
