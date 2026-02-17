@@ -10,9 +10,9 @@ const tiers = [
     colorClass: 'gold',
     featured: false,
     benefits: [
-      { text: 'Keynote speaker opportunity', highlight: true },
-      { text: 'Emphasized branding in a prime location', highlight: true },
-      { text: 'Showcase table at the event', highlight: false },
+      { text: 'Keynote speaker slot', highlight: true },
+      { text: 'Premium branding on event communication', highlight: true },
+      { text: 'Premium table location in demo session', highlight: false },
     ],
   },
   {
@@ -20,8 +20,8 @@ const tiers = [
     colorClass: 'silver',
     featured: false,
     benefits: [
-      { text: 'Branding on event communications', highlight: false },
-      { text: 'Showcase table at the event', highlight: false },
+      { text: 'Premium branding on event communication', highlight: false },
+      { text: 'Premium table location in demo session', highlight: false },
     ],
   },
   {
@@ -29,7 +29,8 @@ const tiers = [
     colorClass: 'bronze',
     featured: false,
     benefits: [
-      { text: 'Branding on event communications', highlight: false },
+      { text: 'Standard branding on event communication', highlight: false },
+      { text: 'Table location in demo session', highlight: false },
     ],
   },
 ];
