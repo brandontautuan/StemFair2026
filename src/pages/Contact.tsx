@@ -52,7 +52,7 @@ function Contact() {
               <li className="contact-email-item">
                 <span className="contact-email-label">General Inquiries</span>
                 <span className="contact-email-address">
-                  <a href="mailto:abaanmajid15@gmail.com">abaanmajid15@gmail.com</a>
+                  <a href="mailto:stemfairlosrios@gmail.com">stemfairlosrios@gmail.com</a>
                 </span>
               </li>
             </ul>

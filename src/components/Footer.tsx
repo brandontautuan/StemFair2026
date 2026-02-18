@@ -8,7 +8,7 @@ function Footer() {
       <div className="footer-content">
         <p className="footer-contact">
           <strong>Questions?</strong> Email us at{' '}
-          <a href="mailto:abaanmajid15@gmail.com">abaanmajid15@gmail.com</a>
+          <a href="mailto:stemfairlosrios@gmail.com">stemfairlosrios@gmail.com</a>
           {' '}or ping an <strong>admin role</strong> on our{' '}
           <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">Discord</a>.
         </p>

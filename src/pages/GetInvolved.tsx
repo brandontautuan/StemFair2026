@@ -75,7 +75,7 @@ function GetInvolved() {
               Open Sponsorship Form →
             </a>
           ) : (
-            <span className="involved-placeholder">Sponsorship Form coming soon—email abaanmajid15@gmail.com</span>
+            <span className="involved-placeholder">Sponsorship Form coming soon—email stemfairlosrios@gmail.com</span>
           )}
 
           <div className="sponsor-tier gold-tier">

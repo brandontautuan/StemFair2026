@@ -207,7 +207,7 @@ function Home() {
           </h2>
           <p className="faq-intro">
             Have questions about the Los Rios STEM Fair? Find answers below. For additional help,
-            reach out via email or ping an admin on Discord.
+            email us at stemfairlosrios@gmail.com or ping an admin on Discord.
           </p>
           <FAQAccordion />
         </section>

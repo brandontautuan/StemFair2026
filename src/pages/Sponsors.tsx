@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './Sponsors.css';
 
 const SPONSORSHIP_FORM_URL = '#'; // Placeholder—add when available
-const CONTACT_EMAIL = 'abaanmajid15@gmail.com';
+const SPONSORSHIP_CONTACT_EMAIL = 'haroonk8201@gmail.com';
 
 const tiers = [
   {
@@ -146,10 +146,10 @@ function Sponsors() {
             </button>
             <h2 className="sponsors-modal-title">Get in Touch</h2>
             <p className="sponsors-modal-text">
-              Interested in sponsoring the Los Rios STEM Fair? Reach out to us at:
+              Interested in sponsoring the Los Rios STEM Fair? We&apos;d love to talk! Please contact Haroon Khan, our Outreach &amp; Partnerships Coordinator.
             </p>
-            <a href={`mailto:${CONTACT_EMAIL}`} className="sponsors-modal-email">
-              {CONTACT_EMAIL}
+            <a href={`mailto:${SPONSORSHIP_CONTACT_EMAIL}`} className="sponsors-modal-email">
+              {SPONSORSHIP_CONTACT_EMAIL}
             </a>
           </div>
         </div>

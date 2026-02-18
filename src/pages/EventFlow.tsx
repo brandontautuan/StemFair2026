@@ -4,34 +4,34 @@ import './EventFlow.css';
 
 const dates = [
   {
-    date: 'February 22',
+    date: 'March 15th (Recommended)',
     label: 'Propose a Project',
     description:
-      'Submit your project proposal by this date. This is your chance to outline your idea and secure your spot at the STEM Fair.',
+      'We recommend submitting your project proposal by this date. Outline your idea and secure your spot at the STEM Fair.',
     buttonLabel: 'Submit Proposal',
     buttonTo: '/proposal-form',
   },
   {
-    date: 'March 8',
+    date: 'March 15th (Recommended)',
     label: 'Join a Project',
     description:
-      'Looking to join a project? Browse available teams and connect with a group that matches your interests by this date. Don\u2019t wait\u2014spots fill up fast!',
+      'Looking to join a project? We recommend browsing available teams and connecting with a group that matches your interests by this date. Spots fill up fast!',
     buttonLabel: 'Browse Projects',
     buttonTo: '/projects',
   },
   {
-    date: 'April 5',
+    date: 'April 2nd',
     label: 'Sponsor the Event',
     description:
-      'Last day for organizations to sponsor the event. Help support student innovation and get your brand in front of the STEM community.',
+      'Reach out by this date to sponsor the event. Help support student innovation and get your brand in front of the STEM community.',
     buttonLabel: 'Become a Sponsor',
     buttonTo: '/sponsors',
   },
   {
-    date: 'April 16',
+    date: 'April 16th',
     label: 'Register to Attend',
     description:
-      'Register to attend the STEM Fair by this date. Secure your spot to experience student projects, demos, and presentations in person.',
+      'We recommend registering to attend the STEM Fair by this date. Secure your spot to experience student projects, demos, and presentations in person.',
     buttonLabel: 'Register Now',
     buttonTo: '/register',
   },
@@ -70,7 +70,7 @@ function EventFlow() {
           Important Dates
         </motion.h1>
         <motion.p className="important-dates-subtitle" variants={itemVariants}>
-          Mark your calendar — here are the key deadlines for the Los Rios STEM Fair.
+          Mark your calendar — here are the recommended dates for the Los Rios STEM Fair.
         </motion.p>
 
         <div className="timeline">
