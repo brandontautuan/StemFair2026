@@ -34,3 +34,10 @@
   color: var(--text-secondary);
   margin: 0;
 }
+
+.footer-credit {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0.5rem 0 0;
+  opacity: 0.85;
+}

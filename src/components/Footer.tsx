@@ -13,6 +13,7 @@ function Footer() {
           <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">Discord</a>.
         </p>
         <p className="footer-copy">© {new Date().getFullYear()} Los Rios STEM Fair</p>
+        <p className="footer-credit">Developed by Brandon Tautuan</p>
       </div>
     </footer>
   );
