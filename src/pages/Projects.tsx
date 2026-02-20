@@ -178,6 +178,18 @@ const projects: Project[] = [
     skills: 'Data management, AI model building (Python), graph and visualization design, and presentation skills.',
     status: 'open',
   },
+  {
+    id: 15,
+    title: 'How Things Work (and Sometimes Don\u2019t): Failure & Success Analysis of Engineering Marvels',
+    lead: 'Dan Ross',
+    email: '',
+    field: 'Engineering / Physics',
+    description: 'ENGR 420 Engineering Statics students present engaging analyses of famous engineering artifacts, exploring both triumphs and spectacular failures from a statics perspective.',
+    longDescription: 'Come explore how engineers think, design, analyze, and learn\u2014by stepping into the world of both triumph and disaster! ENGR 420 (Engineering Statics) students from the Los Rios Community College District will present insightful and engaging analyses of well-known engineering artifacts, structures, and systems from a Statics perspective.\n\nStatics is the foundational study of forces on systems in equilibrium\u2014that means understanding why things stay still, how they hold up under load, and why they sometimes fail spectacularly. The presenters don\u2019t just explain how these technologies work; they also dive into what goes wrong due to technical challenges and human factors, and what we learn from those failures so future engineers can build safer, smarter systems.\n\nPresentations include: the 1999 Mars Climate Rover, the Space Shuttle Challenger Rocket, the Leaning Tower of Pisa, Statics of Slingshot Attractions, and Analysis of Bridge Types.',
+    skills: 'Engineering statics fundamentals and physics of forces and equilibrium.',
+    status: 'closed',
+    showcaseFormat: 'Present: Speaking in front of an audience/panel',
+  },
 ];
 
 function Projects() {
