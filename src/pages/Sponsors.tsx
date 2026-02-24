@@ -61,9 +61,19 @@ function Sponsors() {
           Sponsor the Los Rios STEM Fair
         </h1>
         <p className="sponsors-hero-subtitle">
-          Partner with us to fuel student innovation. Your sponsorship directly supports
-          project showcases, keynote talks, and hands-on STEM experiences for hundreds of
-          community college students.
+          Your sponsorship supports project showcases, keynotes, and hands-on STEM for
+          hundreds of community college students. We&apos;ve partnered with industry
+          before—at the{' '}
+          <a
+            href="https://tikkl.com/folsomlakecollege/c/0e2c4e36/?section=overview"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sponsors-hero-link"
+          >
+            2025 Tech Summit &amp; Hackathon at Folsom Lake College
+          </a>
+          , partners helped make it a success—and we&apos;d love similar partnerships for
+          the STEM Fair.
         </p>
       </section>
 

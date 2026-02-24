@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import ParticleHero from '../components/ParticleHero';
+import HeroPhotoBackground from '../components/HeroPhotoBackground';
 import './EventFlow.css';
 import './FAQ.css';
+import './Home.css';
 
 const faqs = [
   {
@@ -70,15 +71,17 @@ function Home() {
   return (
     <>
       <div className="banner-container home-hero">
-        <ParticleHero className="banner-canvas" />
-        <div className="banner-text">
-          <h1 className="banner-title">Los Rios STEM Fair</h1>
-          <p className="banner-tagline">Learn by Doing</p>
-          <p className="banner-subtitle">April 17th • Folsom Lake College</p>
-          <div className="banner-actions banner-actions-pyramid" role="group" aria-label="Hero actions">
-            <Link to="/register" className="banner-btn banner-btn-primary">Register</Link>
-            <Link to="/proposal-form" className="banner-btn banner-btn-secondary">Propose a Project</Link>
-            <Link to="/projects" className="banner-btn banner-btn-secondary">Join a Project</Link>
+        <div className="home-hero-inner">
+          <HeroPhotoBackground />
+          <div className="banner-text">
+            <h1 className="banner-title">Los Rios STEM Fair</h1>
+            <p className="banner-tagline">Learn by Doing</p>
+            <p className="banner-subtitle">April 17th • Folsom Lake College</p>
+            <div className="banner-actions banner-actions-pyramid" role="group" aria-label="Hero actions">
+              <Link to="/register" className="banner-btn banner-btn-primary">Register</Link>
+              <Link to="/proposal-form" className="banner-btn banner-btn-secondary">Propose a Project</Link>
+              <Link to="/projects" className="banner-btn banner-btn-secondary">Join a Project</Link>
+            </div>
           </div>
         </div>
       </div>

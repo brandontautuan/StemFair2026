@@ -1,0 +1,12 @@
+/* Home page – hero layout tweaks */
+
+.home-hero-inner {
+  position: relative;
+  width: min(1120px, 100% - 3rem);
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
