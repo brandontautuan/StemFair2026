@@ -9,9 +9,9 @@ const faqs = [
       'The STEM Fair is open to all students currently enrolled in a college within the Los Rios Community College District. Whether you attend American River College, Cosumnes River College, Folsom Lake College, or Sacramento City College, you are welcome to participate!',
   },
   {
-    question: 'What is the team size limit?',
+    question: 'Is there a team size limit?',
     answer:
-      'Teams can have up to 6 members. You are also welcome to participate individually or in a smaller group.',
+      'No—there is no team size cap. You can participate solo or with a group of any size. That said, larger teams often find it harder to coordinate and to keep everyone actively involved, so it helps to plan how you\'ll work together.',
   },
   {
     question: 'Is prior experience required?',

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './Projects.css';
 
@@ -297,6 +298,12 @@ function Projects() {
           ))}
         </motion.div>
       </motion.section>
+
+      <section className="projects-own-cta" aria-label="Start your own project">
+        <p className="projects-own-cta-text">Interested in starting your own project?</p>
+        <p className="projects-own-cta-sub">Submit a proposal and bring your idea to the fair.</p>
+        <Link to="/proposal-form" className="projects-own-cta-btn">Submit a Proposal</Link>
+      </section>
 
       {selectedProject && (
         <div

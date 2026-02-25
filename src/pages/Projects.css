@@ -350,6 +350,52 @@
   border-color: rgba(59, 130, 246, 0.5);
 }
 
+/* Bottom CTA: start your own project */
+.projects-own-cta {
+  margin-top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 420px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.projects-own-cta-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.35rem;
+}
+
+.projects-own-cta-sub {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0 0 1.25rem;
+}
+
+.projects-own-cta-btn {
+  display: inline-block;
+  padding: 0.65rem 1.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--button-idle-color);
+  background-color: var(--button-idle-bg);
+  border: var(--button-idle-border);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: var(--button-transition);
+}
+
+.projects-own-cta-btn:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-border-color);
+  transform: translateY(-2px);
+}
+
 @media (max-width: 900px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -368,6 +414,11 @@
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .projects-own-cta {
+    margin-top: 2rem;
+    padding: 1.5rem 1rem;
   }
 
   .project-modal-overlay {
