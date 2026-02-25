@@ -77,6 +77,33 @@ function Sponsors() {
         </p>
       </section>
 
+      {/* Past Industry Engagement */}
+      <section className="sponsors-past-engagement" aria-labelledby="past-engagement-heading">
+        <div className="sponsors-past-engagement-inner">
+          <h2 id="past-engagement-heading" className="sponsors-past-engagement-title">
+            Past Industry Engagement
+          </h2>
+          <div className="sponsors-past-engagement-poster">
+            <img
+              src="/TechSummit.jpg"
+              alt="2025 Tech Summit & Hackathon at Folsom Lake College — event poster"
+              className="sponsors-past-engagement-img"
+            />
+          </div>
+          <div className="sponsors-past-engagement-copy">
+            <p className="sponsors-past-engagement-lead">
+              Over 300 attendees—including academic researchers, industry tech leaders, students,
+              and faculty from the Sacramento area—attended this transformational event. It created
+              pathways that connect community, industry, academia, and cutting-edge, fast-moving
+              technological developments.
+            </p>
+            <p className="sponsors-past-engagement-cta">
+              We invite you to be part of this movement at Folsom Lake College!
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Why Sponsor */}
       <section className="sponsors-why">
         <h2 className="sponsors-section-title">

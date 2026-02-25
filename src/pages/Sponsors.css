@@ -40,6 +40,85 @@
   margin-bottom: 1rem;
 }
 
+/* ===== Past Industry Engagement ===== */
+.sponsors-past-engagement {
+  margin-bottom: 3rem;
+}
+
+/* Framed panel to anchor the section */
+.sponsors-past-engagement-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 380px) 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.25rem 2.5rem 2.5rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #141414 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  position: relative;
+}
+
+.sponsors-past-engagement-title {
+  grid-column: 1 / -1;
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+/* Accent bar on the left to anchor the frame */
+.sponsors-past-engagement-inner::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 16px 0 0 16px;
+  background: linear-gradient(180deg, var(--color-accent), var(--color-accent-hover, #5eb8ff));
+  opacity: 0.9;
+}
+
+.sponsors-past-engagement-poster {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sponsors-past-engagement-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.sponsors-past-engagement-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sponsors-past-engagement-lead {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.sponsors-past-engagement-cta {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
 /* ===== Why Sponsor ===== */
 .sponsors-why {
   margin-bottom: 3rem;
@@ -323,6 +402,18 @@
 }
 
 /* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .sponsors-past-engagement-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .sponsors-past-engagement-poster {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 550px) {
   .sponsors-why-grid {
     flex-direction: column;
