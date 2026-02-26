@@ -4,6 +4,7 @@ import './HeroPhotoBackground.css';
 const PHOTOS_RAW = [
   '/WebsitePhotos/1W8A0446.jpg',
   '/WebsitePhotos/1W8A0872.jpeg',
+  '/WebsitePhotos/IMG_0031.jpeg',
   '/WebsitePhotos/IMG_0056.jpeg',
   '/WebsitePhotos/IMG_0075.jpeg',
   '/WebsitePhotos/IMG_3464.jpg',

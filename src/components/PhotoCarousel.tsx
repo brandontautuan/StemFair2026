@@ -4,6 +4,7 @@ import './PhotoCarousel.css';
 const PHOTOS = [
   '/WebsitePhotos/1W8A0446.jpg',
   '/WebsitePhotos/1W8A0872.jpeg',
+  '/WebsitePhotos/IMG_0031.jpeg',
   '/WebsitePhotos/IMG_0056.jpeg',
   '/WebsitePhotos/IMG_0075.jpeg',
 ];
