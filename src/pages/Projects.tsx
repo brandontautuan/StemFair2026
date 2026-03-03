@@ -40,7 +40,7 @@ const projects: Project[] = [
     description: 'The FLC STEM Club\u2019s second-year entry into the SMUD Solar Regatta\u2014a competition where students design, build, and race solar-powered boats.',
     longDescription: 'The FLC STEM Club entry into the SMUD Solar Regatta. "Working together in teams, students design, build and race their own solar-powered boats. They are judged for speed, distance, maneuverability and more. Students get hands-on, out-of-the-classroom experience with renewable energy and engineering." \u2014 SMUD Website. This will be the second year that Folsom Lake College participates in the Regatta. The team will be presenting the boat itself and what it took to build it, along with the challenges faced.',
     skills: 'An open mind to learning and working with your hands, research ability, and a safety-conscious mindset.',
-    status: 'open',
+    status: 'closed',
   },
   {
     id: 3,
