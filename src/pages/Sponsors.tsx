@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './Sponsors.css';
 
 const SPONSORSHIP_FORM_URL = '#'; // Placeholder—add when available
-const SPONSORSHIP_CONTACT_EMAIL = 'haroonk8201@gmail.com';
+const SPONSORSHIP_CONTACT_EMAIL = 'stemfairlosrios@gmail.com';
 
 const tiers = [
   {
