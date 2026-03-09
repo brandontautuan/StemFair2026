@@ -7,6 +7,11 @@ const PHOTOS = [
   '/WebsitePhotos/IMG_0031.jpeg',
   '/WebsitePhotos/IMG_0056.jpeg',
   '/WebsitePhotos/IMG_0075.jpeg',
+  '/WebsitePhotos/IMG_0213.jpg',
+  '/WebsitePhotos/IMG_4347.jpeg',
+  '/WebsitePhotos/IMG_5126.jpeg',
+  '/WebsitePhotos/IMG_5811.jpeg',
+  '/WebsitePhotos/IMG_6004.jpeg',
 ];
 
 const ROTATE_INTERVAL_MS = 5000;
