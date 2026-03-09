@@ -191,6 +191,30 @@ const projects: Project[] = [
     status: 'closed',
     showcaseFormat: 'Present: Speaking in front of an audience/panel',
   },
+  {
+    id: 16,
+    title: 'Animatronic Coyote #1 & #2',
+    lead: 'Emily & Scott',
+    email: 'dowellz@flc.losrios.edu',
+    field: 'Biology / Computer Science / Engineering',
+    description: 'Solar-powered Canada Goose\u2013scaring animatronic coyote built by the E-Donuts Engineering Club.',
+    longDescription: 'Solar-powered Canada Goose scaring animatronic coyote. This project from the E-Donuts Engineering Club combines biology, computer science, and engineering to create animatronic coyotes that help manage wildlife in outdoor spaces.',
+    skills: 'Curiosity, attention to details, microcontrollers and sensors, and digital fabrication.',
+    status: 'closed',
+    showcaseFormat: 'Both: Table display and a scheduled presentation',
+  },
+  {
+    id: 17,
+    title: 'The Symphony of Cacophony',
+    lead: 'Emily Puthur Simon',
+    email: 'w2153393@apps.losrios.edu',
+    field: 'Physics / Engineering',
+    description: 'Two student-engineered musical instruments: a custom Wind Synthesizer and a handcrafted Hurdy-Gurdy, exploring how engineering transforms digital and mechanical systems into expressive musical tools.',
+    longDescription: 'The E-Donuts Engineering Club is proud to present two student-engineered musical instruments: a custom Wind Synthesizer and a handcrafted Hurdy-Gurdy. This project explores how engineering principles can transform both digital systems and mechanical structures into expressive musical tools.\n\nThe Wind Synthesizer is an electronic instrument that responds to breath pressure and finger inputs, much like a traditional wind instrument. Using pressure sensors, touch controls, and a microcontroller, the system converts breath intensity and fingering patterns into digital signals that generate sound. Students designed and programmed the instrument to demonstrate concepts such as signal processing, analog-to-digital conversion, waveform synthesis, and embedded systems engineering.\n\nIn contrast, the Hurdy-Gurdy showcases mechanical engineering at its finest. This centuries-old string instrument produces sound using a rotating wheel that continuously vibrates the strings, functioning like a mechanical bow. Students engineered the crank mechanism, string tension system, and keybox structure to precisely control pitch and resonance. Through this build, members applied principles of vibration, frequency, resonance, friction, and structural design.\n\nBy building them from the ground up, students gained hands-on experience in design iteration, prototyping, fabrication, programming, acoustics, and systems integration. This project demonstrates how engineering is not limited to circuits or code\u2014it can also be heard, felt, and performed.',
+    skills: 'Circuit boards (e.g., Teensy 4.0), speaker, microphone, wires, soldering tools, wood, and wood cutters. All skills are welcome.',
+    status: 'closed',
+    showcaseFormat: 'Both: Table display and a scheduled presentation',
+  },
 ];
 
 function Projects() {
