@@ -208,6 +208,56 @@ select:focus-visible {
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Sponsor — top right, integrated with navbar */
+.nav-sponsor-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  gap: 4px;
+  padding-left: 1.5rem;
+  margin-left: 0.5rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.navbar--hero .nav-sponsor-wrap {
+  border-left-color: rgba(255, 255, 255, 0.25);
+}
+
+.nav-sponsor-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  line-height: 1;
+}
+
+.navbar--hero .nav-sponsor-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-sponsor {
+  display: flex;
+  align-items: center;
+  opacity: 0.88;
+  transition: opacity 0.2s ease;
+  padding: 2px 0;
+}
+
+.nav-sponsor:hover {
+  opacity: 1;
+}
+
+.nav-sponsor-img {
+  display: block;
+  height: 40px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  filter: brightness(1.05);
+}
+
 /* Hamburger button — hidden on desktop */
 .nav-hamburger {
   display: none;
@@ -252,6 +302,24 @@ select:focus-visible {
   .navbar-inner {
     flex-wrap: wrap;
     align-items: center;
+  }
+
+  .nav-sponsor-wrap {
+    order: 2;
+    margin-left: auto;
+    padding-left: 1rem;
+    margin-left: 0.25rem;
+    border-left-width: 1px;
+  }
+
+  .nav-sponsor-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.06em;
+  }
+
+  .nav-sponsor-img {
+    height: 32px;
+    max-width: 115px;
   }
 
   .nav-menu {

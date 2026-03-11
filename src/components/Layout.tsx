@@ -98,6 +98,22 @@ function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             </li>
           </ul>
+          <div className="nav-sponsor-wrap">
+            <span className="nav-sponsor-label">Proudly sponsored by</span>
+            <a
+              href="https://www.inductiveautomation.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-sponsor"
+              aria-label="Inductive Automation - Sponsor"
+            >
+              <img
+                src="/sponsor_logos/Inductive_Automation_logo.png"
+                alt="Inductive Automation"
+                className="nav-sponsor-img"
+              />
+            </a>
+          </div>
         </div>
       </nav>
       <div className="app-body">
