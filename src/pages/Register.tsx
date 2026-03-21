@@ -1,6 +1,12 @@
 import { motion } from 'framer-motion';
 
-const REGISTRATION_FORM_URL = 'https://forms.gle/evzMxp7bMHRrw8eJA';
+const REGISTRATION_FORM_VIEW =
+  'https://docs.google.com/forms/d/e/1FAIpQLSelDodAX5yesGHtXpdzLUO-jTiJIs-2e-F007tIyBdUBf24xA/viewform';
+
+/** Public signup link for “register to attend” and the Registration page fallback. */
+export const EVENT_REGISTRATION_FORM_URL = `${REGISTRATION_FORM_VIEW}?usp=header`;
+
+const REGISTRATION_FORM_EMBED_URL = `${REGISTRATION_FORM_VIEW}?embedded=true`;
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,12 +41,11 @@ function Register() {
           Registration
         </motion.h1>
         <motion.p className="section-text register-intro" variants={itemVariants}>
-          Fill out the Registration Form below to sign up for the Los Rios STEM Fair. 
-          Join our Discord to stay updated on announcements and team formation.
+          Fill out the Registration Form below to sign up for the Los Rios STEM Fair.
         </motion.p>
         <motion.div className="form-embed-container" variants={itemVariants}>
           <iframe
-            src={`${REGISTRATION_FORM_URL}?embedded=true`}
+            src={REGISTRATION_FORM_EMBED_URL}
             width="100%"
             height="800"
             frameBorder="0"
@@ -53,7 +58,7 @@ function Register() {
         </motion.div>
         <motion.p className="form-fallback" variants={itemVariants}>
           If the form doesn&apos;t load,{' '}
-          <a href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer">
+          <a href={EVENT_REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer">
             open it in a new tab
           </a>
           .

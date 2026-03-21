@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { EVENT_REGISTRATION_FORM_URL } from './Register';
 import './EventFlow.css';
 
 const dates = [
@@ -33,7 +34,7 @@ const dates = [
     description:
       'We recommend registering to attend the STEM Fair by this date. Secure your spot to experience student projects, demos, and presentations in person.',
     buttonLabel: 'Register Now',
-    buttonTo: '/register',
+    buttonTo: EVENT_REGISTRATION_FORM_URL,
   },
 ];
 
@@ -84,9 +85,20 @@ function EventFlow() {
                 <span className="timeline-date">{item.date}</span>
                 <h2 className="timeline-label">{item.label}</h2>
                 <p className="timeline-desc">{item.description}</p>
-                <Link to={item.buttonTo} className="timeline-btn">
-                  {item.buttonLabel} →
-                </Link>
+                {item.buttonTo.startsWith('http') ? (
+                  <a
+                    href={item.buttonTo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="timeline-btn"
+                  >
+                    {item.buttonLabel} →
+                  </a>
+                ) : (
+                  <Link to={item.buttonTo} className="timeline-btn">
+                    {item.buttonLabel} →
+                  </Link>
+                )}
               </div>
             </motion.div>
           ))}

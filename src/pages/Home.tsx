@@ -122,7 +122,9 @@ function Home() {
                 the showcase floor, network with students and industry professionals, and be part
                 of the Los Rios STEM community.
               </p>
-              <Link to="/register" className="participate-card-btn">Register to Attend</Link>
+              <Link to="/register" className="participate-card-btn">
+                Register to Attend
+              </Link>
             </div>
             <div className="participate-card">
               <div className="participate-card-icon" aria-hidden="true">
