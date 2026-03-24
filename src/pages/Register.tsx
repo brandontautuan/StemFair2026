@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 const REGISTRATION_FORM_VIEW =
-  'https://docs.google.com/forms/d/e/1FAIpQLSelDodAX5yesGHtXpdzLUO-jTiJIs-2e-F007tIyBdUBf24xA/viewform';
+  'https://docs.google.com/forms/d/1Ei98y4J-NZz4LbXESkZ4RSMjSOSFXXGqX8YoevI4IbE/viewform';
 
 /** Public signup link for “register to attend” and the Registration page fallback. */
 export const EVENT_REGISTRATION_FORM_URL = `${REGISTRATION_FORM_VIEW}?usp=header`;
@@ -51,7 +51,7 @@ function Register() {
             frameBorder="0"
             marginHeight={0}
             marginWidth={0}
-            title="2026 STEM Fair Registration Form"
+            title="2026 Los Rios STEM Fair Event Registration Form"
           >
             Loading…
           </iframe>
