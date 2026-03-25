@@ -100,19 +100,34 @@ function Layout({ children }: { children: React.ReactNode }) {
           </ul>
           <div className="nav-sponsor-wrap">
             <span className="nav-sponsor-label">Proudly sponsored by</span>
-            <a
-              href="https://www.inductiveautomation.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="nav-sponsor"
-              aria-label="Inductive Automation - Sponsor"
-            >
-              <img
-                src="/sponsor_logos/Inductive_Automation_logo.png"
-                alt="Inductive Automation"
-                className="nav-sponsor-img"
-              />
-            </a>
+            <div className="nav-sponsor-logos">
+              <a
+                href="https://www.inductiveautomation.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-sponsor"
+                aria-label="Inductive Automation - Sponsor"
+              >
+                <img
+                  src="/sponsor_logos/Inductive_Automation_logo.png"
+                  alt="Inductive Automation"
+                  className="nav-sponsor-img"
+                />
+              </a>
+              <a
+                href="https://aws.amazon.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-sponsor"
+                aria-label="Amazon Web Services - Sponsor"
+              >
+                <img
+                  src="/sponsor_logos/aws-sponsor.webp"
+                  alt="Amazon Web Services"
+                  className="nav-sponsor-img"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </nav>
