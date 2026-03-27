@@ -215,6 +215,30 @@ const projects: Project[] = [
     status: 'closed',
     showcaseFormat: 'Both: Table display and a scheduled presentation',
   },
+  {
+    id: 18,
+    title: 'Project Northstar',
+    lead: 'Josh Jovovich',
+    email: 'joshuajovovich@gmail.com',
+    field: 'Computer Science',
+    description: 'A self-hostable live streaming platform that uses peer-to-peer WebRTC instead of a traditional CDN\u2014demonstrating decentralized streaming on standard web tech.',
+    longDescription: 'Project Northstar is a self-hostable live streaming platform that shows how peer-to-peer networking can change how video streaming systems are built. Traditional platforms rely on centralized Content Delivery Networks (CDNs); Northstar explores WebRTC so viewers can receive streams directly from the broadcaster through encrypted peer-to-peer connections. A lightweight Node.js signaling server coordinates connection setup with WebSockets; once connected, video flows between participants with minimal central infrastructure.\n\nThe system uses WebRTC, WebSockets, JavaScript, HTML5, and Node.js, with real-time screen broadcasting, live chat, quality presets (720p/1080p), and codec options such as VP9 or H.264. It includes role-aware signaling, reconnection logic, and peer management for multiple viewers. See the project on GitHub: https://github.com/RxFaction/Northstar-Mainframe\n\nNorthstar will be demonstrated live across multiple devices to illustrate decentralized streaming on consumer hardware.',
+    skills: 'Further development benefits from JavaScript and Node.js, WebSockets and WebRTC, distributed and peer-to-peer concepts, front-end web development, NAT/signaling, and media encoding. Standard hardware (laptops, phones, stable network) for testing; Node.js and modern browsers with WebRTC support.',
+    status: 'open',
+    showcaseFormat: 'Table: Stationary display for the duration of the fair',
+  },
+  {
+    id: 19,
+    title: 'Extending Classic Games Without Rewriting the Engine',
+    lead: 'Tony Benavides',
+    email: 'tony.benavides@flc.losrios.edu',
+    field: 'Computer Science',
+    description: 'A faculty presentation on a \u201cshim\u201d approach to modding\u2014a custom entry point that calls into the original engine so mods can load safely without a full engine rewrite.',
+    longDescription: 'Many classic games were never built with mod support, yet communities still find ways to extend them. This talk explores a shim approach: building a replacement entry point that stands in for the original executable and calls into the same engine functions the game already uses. By treating the engine like an API, we create a structured, reliable pathway for customization without rewriting the engine itself.\n\nWith that adapter layer, the asset pipeline can redirect loading of content the game would not normally accept\u2014custom textures, scripts, and optional plugin modules\u2014through a modular loader focused on configuration, discovery, validation, load order, and logging.\n\nThe session is framed as a Learn by Doing STEM topic: mismatched signatures, ownership mistakes, timing issues, and format constraints become practical lessons in systems programming and architecture. The emphasis is on interoperability and controlled experimentation rather than bypassing protections.',
+    skills: 'Game backend concepts, Python and C++ programming, and interest in reverse engineering and software architecture. (Student collaborators may use alternate contact as arranged with the instructor.)',
+    status: 'closed',
+    showcaseFormat: 'Present: Speaking in front of an audience/panel',
+  },
 ];
 
 function Projects() {
