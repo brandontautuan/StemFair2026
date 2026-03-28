@@ -350,7 +350,7 @@ select:focus-visible {
   }
 
   .nav-menu--open {
-    max-height: 320px;
+    max-height: 400px;
     opacity: 1;
     padding: 0.5rem 0 1rem;
   }
@@ -370,6 +370,7 @@ select:focus-visible {
     color: var(--color-accent);
     border-bottom: none !important;
   }
+
 }
 
 /* Banner / Hero (full viewport on home) */
