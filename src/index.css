@@ -1121,6 +1121,33 @@ select:focus-visible {
   margin: 0;
 }
 
+.schedule-item--keynote {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.schedule-speaker-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.schedule-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .schedule-speaker-photo {
+    width: 48px;
+    height: 48px;
+  }
+}
+
 /* Speakers Section */
 .speakers-section {
   padding: 1.5rem 2.5rem;
