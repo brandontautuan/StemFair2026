@@ -1,0 +1,12 @@
+﻿Event Schedule
+
+
+9:00 am - 10:00 am: Coffee and Welcome Address by Folsom Lake College Administration
+10:00 am - 10:30 am: "From Data to Intelligence", Keynote speech by Ramkarthik Ganesan, Fellow at Micron Technology
+10:45 am - 11:15 am: "Disruptive Technology Driven Innovation", Keynote speech by Tahmid Rahman, Director, Product and Partner Marketing, Solidigm
+11:30 am - 12:00 pm: "Building Traffic Planning and Management Systems using Innovative AI technologies", Keynote speech by Marcie Kahbody, CIO at Caltrans
+12:00 pm - 2:00 pm: Student Demo Showcasing
+2:00pm - 2:30 pm: "Why Computer Science is Essential in the Age of Generative AI", Keynote Speech by Tim Jones, Sr. Solutions Architect at AWS
+2:45 pm - 3:15 pm: "STEM Professional 2.0: Thriving on the razor edge of AI", Keynote Speech by Shashank Bangalore Lakshman, Engineering Leader - MLOps, Renesas Electronics
+3:30 pm - 4:00 pm: Closing Ceremony, Certificates of Achievement/ Prizes 
+By Dean of STEM Dr. Lorena Navarro

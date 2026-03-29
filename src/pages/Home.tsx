@@ -162,44 +162,65 @@ function Home() {
 
         <section className="event-intro event-intro-compact">
           <div className="key-dates-schedule-inline">
-            <h3 className="section-title key-dates-schedule-heading">Event Schedule (Tentative)</h3>
+            <h3 className="section-title key-dates-schedule-heading">Event Schedule</h3>
             <p className="key-dates-schedule-intro">
               April 17th at Folsom Lake College.
             </p>
             <ul className="schedule-list" aria-label="Event schedule">
               <li className="schedule-item">
-                <span className="schedule-time">8:30 – 9:30 AM</span>
-                <span className="schedule-title">Check-In &amp; Refreshments</span>
+                <span className="schedule-time">9:00 – 10:00 AM</span>
+                <span className="schedule-title">Coffee &amp; Welcome Address</span>
                 <p className="schedule-desc">
-                  Guests arrive, check in, and enjoy light refreshments. A chance to settle in, mingle, and get ready for the day ahead.
+                  Welcome address by Folsom Lake College Administration.
                 </p>
               </li>
               <li className="schedule-item">
-                <span className="schedule-time">9:30 – 10:00 AM</span>
-                <span className="schedule-title">Welcome Address</span>
+                <span className="schedule-time">10:00 – 10:30 AM</span>
+                <span className="schedule-title">&ldquo;From Data to Intelligence&rdquo;</span>
                 <p className="schedule-desc">
-                  Opening remarks and an overview of the day&apos;s events to kick off the Los Rios STEM Fair.
+                  Keynote by <strong>Ramkarthik Ganesan</strong>, Fellow at Micron Technology.
                 </p>
               </li>
               <li className="schedule-item">
-                <span className="schedule-time">9:40 AM – 12:15 PM</span>
-                <span className="schedule-title">Project Presentations</span>
+                <span className="schedule-time">10:45 – 11:15 AM</span>
+                <span className="schedule-title">&ldquo;Disruptive Technology Driven Innovation&rdquo;</span>
                 <p className="schedule-desc">
-                  Teams deliver formal presentations of their projects to judges and attendees in scheduled time slots.
+                  Keynote by <strong>Tahmid Rahman</strong>, Director, Product &amp; Partner Marketing, Solidigm.
                 </p>
               </li>
               <li className="schedule-item">
-                <span className="schedule-time">12:30 – 2:30 PM</span>
-                <span className="schedule-title">Project Showcase &amp; Lunch</span>
+                <span className="schedule-time">11:30 AM – 12:00 PM</span>
+                <span className="schedule-title">&ldquo;Building Traffic Planning &amp; Management Systems using Innovative AI Technologies&rdquo;</span>
                 <p className="schedule-desc">
-                  Browse project tables at your own pace while enjoying lunch. A great opportunity to chat with teams, see demos, and explore hands-on exhibits.
+                  Keynote by <strong>Marcie Kahbody</strong>, CIO at Caltrans.
                 </p>
               </li>
               <li className="schedule-item">
-                <span className="schedule-time">2:30 – 3:15 PM</span>
-                <span className="schedule-title">Awards &amp; Closing Remarks</span>
+                <span className="schedule-time">12:00 – 2:00 PM</span>
+                <span className="schedule-title">Student Demo Showcasing</span>
                 <p className="schedule-desc">
-                  Recognition of outstanding projects followed by closing remarks to wrap up the fair.
+                  Browse student project demos, interact with teams, and see their work in action.
+                </p>
+              </li>
+              <li className="schedule-item">
+                <span className="schedule-time">2:00 – 2:30 PM</span>
+                <span className="schedule-title">&ldquo;Why Computer Science is Essential in the Age of Generative AI&rdquo;</span>
+                <p className="schedule-desc">
+                  Keynote by <strong>Tim Jones</strong>, Sr. Solutions Architect at AWS.
+                </p>
+              </li>
+              <li className="schedule-item">
+                <span className="schedule-time">2:45 – 3:15 PM</span>
+                <span className="schedule-title">&ldquo;STEM Professional 2.0: Thriving on the Razor Edge of AI&rdquo;</span>
+                <p className="schedule-desc">
+                  Keynote by <strong>Shashank Bangalore Lakshman</strong>, Engineering Leader – MLOps, Renesas Electronics.
+                </p>
+              </li>
+              <li className="schedule-item">
+                <span className="schedule-time">3:30 – 4:00 PM</span>
+                <span className="schedule-title">Closing Ceremony</span>
+                <p className="schedule-desc">
+                  Certificates of Achievement &amp; Prizes, by Dean of STEM <strong>Dr. Lorena Navarro</strong>.
                 </p>
               </li>
             </ul>

@@ -83,11 +83,6 @@ function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             </li>
             <li>
-              <Link to="/register" className={isActive('/register') ? 'active' : ''}>
-                Register
-              </Link>
-            </li>
-            <li>
               <Link to="/projects" className={isActive('/projects') ? 'active' : ''}>
                 Projects
               </Link>
@@ -100,6 +95,11 @@ function Layout({ children }: { children: React.ReactNode }) {
             <li>
               <Link to="/contact" className={isActive('/contact') ? 'active' : ''}>
                 Contact Us
+              </Link>
+            </li>
+            <li className="nav-register-item">
+              <Link to="/register" className={`nav-register-btn ${isActive('/register') ? 'nav-register-btn--active' : ''}`}>
+                Register
               </Link>
             </li>
           </ul>

@@ -35,33 +35,65 @@ function Schedule() {
           Schedule
         </motion.h1>
         <motion.div className="section-content" variants={containerVariants}>
-          <motion.p className="schedule-disclaimer" variants={itemVariants}>
-            <strong>This schedule is prone to heavy change and is not finalized yet.</strong>
-          </motion.p>
           <motion.p className="section-text schedule-intro" variants={itemVariants}>
-            The day-of schedule for April 17th at Folsom Lake College. Times and sessions may be updated closer to the event.
+            The day-of schedule for April 17th at Folsom Lake College.
           </motion.p>
 
           <motion.ul className="schedule-list" aria-label="Event schedule" variants={containerVariants}>
             <motion.li className="schedule-item" variants={itemVariants}>
-              <span className="schedule-time">12:00 – 12:30</span>
-              <span className="schedule-title">Intro Period</span>
+              <span className="schedule-time">9:00 – 10:00 AM</span>
+              <span className="schedule-title">Coffee and Welcome Address</span>
               <p className="schedule-desc">
-                Guests arrive and get settled. Coffee and light refreshments will be available—a good time to mingle, chat, and connect. Tables and materials will be set up during this window.
+                Welcome address by Folsom Lake College Administration.
+              </p>
+            </motion.li>
+            <motion.li className="schedule-item schedule-keynote" variants={itemVariants}>
+              <span className="schedule-time">10:00 – 10:30 AM</span>
+              <span className="schedule-title">"From Data to Intelligence"</span>
+              <p className="schedule-desc">
+                Keynote speech by <strong>Ramkarthik Ganesan</strong>, Fellow at Micron Technology.
+              </p>
+            </motion.li>
+            <motion.li className="schedule-item schedule-keynote" variants={itemVariants}>
+              <span className="schedule-time">10:45 – 11:15 AM</span>
+              <span className="schedule-title">"Disruptive Technology Driven Innovation"</span>
+              <p className="schedule-desc">
+                Keynote speech by <strong>Tahmid Rahman</strong>, Director, Product and Partner Marketing, Solidigm.
+              </p>
+            </motion.li>
+            <motion.li className="schedule-item schedule-keynote" variants={itemVariants}>
+              <span className="schedule-time">11:30 AM – 12:00 PM</span>
+              <span className="schedule-title">"Building Traffic Planning and Management Systems using Innovative AI Technologies"</span>
+              <p className="schedule-desc">
+                Keynote speech by <strong>Marcie Kahbody</strong>, CIO at Caltrans.
               </p>
             </motion.li>
             <motion.li className="schedule-item" variants={itemVariants}>
-              <span className="schedule-time">12:30 – 2:00</span>
-              <span className="schedule-title">Presentation Period</span>
+              <span className="schedule-time">12:00 – 2:00 PM</span>
+              <span className="schedule-title">Student Demo Showcasing</span>
               <p className="schedule-desc">
-                Teams that opt to present will give formal presentations during this block. Attendees can watch project demos, hear from student teams, and join Q&amp;A in a structured session.
+                Browse student project demos, interact with teams, and see their work in action.
+              </p>
+            </motion.li>
+            <motion.li className="schedule-item schedule-keynote" variants={itemVariants}>
+              <span className="schedule-time">2:00 – 2:30 PM</span>
+              <span className="schedule-title">"Why Computer Science is Essential in the Age of Generative AI"</span>
+              <p className="schedule-desc">
+                Keynote speech by <strong>Tim Jones</strong>, Sr. Solutions Architect at AWS.
+              </p>
+            </motion.li>
+            <motion.li className="schedule-item schedule-keynote" variants={itemVariants}>
+              <span className="schedule-time">2:45 – 3:15 PM</span>
+              <span className="schedule-title">"STEM Professional 2.0: Thriving on the Razor Edge of AI"</span>
+              <p className="schedule-desc">
+                Keynote speech by <strong>Shashank Bangalore Lakshman</strong>, Engineering Leader – MLOps, Renesas Electronics.
               </p>
             </motion.li>
             <motion.li className="schedule-item" variants={itemVariants}>
-              <span className="schedule-time">2:00 – 4:00</span>
-              <span className="schedule-title">Showcase Period</span>
+              <span className="schedule-time">3:30 – 4:00 PM</span>
+              <span className="schedule-title">Closing Ceremony</span>
               <p className="schedule-desc">
-                Teams that opt to showcase will table their projects for walk-by viewing. Visitors can browse tables, view projects, and talk with teams. Food will be served during this time.
+                Certificates of Achievement and Prizes, by Dean of STEM <strong>Dr. Lorena Navarro</strong>.
               </p>
             </motion.li>
           </motion.ul>

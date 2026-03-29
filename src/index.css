@@ -208,6 +208,47 @@ select:focus-visible {
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Register CTA — pushed to the right as a distinct button */
+.nav-register-item {
+  margin-left: auto;
+}
+
+.nav-register-btn {
+  display: block;
+  padding: 0.5rem 1.25rem !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  border-radius: 8px;
+  border: 2px solid var(--color-accent) !important;
+  background-color: var(--color-accent);
+  color: #fff !important;
+  text-decoration: none !important;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+
+.nav-register-btn:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover) !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+.nav-register-btn--active {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover) !important;
+}
+
+.navbar--hero .nav-register-btn {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+  color: #fff !important;
+}
+
+.navbar--hero .nav-register-btn:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent) !important;
+}
+
 /* Sponsor — top right, integrated with navbar */
 .nav-sponsor-wrap {
   display: flex;
@@ -369,6 +410,23 @@ select:focus-visible {
   .nav-menu li a.active {
     color: var(--color-accent);
     border-bottom: none !important;
+  }
+
+  .nav-register-item {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: auto !important;
+  }
+
+  .nav-register-btn {
+    display: inline-block !important;
+    border-bottom: none !important;
+  }
+
+  .nav-menu--open .nav-register-btn {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent) !important;
+    color: #fff !important;
   }
 
 }
