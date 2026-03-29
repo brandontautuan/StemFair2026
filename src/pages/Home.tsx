@@ -98,6 +98,50 @@ function Home() {
           </div>
         </section>
 
+        <section className="speakers-section">
+          <h2 className="section-title">Keynote Speakers</h2>
+          <p className="participate-intro">
+            Hear from industry leaders who are shaping the future of technology and STEM.
+          </p>
+          <div className="speakers-grid">
+            <div className="speaker-card">
+              <div className="speaker-image">
+                <img src="/speakers/ramkarthik_micron.jpeg" alt="Ramkarthik Ganesan" />
+              </div>
+              <h3 className="speaker-name">Ramkarthik Ganesan</h3>
+              <p className="speaker-title">Fellow at Micron Technology</p>
+            </div>
+            <div className="speaker-card">
+              <div className="speaker-image">
+                <img src="/speakers/tahmid_solidigm.jpeg" alt="Tahmid Rahman" />
+              </div>
+              <h3 className="speaker-name">Tahmid Rahman</h3>
+              <p className="speaker-title">Director, Product &amp; Partner Marketing, Solidigm</p>
+            </div>
+            <div className="speaker-card">
+              <div className="speaker-image">
+                <img src="/speakers/marcie_caltrans.jpeg" alt="Marcie Kahbody" />
+              </div>
+              <h3 className="speaker-name">Marcie Kahbody</h3>
+              <p className="speaker-title">CIO at Caltrans</p>
+            </div>
+            <div className="speaker-card">
+              <div className="speaker-image">
+                <img src="/speakers/tim_aws.png" alt="Tim Jones" />
+              </div>
+              <h3 className="speaker-name">Tim Jones</h3>
+              <p className="speaker-title">Sr. Solutions Architect at AWS</p>
+            </div>
+            <div className="speaker-card">
+              <div className="speaker-image">
+                <img src="/speakers/shashank_renesas.jpeg" alt="Shashank Bangalore Lakshman" />
+              </div>
+              <h3 className="speaker-name">Shashank Bangalore Lakshman</h3>
+              <p className="speaker-title">Engineering Leader – MLOps, Renesas Electronics</p>
+            </div>
+          </div>
+        </section>
+
         <section className="participate-section">
           <h2 className="section-title participate-title">
             How to Participate
