@@ -9,11 +9,25 @@ function Layout({ children }: { children: React.ReactNode }) {
   const isHome = location.pathname === '/';
   const [scrolledPastHero, setScrolledPastHero] = useState(!isHome);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
   const menuRef = useRef<HTMLUListElement>(null);
+  const moreRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setMoreOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (!moreOpen) return;
+    const onClickOutside = (e: MouseEvent) => {
+      if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
+        setMoreOpen(false);
+      }
+    };
+    document.addEventListener('click', onClickOutside);
+    return () => document.removeEventListener('click', onClickOutside);
+  }, [moreOpen]);
 
   // Close mobile menu on scroll so it doesn't interfere with hero transition
   useEffect(() => {
@@ -78,8 +92,8 @@ function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             </li>
             <li>
-              <Link to="/event-flow" className={isActive('/event-flow') ? 'active' : ''}>
-                Important Dates
+              <Link to="/schedule" className={isActive('/schedule') ? 'active' : ''}>
+                Schedule
               </Link>
             </li>
             <li>
@@ -88,21 +102,44 @@ function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             </li>
             <li>
-              <Link to="/sponsors" className={isActive('/sponsors') ? 'active' : ''}>
-                Sponsors
-              </Link>
-            </li>
-            <li>
               <Link to="/contact" className={isActive('/contact') ? 'active' : ''}>
                 Contact Us
               </Link>
             </li>
-            <li className="nav-register-item">
-              <Link to="/register" className={`nav-register-btn ${isActive('/register') ? 'nav-register-btn--active' : ''}`}>
+            <li
+              ref={moreRef}
+              className={`nav-dropdown ${moreOpen ? 'nav-dropdown--open' : ''} ${isActive('/event-flow') || isActive('/sponsors') ? 'nav-dropdown--child-active' : ''}`}
+            >
+              <button
+                className="nav-dropdown-toggle"
+                onClick={() => setMoreOpen((prev) => !prev)}
+                aria-expanded={moreOpen}
+                type="button"
+              >
+                More <span className="nav-dropdown-arrow" aria-hidden="true">&#9662;</span>
+              </button>
+              <ul className="nav-dropdown-menu">
+                <li>
+                  <Link to="/event-flow" className={isActive('/event-flow') ? 'active' : ''}>
+                    Important Dates
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/sponsors" className={isActive('/sponsors') ? 'active' : ''}>
+                    Sponsors
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="nav-register-mobile">
+              <Link to="/register" className={`nav-register-btn nav-register-btn--mobile ${isActive('/register') ? 'nav-register-btn--active' : ''}`}>
                 Register
               </Link>
             </li>
           </ul>
+          <Link to="/register" className={`nav-register-btn nav-register-btn--desktop ${isActive('/register') ? 'nav-register-btn--active' : ''}`}>
+            Register
+          </Link>
           <div className="nav-sponsor-wrap">
             <span className="nav-sponsor-label">Proudly sponsored by</span>
             <div className="nav-sponsor-logos">

@@ -156,17 +156,6 @@ function Home() {
       </div>
 
       <main className="main-content home-content">
-        <section className="event-intro event-intro-compact">
-          <h2 className="section-title">
-            What is the Los Rios STEM Fair
-          </h2>
-          <div className="intro-content">
-            <p className="intro-text">
-              The Los Rios STEM Fair is where &quot;learning by doing&quot; meets professional opportunity. We are providing a platform for community college students to bridge the gap between academic theory and the industry, allowing you to showcase your technical skills directly to professionals and the Los Rios Community. Whether you want to start a solo endeavor or a large-scale group project, this is your stage to present your work to those who move the industry forward.
-            </p>
-          </div>
-        </section>
-
         <section className="speakers-section">
           <h2 className="section-title">Keynote Speakers</h2>
           <p className="participate-intro">
@@ -190,6 +179,17 @@ function Home() {
                 <p className="speaker-title">{speaker.title}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="event-intro event-intro-compact">
+          <h2 className="section-title">
+            What is the Los Rios STEM Fair
+          </h2>
+          <div className="intro-content">
+            <p className="intro-text">
+              The Los Rios STEM Fair is where &quot;learning by doing&quot; meets professional opportunity. We are providing a platform for community college students to bridge the gap between academic theory and the industry, allowing you to showcase your technical skills directly to professionals and the Los Rios Community. Whether you want to start a solo endeavor or a large-scale group project, this is your stage to present your work to those who move the industry forward.
+            </p>
           </div>
         </section>
 
