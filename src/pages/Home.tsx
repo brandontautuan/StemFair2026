@@ -193,68 +193,6 @@ function Home() {
           </div>
         </section>
 
-        <section className="participate-section">
-          <h2 className="section-title participate-title">
-            How to Participate
-          </h2>
-          <p className="participate-intro">
-            There are three ways to be part of the Los Rios STEM Fair. Whether you want to attend and explore,
-            present your own work, or join an existing project, we&apos;d love to have you there.
-          </p>
-          <div className="participate-paths">
-            <div className="participate-card">
-              <div className="participate-card-icon" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="36" height="36">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              </div>
-              <h3 className="participate-card-title">Attend the Event</h3>
-              <p className="participate-card-desc">
-                Register to attend the STEM Fair as a guest. Watch project presentations, explore
-                the showcase floor, network with students and industry professionals, and be part
-                of the Los Rios STEM community.
-              </p>
-              <Link to="/register" className="participate-card-btn">
-                Register to Attend
-              </Link>
-            </div>
-            <div className="participate-card">
-              <div className="participate-card-icon" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="36" height="36">
-                  <path d="M12 20h9" />
-                  <path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
-                </svg>
-              </div>
-              <h3 className="participate-card-title">Showcase Your Project</h3>
-              <p className="participate-card-desc">
-                Have a project idea you&apos;d like to present? Submit a project proposal and get
-                the chance to showcase your work to judges, industry professionals, and the
-                broader Los Rios community on April 17th.
-              </p>
-              <Link to="/proposal-form" className="participate-card-btn">Submit a Proposal</Link>
-            </div>
-            <div className="participate-card">
-              <div className="participate-card-icon" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="36" height="36">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <line x1="19" y1="8" x2="19" y2="14" />
-                  <line x1="22" y1="11" x2="16" y2="11" />
-                </svg>
-              </div>
-              <h3 className="participate-card-title">Join an Existing Project</h3>
-              <p className="participate-card-desc">
-                Want to contribute but don&apos;t have your own project? Browse the list of registered
-                projects looking for team members and ask to join one that interests you.
-              </p>
-              <Link to="/projects" className="participate-card-btn">Browse Projects</Link>
-            </div>
-          </div>
-        </section>
-
         <section className="event-intro event-intro-compact">
           <div className="key-dates-schedule-inline">
             <h3 className="section-title key-dates-schedule-heading">Event Schedule</h3>
