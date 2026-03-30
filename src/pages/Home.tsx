@@ -5,6 +5,43 @@ import './EventFlow.css';
 import './FAQ.css';
 import './Home.css';
 
+interface Speaker {
+  name: string;
+  title: string;
+  photo: string;
+  bio?: string;
+}
+
+const speakers: Speaker[] = [
+  {
+    name: 'Ramkarthik Ganesan',
+    title: 'Fellow at Micron Technology',
+    photo: '/speakers/ramkarthik_micron.jpeg',
+  },
+  {
+    name: 'Tahmid Rahman',
+    title: 'Director Product Marketing, Solidigm Corp',
+    photo: '/speakers/tahmid_solidigm.png',
+    bio: 'Tahmid Rahman is a Director of Product Marketing specializing in data center solutions. He drives product positioning, messaging, and business impact across enterprise and cloud markets, partnering closely with product and sales teams to accelerate growth. Tahmid is a Folsom resident and moved to the area with his first job at Intel Corporation as a mixed signal designer, he enjoys the various outdoor activities Folsom and adjacent areas offer.',
+  },
+  {
+    name: 'Marcie Kahbody',
+    title: 'CIO at Caltrans',
+    photo: '/speakers/marcie_caltrans.jpeg',
+  },
+  {
+    name: 'Tim Jones',
+    title: 'Sr. Solutions Architect at AWS',
+    photo: '/speakers/tim_aws.png',
+    bio: 'Tim Jones is a Sr Solutions Architect with Amazon Web Services (AWS). He works with Higher Education, State, and Local Government customers in California helping them understand and adopt AWS services. Before his current role, he spent 16 years as a developer and technical lead running mission critical systems at Hewlett Packard.',
+  },
+  {
+    name: 'Shashank Bangalore Lakshman',
+    title: 'Engineering Leader \u2013 MLOps, Renesas Electronics',
+    photo: '/speakers/shashank_renesas.jpeg',
+  },
+];
+
 const faqs = [
   {
     question: 'Who can participate?',
@@ -62,7 +99,39 @@ function FAQAccordion() {
 
 const HOME_PAGE_CLASS = 'home-page';
 
+function SpeakerBioModal({ speaker, onClose }: { speaker: Speaker; onClose: () => void }) {
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', handleKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleKey);
+      document.body.style.overflow = '';
+    };
+  }, [onClose]);
+
+  return (
+    <div className="speaker-modal-overlay" onClick={onClose}>
+      <div className="speaker-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={`Bio for ${speaker.name}`}>
+        <button className="speaker-modal-close" onClick={onClose} aria-label="Close">&times;</button>
+        <div className="speaker-modal-header">
+          <div className="speaker-modal-photo">
+            <img src={speaker.photo} alt={speaker.name} />
+          </div>
+          <div className="speaker-modal-info">
+            <h3 className="speaker-modal-name">{speaker.name}</h3>
+            <p className="speaker-modal-title">{speaker.title}</p>
+          </div>
+        </div>
+        <p className="speaker-modal-bio">{speaker.bio}</p>
+      </div>
+    </div>
+  );
+}
+
 function Home() {
+  const [activeSpeaker, setActiveSpeaker] = useState<Speaker | null>(null);
+
   useEffect(() => {
     document.documentElement.classList.add(HOME_PAGE_CLASS);
     return () => document.documentElement.classList.remove(HOME_PAGE_CLASS);
@@ -104,41 +173,23 @@ function Home() {
             Hear from industry leaders who are shaping the future of technology and STEM.
           </p>
           <div className="speakers-grid">
-            <div className="speaker-card">
-              <div className="speaker-image">
-                <img src="/speakers/ramkarthik_micron.jpeg" alt="Ramkarthik Ganesan" />
+            {speakers.map((speaker) => (
+              <div className="speaker-card" key={speaker.name}>
+                <div
+                  className={`speaker-image${speaker.bio ? ' speaker-image--clickable' : ''}`}
+                  role={speaker.bio ? 'button' : undefined}
+                  tabIndex={speaker.bio ? 0 : undefined}
+                  aria-label={speaker.bio ? `View bio for ${speaker.name}` : undefined}
+                  onClick={speaker.bio ? () => setActiveSpeaker(speaker) : undefined}
+                  onKeyDown={speaker.bio ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setActiveSpeaker(speaker); } } : undefined}
+                >
+                  <img src={speaker.photo} alt={speaker.name} />
+                  {speaker.bio && <span className="speaker-bio-hint">View Bio</span>}
+                </div>
+                <h3 className="speaker-name">{speaker.name}</h3>
+                <p className="speaker-title">{speaker.title}</p>
               </div>
-              <h3 className="speaker-name">Ramkarthik Ganesan</h3>
-              <p className="speaker-title">Fellow at Micron Technology</p>
-            </div>
-            <div className="speaker-card">
-              <div className="speaker-image">
-                <img src="/speakers/tahmid_solidigm.jpeg" alt="Tahmid Rahman" />
-              </div>
-              <h3 className="speaker-name">Tahmid Rahman</h3>
-              <p className="speaker-title">Director, Product &amp; Partner Marketing, Solidigm</p>
-            </div>
-            <div className="speaker-card">
-              <div className="speaker-image">
-                <img src="/speakers/marcie_caltrans.jpeg" alt="Marcie Kahbody" />
-              </div>
-              <h3 className="speaker-name">Marcie Kahbody</h3>
-              <p className="speaker-title">CIO at Caltrans</p>
-            </div>
-            <div className="speaker-card">
-              <div className="speaker-image">
-                <img src="/speakers/tim_aws.png" alt="Tim Jones" />
-              </div>
-              <h3 className="speaker-name">Tim Jones</h3>
-              <p className="speaker-title">Sr. Solutions Architect at AWS</p>
-            </div>
-            <div className="speaker-card">
-              <div className="speaker-image">
-                <img src="/speakers/shashank_renesas.jpeg" alt="Shashank Bangalore Lakshman" />
-              </div>
-              <h3 className="speaker-name">Shashank Bangalore Lakshman</h3>
-              <p className="speaker-title">Engineering Leader – MLOps, Renesas Electronics</p>
-            </div>
+            ))}
           </div>
         </section>
 
@@ -229,12 +280,12 @@ function Home() {
                 </div>
               </li>
               <li className="schedule-item schedule-item--keynote">
-                <img className="schedule-speaker-photo" src="/speakers/tahmid_solidigm.jpeg" alt="Tahmid Rahman" />
+                <img className="schedule-speaker-photo" src="/speakers/tahmid_solidigm.png" alt="Tahmid Rahman" />
                 <div className="schedule-item-content">
                   <span className="schedule-time">10:45 – 11:15 AM</span>
-                  <span className="schedule-title">&ldquo;Disruptive Technology Driven Innovation&rdquo;</span>
+                  <span className="schedule-title">&ldquo;Solidigm: Storage for AI innovation&rdquo;</span>
                   <p className="schedule-desc">
-                    Keynote by <strong>Tahmid Rahman</strong>, Director, Product &amp; Partner Marketing, Solidigm.
+                    Keynote by <strong>Tahmid Rahman</strong>, Director Product Marketing, Solidigm Corp.
                   </p>
                 </div>
               </li>
@@ -300,6 +351,10 @@ function Home() {
           <FAQAccordion />
         </section>
       </main>
+
+      {activeSpeaker && (
+        <SpeakerBioModal speaker={activeSpeaker} onClose={() => setActiveSpeaker(null)} />
+      )}
     </>
   );
 }

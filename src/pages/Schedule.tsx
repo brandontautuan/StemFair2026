@@ -56,9 +56,9 @@ function Schedule() {
             </motion.li>
             <motion.li className="schedule-item schedule-keynote" variants={itemVariants}>
               <span className="schedule-time">10:45 – 11:15 AM</span>
-              <span className="schedule-title">"Disruptive Technology Driven Innovation"</span>
+              <span className="schedule-title">"Solidigm: Storage for AI innovation"</span>
               <p className="schedule-desc">
-                Keynote speech by <strong>Tahmid Rahman</strong>, Director, Product and Partner Marketing, Solidigm.
+                Keynote speech by <strong>Tahmid Rahman</strong>, Director Product Marketing, Solidigm Corp.
               </p>
             </motion.li>
             <motion.li className="schedule-item schedule-keynote" variants={itemVariants}>
