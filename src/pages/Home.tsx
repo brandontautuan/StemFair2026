@@ -264,6 +264,7 @@ function Home() {
             <ul className="schedule-list" aria-label="Event schedule">
               <li className="schedule-item">
                 <span className="schedule-time">9:00 – 10:00 AM</span>
+                <span className="schedule-location">Falcon's Roost</span>
                 <span className="schedule-title">Coffee &amp; Welcome Address</span>
                 <p className="schedule-desc">
                   Welcome address by Folsom Lake College Administration.
@@ -273,6 +274,7 @@ function Home() {
                 <img className="schedule-speaker-photo" src="/speakers/ramkarthik_micron.jpeg" alt="Ramkarthik Ganesan" />
                 <div className="schedule-item-content">
                   <span className="schedule-time">10:00 – 10:30 AM</span>
+                  <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
                   <span className="schedule-title">&ldquo;From Data to Intelligence&rdquo;</span>
                   <p className="schedule-desc">
                     Keynote by <strong>Ramkarthik Ganesan</strong>, Fellow at Micron Technology.
@@ -283,6 +285,7 @@ function Home() {
                 <img className="schedule-speaker-photo" src="/speakers/tahmid_solidigm.png" alt="Tahmid Rahman" />
                 <div className="schedule-item-content">
                   <span className="schedule-time">10:45 – 11:15 AM</span>
+                  <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
                   <span className="schedule-title">&ldquo;Solidigm: Storage for AI innovation&rdquo;</span>
                   <p className="schedule-desc">
                     Keynote by <strong>Tahmid Rahman</strong>, Director Product Marketing, Solidigm Corp.
@@ -293,6 +296,7 @@ function Home() {
                 <img className="schedule-speaker-photo" src="/speakers/marcie_caltrans.jpeg" alt="Marcie Kahbody" />
                 <div className="schedule-item-content">
                   <span className="schedule-time">11:30 AM – 12:00 PM</span>
+                  <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
                   <span className="schedule-title">&ldquo;Building Traffic Planning &amp; Management Systems using Innovative AI Technologies&rdquo;</span>
                   <p className="schedule-desc">
                     Keynote by <strong>Marcie Kahbody</strong>, CIO at Caltrans.
@@ -301,6 +305,7 @@ function Home() {
               </li>
               <li className="schedule-item">
                 <span className="schedule-time">12:00 – 2:00 PM</span>
+                <span className="schedule-location">Falcon's Roost</span>
                 <span className="schedule-title">Student Demo Showcasing</span>
                 <p className="schedule-desc">
                   Browse student project demos, interact with teams, and see their work in action.
@@ -310,6 +315,7 @@ function Home() {
                 <img className="schedule-speaker-photo" src="/speakers/tim_aws.png" alt="Tim Jones" />
                 <div className="schedule-item-content">
                   <span className="schedule-time">2:00 – 2:30 PM</span>
+                  <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
                   <span className="schedule-title">&ldquo;Why Computer Science is Essential in the Age of Generative AI&rdquo;</span>
                   <p className="schedule-desc">
                     Keynote by <strong>Tim Jones</strong>, Sr. Solutions Architect at AWS.
@@ -320,6 +326,7 @@ function Home() {
                 <img className="schedule-speaker-photo" src="/speakers/shashank_renesas.jpeg" alt="Shashank Bangalore Lakshman" />
                 <div className="schedule-item-content">
                   <span className="schedule-time">2:45 – 3:15 PM</span>
+                  <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
                   <span className="schedule-title">&ldquo;STEM Professional 2.0: Thriving on the Razor Edge of AI&rdquo;</span>
                   <p className="schedule-desc">
                     Keynote by <strong>Shashank Bangalore Lakshman</strong>, Engineering Leader – MLOps, Renesas Electronics.
@@ -330,6 +337,7 @@ function Home() {
                 <img className="schedule-speaker-photo" src="/speakers/dean_lorena.jpeg" alt="Dr. Lorena Navarro" />
                 <div className="schedule-item-content">
                   <span className="schedule-time">3:30 – 4:00 PM</span>
+                  <span className="schedule-location">Falcon's Roost</span>
                   <span className="schedule-title">Closing Ceremony</span>
                   <p className="schedule-desc">
                     Certificates of Achievement &amp; Prizes, by Dean of STEM <strong>Dr. Lorena Navarro</strong>.

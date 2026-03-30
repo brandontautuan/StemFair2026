@@ -1221,7 +1221,16 @@ select:focus-visible {
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--text-secondary);
+  margin-bottom: 0.15rem;
+}
+
+.schedule-location {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent, #4fc3f7);
   margin-bottom: 0.25rem;
+  letter-spacing: 0.02em;
   white-space: nowrap;
 }
 
