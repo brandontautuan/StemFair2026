@@ -18,12 +18,6 @@ const faqs = [
     answer:
       'No prior experience is required! The STEM Fair is designed to be inclusive for participants of all skill levels. Come with curiosity and a willingness to learn.',
   },
-  {
-    question:
-      'If I\'m already part of a participating project, do I still need to register to attend?',
-    answer:
-      'No — if you are already on a registered project team, you do not need to separately register as an attendee. Your project registration covers your participation.',
-  },
 ];
 
 const containerVariants = {
