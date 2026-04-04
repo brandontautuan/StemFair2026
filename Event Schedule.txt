@@ -3,10 +3,15 @@ Event Schedule
 
 9:00 am - 10:00 am: Coffee and Welcome Address by Folsom Lake College Administration (Falcon's Roost)
 10:00 am - 10:30 am: "From Data to Intelligence", Keynote speech by Ramkarthik Ganesan, Fellow at Micron Technology (Peregrine Room, Falcon's Roost)
+10:35 am - 10:45 am: "Self-Navigating Smart Sofa", Student Presentation (Peregrine Room, Falcon's Roost)
 10:45 am - 11:15 am: "Disruptive Technology Driven Innovation", Keynote speech by Tahmid Rahman, Director, Product and Partner Marketing, Solidigm (Peregrine Room, Falcon's Roost)
+11:20 am - 11:30 am: "Predicting Air Quality Using Artificial Intelligence", Student Presentation (Peregrine Room, Falcon's Roost)
 11:30 am - 12:00 pm: "Building Traffic Planning and Management Systems using Innovative AI technologies", Keynote speech by Marcie Kahbody, CIO at Caltrans (Peregrine Room, Falcon's Roost)
-12:00 pm - 2:00 pm: Student Demo Showcasing (Falcon's Roost)
+12:05 pm - 12:15 pm: "Falcon Eye", Student Presentation (Peregrine Room, Falcon's Roost)
+12:15 pm - 2:00 pm: Student Demo Showcasing (Falcon's Roost)
 2:00pm - 2:30 pm: "Why Computer Science is Essential in the Age of Generative AI", Keynote Speech by Tim Jones, Sr. Solutions Architect at AWS (Peregrine Room, Falcon's Roost)
+2:35 pm - 2:45 pm: "Designing Tiny Molecules: My Summer Research Experience", Student Presentation (Peregrine Room, Falcon's Roost)
 2:45 pm - 3:15 pm: "STEM Professional 2.0: Thriving on the razor edge of AI", Keynote Speech by Shashank Bangalore Lakshman, Engineering Leader - MLOps, Renesas Electronics (Peregrine Room, Falcon's Roost)
+3:20 pm - 3:30 pm: "Investigating the Role of Fungal Enzymes in Degrading Environmental Phthalates", Student Presentation (Peregrine Room, Falcon's Roost)
 3:30 pm - 4:00 pm: Closing Ceremony, Certificates of Achievement (Falcon's Roost)
 By Dean of STEM Dr. Lorena Navarro

@@ -1161,7 +1161,8 @@ select:focus-visible {
   margin: 0;
 }
 
-.schedule-item--keynote {
+.schedule-item--keynote,
+.schedule-item--student {
   display: flex;
   align-items: center;
   gap: 1.25rem;

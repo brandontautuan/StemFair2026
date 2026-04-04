@@ -58,6 +58,17 @@ function Schedule() {
                 </p>
               </div>
             </motion.li>
+            <motion.li className="schedule-item schedule-item--student" variants={itemVariants}>
+              <img className="schedule-speaker-photo" src="/speakers/flc_logo.jpg" alt="Student Presentation" />
+              <div className="schedule-item-content">
+                <span className="schedule-time">10:35 – 10:45 AM</span>
+                <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
+                <span className="schedule-title">&ldquo;Self-Navigating Smart Sofa&rdquo;</span>
+                <p className="schedule-desc">
+                  Student Presentation.
+                </p>
+              </div>
+            </motion.li>
             <motion.li className="schedule-item schedule-item--keynote" variants={itemVariants}>
               <img className="schedule-speaker-photo" src="/speakers/tahmid_solidigm.png" alt="Tahmid Rahman" />
               <div className="schedule-item-content">
@@ -66,6 +77,17 @@ function Schedule() {
                 <span className="schedule-title">&ldquo;Solidigm: Storage for AI innovation&rdquo;</span>
                 <p className="schedule-desc">
                   Keynote by <strong>Tahmid Rahman</strong>, Director Product Marketing, Solidigm Corp.
+                </p>
+              </div>
+            </motion.li>
+            <motion.li className="schedule-item schedule-item--student" variants={itemVariants}>
+              <img className="schedule-speaker-photo" src="/speakers/flc_logo.jpg" alt="Student Presentation" />
+              <div className="schedule-item-content">
+                <span className="schedule-time">11:20 – 11:30 AM</span>
+                <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
+                <span className="schedule-title">&ldquo;Predicting Air Quality Using Artificial Intelligence&rdquo;</span>
+                <p className="schedule-desc">
+                  Student Presentation.
                 </p>
               </div>
             </motion.li>
@@ -80,8 +102,19 @@ function Schedule() {
                 </p>
               </div>
             </motion.li>
+            <motion.li className="schedule-item schedule-item--student" variants={itemVariants}>
+              <img className="schedule-speaker-photo" src="/speakers/flc_logo.jpg" alt="Student Presentation" />
+              <div className="schedule-item-content">
+                <span className="schedule-time">12:05 – 12:15 PM</span>
+                <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
+                <span className="schedule-title">&ldquo;Falcon Eye&rdquo;</span>
+                <p className="schedule-desc">
+                  Student Presentation.
+                </p>
+              </div>
+            </motion.li>
             <motion.li className="schedule-item" variants={itemVariants}>
-              <span className="schedule-time">12:00 – 2:00 PM</span>
+              <span className="schedule-time">12:15 – 2:00 PM</span>
               <span className="schedule-location">Falcon's Roost</span>
               <span className="schedule-title">Student Demo Showcasing</span>
               <p className="schedule-desc">
@@ -99,6 +132,17 @@ function Schedule() {
                 </p>
               </div>
             </motion.li>
+            <motion.li className="schedule-item schedule-item--student" variants={itemVariants}>
+              <img className="schedule-speaker-photo" src="/speakers/flc_logo.jpg" alt="Student Presentation" />
+              <div className="schedule-item-content">
+                <span className="schedule-time">2:35 – 2:45 PM</span>
+                <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
+                <span className="schedule-title">&ldquo;Designing Tiny Molecules: My Summer Research Experience&rdquo;</span>
+                <p className="schedule-desc">
+                  Student Presentation.
+                </p>
+              </div>
+            </motion.li>
             <motion.li className="schedule-item schedule-item--keynote" variants={itemVariants}>
               <img className="schedule-speaker-photo" src="/speakers/shashank_renesas.jpeg" alt="Shashank Bangalore Lakshman" />
               <div className="schedule-item-content">
@@ -107,6 +151,17 @@ function Schedule() {
                 <span className="schedule-title">&ldquo;STEM Professional 2.0: Thriving on the Razor Edge of AI&rdquo;</span>
                 <p className="schedule-desc">
                   Keynote by <strong>Shashank Bangalore Lakshman</strong>, Engineering Leader – MLOps, Renesas Electronics.
+                </p>
+              </div>
+            </motion.li>
+            <motion.li className="schedule-item schedule-item--student" variants={itemVariants}>
+              <img className="schedule-speaker-photo" src="/speakers/flc_logo.jpg" alt="Student Presentation" />
+              <div className="schedule-item-content">
+                <span className="schedule-time">3:20 – 3:30 PM</span>
+                <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
+                <span className="schedule-title">&ldquo;Investigating the Role of Fungal Enzymes in Degrading Environmental Phthalates&rdquo;</span>
+                <p className="schedule-desc">
+                  Student Presentation.
                 </p>
               </div>
             </motion.li>
