@@ -117,7 +117,7 @@ function Schedule() {
                 <span className="schedule-location">Falcon's Roost</span>
                 <span className="schedule-title">Closing Ceremony</span>
                 <p className="schedule-desc">
-                  Certificates of Achievement &amp; Prizes, by Dean of STEM <strong>Dr. Lorena Navarro</strong>.
+                  Certificates of Achievement, by Dean of STEM <strong>Dr. Lorena Navarro</strong>.
                 </p>
               </div>
             </motion.li>

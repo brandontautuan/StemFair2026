@@ -8,5 +8,5 @@ Event Schedule
 12:00 pm - 2:00 pm: Student Demo Showcasing (Falcon's Roost)
 2:00pm - 2:30 pm: "Why Computer Science is Essential in the Age of Generative AI", Keynote Speech by Tim Jones, Sr. Solutions Architect at AWS (Peregrine Room, Falcon's Roost)
 2:45 pm - 3:15 pm: "STEM Professional 2.0: Thriving on the razor edge of AI", Keynote Speech by Shashank Bangalore Lakshman, Engineering Leader - MLOps, Renesas Electronics (Peregrine Room, Falcon's Roost)
-3:30 pm - 4:00 pm: Closing Ceremony, Certificates of Achievement/ Prizes (Falcon's Roost)
+3:30 pm - 4:00 pm: Closing Ceremony, Certificates of Achievement (Falcon's Roost)
 By Dean of STEM Dr. Lorena Navarro
