@@ -65,7 +65,7 @@ function Schedule() {
                 <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
                 <span className="schedule-title">&ldquo;Self-Navigating Smart Sofa&rdquo;</span>
                 <p className="schedule-desc">
-                  Student Presentation.
+                  Student Lightning Talk.
                 </p>
               </div>
             </motion.li>
@@ -87,7 +87,7 @@ function Schedule() {
                 <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
                 <span className="schedule-title">&ldquo;Predicting Air Quality Using Artificial Intelligence&rdquo;</span>
                 <p className="schedule-desc">
-                  Student Presentation.
+                  Student Lightning Talk.
                 </p>
               </div>
             </motion.li>
@@ -109,7 +109,7 @@ function Schedule() {
                 <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
                 <span className="schedule-title">&ldquo;Falcon Eye&rdquo;</span>
                 <p className="schedule-desc">
-                  Student Presentation.
+                  Student Lightning Talk.
                 </p>
               </div>
             </motion.li>
@@ -139,7 +139,7 @@ function Schedule() {
                 <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
                 <span className="schedule-title">&ldquo;Designing Tiny Molecules: My Summer Research Experience&rdquo;</span>
                 <p className="schedule-desc">
-                  Student Presentation.
+                  Student Lightning Talk.
                 </p>
               </div>
             </motion.li>
@@ -161,7 +161,7 @@ function Schedule() {
                 <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
                 <span className="schedule-title">&ldquo;Investigating the Role of Fungal Enzymes in Degrading Environmental Phthalates&rdquo;</span>
                 <p className="schedule-desc">
-                  Student Presentation.
+                  Student Lightning Talk.
                 </p>
               </div>
             </motion.li>
