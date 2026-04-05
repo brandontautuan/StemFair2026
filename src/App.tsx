@@ -10,6 +10,7 @@ import Teams from './pages/Teams';
 import Sponsors from './pages/Sponsors';
 import ProposalForm from './pages/ProposalForm';
 import Contact from './pages/Contact';
+import GettingThere from './pages/GettingThere';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/teams" element={<Teams />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/getting-there" element={<GettingThere />} />
         </Routes>
       </Layout>
     </Router>

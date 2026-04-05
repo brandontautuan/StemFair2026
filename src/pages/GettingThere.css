@@ -1,0 +1,200 @@
+.getting-there-section {
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 0;
+}
+
+.getting-there-title {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.getting-there-intro {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0 0 2rem;
+}
+
+.getting-there-address {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  background-color: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.getting-there-address-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+/* Direction cards */
+.getting-there-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.getting-there-card {
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.getting-there-card-title {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.getting-there-card-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+.getting-there-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--button-idle-bg);
+  color: var(--button-idle-color);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  border: var(--button-idle-border);
+  transition: var(--button-transition);
+  text-align: center;
+  align-self: flex-start;
+}
+
+.getting-there-btn:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-border-color);
+  transform: translateY(-2px);
+}
+
+/* Section headings inside the page */
+.getting-there-section-heading {
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+/* Parking */
+.getting-there-parking {
+  margin-bottom: 3rem;
+}
+
+.getting-there-parking-card {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.75rem 2rem;
+  border-radius: 12px;
+  background-color: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  align-items: flex-start;
+}
+
+.getting-there-parking-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.getting-there-parking-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.getting-there-parking-info p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.getting-there-parking-tip {
+  font-size: 0.92rem !important;
+  color: var(--text-secondary);
+  opacity: 0.85;
+  padding-top: 0.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Campus Map PDF embed */
+.getting-there-campus-map {
+  margin-bottom: 2rem;
+}
+
+.getting-there-map-note {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 0 1.25rem;
+}
+
+.getting-there-map-note a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.getting-there-map-note a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+.getting-there-pdf-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: #f4f4f6;
+}
+
+.getting-there-pdf {
+  display: block;
+  width: 100%;
+  height: 700px;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .getting-there-section {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .getting-there-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .getting-there-iframe-wrap {
+    padding-bottom: 75%;
+  }
+
+  .getting-there-parking-card {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .getting-there-pdf {
+    height: 500px;
+  }
+}

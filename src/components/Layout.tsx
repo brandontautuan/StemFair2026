@@ -102,13 +102,13 @@ function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             </li>
             <li>
-              <Link to="/contact" className={isActive('/contact') ? 'active' : ''}>
-                Contact Us
+              <Link to="/getting-there" className={isActive('/getting-there') ? 'active' : ''}>
+                Getting There
               </Link>
             </li>
             <li
               ref={moreRef}
-              className={`nav-dropdown ${moreOpen ? 'nav-dropdown--open' : ''} ${isActive('/event-flow') || isActive('/sponsors') ? 'nav-dropdown--child-active' : ''}`}
+              className={`nav-dropdown ${moreOpen ? 'nav-dropdown--open' : ''} ${isActive('/event-flow') || isActive('/sponsors') || isActive('/contact') ? 'nav-dropdown--child-active' : ''}`}
             >
               <button
                 className="nav-dropdown-toggle"
@@ -122,6 +122,11 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <li>
                   <Link to="/event-flow" className={isActive('/event-flow') ? 'active' : ''}>
                     Important Dates
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className={isActive('/contact') ? 'active' : ''}>
+                    Contact Us
                   </Link>
                 </li>
                 <li>
