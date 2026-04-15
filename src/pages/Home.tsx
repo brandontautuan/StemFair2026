@@ -195,12 +195,23 @@ function Home() {
             </p>
             <ul className="schedule-list" aria-label="Event schedule">
               <li className="schedule-item">
-                <span className="schedule-time">9:00 – 10:00 AM</span>
+                <span className="schedule-time">9:00 – 9:30 AM</span>
                 <span className="schedule-location">Falcon's Roost</span>
                 <span className="schedule-title">Coffee &amp; Welcome Address</span>
                 <p className="schedule-desc">
                   Welcome address by Folsom Lake College Administration.
                 </p>
+              </li>
+              <li className="schedule-item schedule-item--student">
+                <img className="schedule-speaker-photo" src="/speakers/flc_logo.jpg" alt="Student Presentation" />
+                <div className="schedule-item-content">
+                  <span className="schedule-time">9:30 – 9:40 AM</span>
+                  <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
+                  <span className="schedule-title">&ldquo;Falcon Eye&rdquo;</span>
+                  <p className="schedule-desc">
+                    Student Lightning Talk.
+                  </p>
+                </div>
               </li>
               <li className="schedule-item schedule-item--keynote">
                 <img className="schedule-speaker-photo" src="/speakers/ramkarthik_micron.jpeg" alt="Ramkarthik Ganesan" />
@@ -254,17 +265,6 @@ function Home() {
                   <span className="schedule-title">&ldquo;Building Traffic Planning &amp; Management Systems using Innovative AI Technologies&rdquo;</span>
                   <p className="schedule-desc">
                     Keynote by <strong>Marcie Kahbody</strong>, CIO at Caltrans.
-                  </p>
-                </div>
-              </li>
-              <li className="schedule-item schedule-item--student">
-                <img className="schedule-speaker-photo" src="/speakers/flc_logo.jpg" alt="Student Presentation" />
-                <div className="schedule-item-content">
-                  <span className="schedule-time">12:05 – 12:15 PM</span>
-                  <span className="schedule-location">Peregrine Room, Falcon's Roost</span>
-                  <span className="schedule-title">&ldquo;Falcon Eye&rdquo;</span>
-                  <p className="schedule-desc">
-                    Student Lightning Talk.
                   </p>
                 </div>
               </li>
