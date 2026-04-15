@@ -1,7 +1,8 @@
 Event Schedule
 
 
-9:00 am - 9:30 am: Coffee and Welcome Address by Folsom Lake College Administration (Falcon's Roost)
+9:00 am - 9:20 am: Coffee and Networking (Falcon's Roost)
+9:20 am - 9:30 am: Welcome Address by Folsom Lake College Administration (Falcon's Roost)
 9:30 am - 9:40 am: "Falcon Eye", Student Presentation (Peregrine Room, Falcon's Roost)
 10:00 am - 10:30 am: "From Data to Intelligence", Keynote speech by Ramkarthik Ganesan, Fellow at Micron Technology (Peregrine Room, Falcon's Roost)
 10:35 am - 10:45 am: "Self-Navigating Smart Sofa", Student Presentation (Peregrine Room, Falcon's Roost)

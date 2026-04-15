@@ -40,9 +40,14 @@ function Schedule() {
 
           <motion.ul className="schedule-list" aria-label="Event schedule" variants={containerVariants}>
             <motion.li className="schedule-item" variants={itemVariants}>
-              <span className="schedule-time">9:00 – 9:30 AM</span>
+              <span className="schedule-time">9:00 – 9:20 AM</span>
               <span className="schedule-location">Falcon's Roost</span>
-              <span className="schedule-title">Coffee &amp; Welcome Address</span>
+              <span className="schedule-title">Coffee &amp; Networking</span>
+            </motion.li>
+            <motion.li className="schedule-item" variants={itemVariants}>
+              <span className="schedule-time">9:20 – 9:30 AM</span>
+              <span className="schedule-location">Falcon's Roost</span>
+              <span className="schedule-title">Welcome Address</span>
               <p className="schedule-desc">
                 Welcome address by Folsom Lake College Administration.
               </p>
