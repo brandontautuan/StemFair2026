@@ -42,6 +42,30 @@ const speakers: Speaker[] = [
   },
 ];
 
+interface TeamMember {
+  name: string;
+  title: string;
+  photo?: string;
+}
+
+const team: TeamMember[] = [
+  { name: 'Abaan Majid', title: 'Executive Director', photo: '/team/abaan_majid.png' },
+  { name: 'Nikolas Linn', title: 'Outreach & Promotions Lead', photo: '/team/nikolas_linn.jpeg' },
+  { name: 'Kareem Ba', title: 'Logistics & Operations Coordinator', photo: '/team/kareem_ba.jpeg' },
+  { name: 'Jack Bird', title: 'Volunteer Coordination Manager', photo: '/team/jack_bird.jpeg' },
+  { name: 'Scott Bohn', title: 'Team Registration Manager', photo: '/team/scott_bohn.jpeg' },
+  { name: 'Brandon Tautuan', title: 'Web Content Manager', photo: '/team/brandon_tautuan.jpeg' },
+];
+
+const getInitials = (name: string) =>
+  name
+    .split(' ')
+    .map((part) => part[0])
+    .filter(Boolean)
+    .slice(0, 2)
+    .join('')
+    .toUpperCase();
+
 const faqs = [
   {
     question: 'Who can submit a project?',
@@ -349,6 +373,28 @@ function Home() {
             email us at stemfairlosrios@gmail.com or ping an admin on Discord.
           </p>
           <FAQAccordion />
+        </section>
+
+        <section className="team-section">
+          <h2 className="section-title">Our Team</h2>
+          <p className="participate-intro">
+            The Los Rios STEM Fair is organized by a team of students dedicated to bridging education and industry.
+          </p>
+          <div className="team-grid">
+            {team.map((member) => (
+              <div className="team-card" key={member.name}>
+                <div className="team-image">
+                  {member.photo ? (
+                    <img src={member.photo} alt={member.name} />
+                  ) : (
+                    <span className="team-initials" aria-hidden="true">{getInitials(member.name)}</span>
+                  )}
+                </div>
+                <h3 className="team-name">{member.name}</h3>
+                <p className="team-title">{member.title}</p>
+              </div>
+            ))}
+          </div>
         </section>
       </main>
 
